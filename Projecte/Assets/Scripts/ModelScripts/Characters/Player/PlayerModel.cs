@@ -14,6 +14,8 @@ public class PlayerModel : CharacterModel
     [Header("Player Controller")]
     [Range(0f, 20f)] public float speed = 4f;
     [Range(0f, 100f)] public float force = 70f;
+    [Range(0f, 50f)] public float power = 20f;
+    [Range(0f, 20f)] public float range = 10f;
     [Range(0, 10f)] public float TimeBetweenFlash = 3f;
     public float timeForFlash = 5f;
 

@@ -11,12 +11,10 @@ public class EnemyModel : CharacterModel
 
     [Header("EnemyState")]
     public float patrolSpeed = 0.5f;
-
     public float timeToPerception = 0.2f;
-
     public float chaseSpeed = 1f;
 
-    public float attackDistance = 0.5f;
+    public float range = 0.5f;
 
     public enum EnemyType
     {
@@ -38,15 +36,6 @@ public class EnemyModel : CharacterModel
     public GameObject _swampProjectile;
 
     public GameObject _magicianProjectile;
-
-    public enum State
-    {
-        Idle,
-        MoveTo,
-        Attack
-    };
-
-    public State _currentState;
 
     public EnemyType _enemyType;
 
