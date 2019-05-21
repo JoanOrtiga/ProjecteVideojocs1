@@ -21,7 +21,6 @@ public class PlayerShoot : PlayerState
         fatherUI();
     }
 
-
     private void Aim()
     {
         Vector3 mausepostion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -39,9 +38,9 @@ public class PlayerShoot : PlayerState
 
             arrow.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
             Destroy(arrow, 2.0f);
-        }
-       
+        }     
     }
+
     private void Reacharge()
     {
         timePast = Time.deltaTime + timePast;
@@ -55,9 +54,6 @@ public class PlayerShoot : PlayerState
             timePast = 0;
         }
     }
-
-
-
 
     private void fatherUI()
     {
