@@ -18,6 +18,7 @@ public class Crosshair : MonoBehaviour {
         mausePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mausePosition.z = 0;
 
+
         crossHairSprite.GetComponent<Transform>().position = mausePosition;
     }
 }
