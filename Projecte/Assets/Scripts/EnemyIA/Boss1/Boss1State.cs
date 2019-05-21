@@ -9,10 +9,9 @@ public class Boss1State : MonoBehaviour {
     protected Transform p1, p2, p3;
 
     protected Rigidbody2D rb2d;
-    protected Boss1_Model boss;
+    protected Boss1Model boss;
 
     protected bool attacking = false;
-
 
     private void Awake()
     {

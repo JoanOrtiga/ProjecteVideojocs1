@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EnemyModel", menuName = "Models")]
+[CreateAssetMenu(fileName = "EnemyModel", menuName = "Models/Characters/Enemy")]
 public class EnemyModel : CharacterModel
 {
+    [Header("Perception")]
     [Range(0.5f, 10f)] public float rangeVision = 2f;
     [Range(0, 1)] public float FOV = 0.5f;
 
+    [Header("EnemyState")]
     public float patrolSpeed = 0.5f;
 
     public float timeToPerception = 0.2f;

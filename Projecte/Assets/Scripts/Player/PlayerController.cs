@@ -2,26 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum PlayerStates
-{
-    attack, walk, idle, flash
-}
-
 public class PlayerController : PlayerState
 {
-
-    [Range(0.1f, 20)] public float speed = 4f;
-    [Range(0.1f, 100)] public float force = 70f;
-    [Range(0.1f, 100)] public float TimeBetweenFlash = 3;
-
-
-    protected Animator animator;
-    public PlayerStates currentState;
-
-    protected float timeForFlash = 5;
-    protected float h, v;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,20 +15,16 @@ public class PlayerController : PlayerState
     // Update is called once per frame
     void Update()
     {
-        timeForFlash  = Time.deltaTime + timeForFlash;
-        
+        playerModel.timeForFlash  = Time.deltaTime + playerModel.timeForFlash;
 
-        if (currentState != PlayerStates.attack)
-        {
-            v = Input.GetAxis("Vertical");
-            h = Input.GetAxis("Horizontal");
-        }
-        else
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");
+
+        if (currentState == PlayerStates.attack)
         {
             v = 0;
             h = 0;
         }
-
 
         if (h != 0 || v != 0)
         {
@@ -77,18 +55,15 @@ public class PlayerController : PlayerState
 
     private void FixedUpdate()
     {
-
-        rb2D.AddForce(new Vector2(h, v) * force);
-        rb2D.velocity = new Vector2(h, v) * Mathf.Clamp(rb2D.velocity.magnitude, -speed, speed);
-
-
+        rb2D.AddForce(new Vector2(h, v) * playerModel.force);
+        rb2D.velocity = new Vector2(h, v) * Mathf.Clamp(rb2D.velocity.magnitude, -playerModel.speed, playerModel.speed);
     }
 
     private void LateUpdate()
     {
-        if (Input.GetButtonDown("Fire2") && timeForFlash >= TimeBetweenFlash)
+        if (Input.GetButtonDown("Fire2") && playerModel.timeForFlash >= playerModel.TimeBetweenFlash)
         {
-            timeForFlash = 0;
+            playerModel.timeForFlash = 0;
             GetComponent<PlayerFlash>().enabled = true;
             this.enabled = false;
 
