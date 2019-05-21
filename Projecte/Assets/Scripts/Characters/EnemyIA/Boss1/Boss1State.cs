@@ -4,7 +4,8 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Boss1State : MonoBehaviour {
+public class Boss1State : CharacterState
+{
 
     protected Transform p1, p2, p3;
 
@@ -12,6 +13,12 @@ public class Boss1State : MonoBehaviour {
     protected Boss1Model boss;
 
     protected bool attacking = false;
+
+    public override void InitState()
+    {
+        boss = GameManager.instance.boss1_model;
+    }
+
 
     private void Awake()
     {
@@ -25,9 +32,6 @@ public class Boss1State : MonoBehaviour {
         p1 = transform.Find("Range1");
         p2 = transform.Find("Range2");
         p3 = transform.Find("Range3");
-
-        if (boss == null && GameManager.instance.boss1_model != null)
-            boss = GameManager.instance.boss1_model;
 
         GetComponent<MovingState_Boss1>().enabled = true;
     }

@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : PlayerState
 {
+   // private float force = 70f;
+   // private float speed = 4f;
+
     // Start is called before the first frame update
     void Start()
     {
         currentState = PlayerStates.idle;
-     
+
         animator = GetComponent<Animator>();
     }
 
@@ -51,12 +55,10 @@ public class PlayerController : PlayerState
         }
     }
 
-
-
     private void FixedUpdate()
     {
-        rb2D.AddForce(new Vector2(h, v) * playerModel.force);
-        rb2D.velocity = new Vector2(h, v) * Mathf.Clamp(rb2D.velocity.magnitude, -playerModel.speed, playerModel.speed);
+            rb2D.AddForce(new Vector2(h, v) * playerModel.force);
+            rb2D.velocity = new Vector2(h, v) * Mathf.Clamp(rb2D.velocity.magnitude, -playerModel.speed, playerModel.speed);
     }
 
     private void LateUpdate()

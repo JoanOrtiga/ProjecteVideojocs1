@@ -8,7 +8,7 @@ public enum PlayerStates
     attack, walk, idle, flash
 }
 
-public class PlayerState : MonoBehaviour {
+public class PlayerState : CharacterState {
 
     protected SpriteRenderer sprPlayer, sprShadow;
     protected Rigidbody2D rb2D;
@@ -20,14 +20,13 @@ public class PlayerState : MonoBehaviour {
 
     protected PlayerModel playerModel;
 
-    // Use this for initialization
-    void Awake()
+    public override void InitState()
     {
         playerModel = GameManager.instance.playerModel;
-
+        rb2D = GetComponent<Rigidbody2D>();
         sprPlayer = GetComponent<SpriteRenderer>();
         sprShadow = transform.Find("Shadow").gameObject.GetComponent<SpriteRenderer>();
-        rb2D = GetComponent<Rigidbody2D>();
+
         animator = GetComponent<Animator>();
     }
 }
