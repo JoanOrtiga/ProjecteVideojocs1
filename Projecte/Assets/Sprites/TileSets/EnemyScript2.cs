@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class EnemyScript2 : MonoBehaviour
 {
     private float _health;
  
@@ -23,7 +23,8 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField]
     private EnemyType _type;
-
+    
+    /*
     // Use this for initialization
     void Start ()
     {
@@ -86,5 +87,5 @@ public class EnemyScript : MonoBehaviour
     public void SetHealth(float health)
     {
         _health += health;
-    }
+    }*/
 }
