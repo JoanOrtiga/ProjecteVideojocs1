@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ddd82aa709cb347ba3527a58a11ce1, type: 3}
   m_Name: Boss1_Model
   m_EditorClassIdentifier: 
-  health: 0
-  speed: 10
+  _health: 0
+  speedInterpolation: 0.03
   attack1Dmg: 0
   attack2Dmg: 0
   attack3Dmg: 0

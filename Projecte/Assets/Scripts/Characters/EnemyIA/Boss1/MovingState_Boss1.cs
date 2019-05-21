@@ -29,9 +29,9 @@ public class MovingState_Boss1 : Boss1State
 
                 if (position != Positions.left)
                 {
-                    transform.position = Vector2.Lerp(transform.position, p1.transform.position, 0.08f);
+                    rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, p1.transform.position, boss.speedInterpolation);
 
-                    if (transform.position.x - p1.transform.position.x < 0.1f)
+                    if (rb2d.transform.position.x - p1.transform.position.x < 0.1f)
                     {
                         position = Positions.left;
                         finishedMoving = true;
@@ -44,9 +44,9 @@ public class MovingState_Boss1 : Boss1State
             case Positions.center: //1
                 if (position != Positions.center)
                 {
-                    transform.position = Vector2.Lerp(transform.position, p2.transform.position, 0.08f);
+                    rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, p2.transform.position, boss.speedInterpolation);
 
-                    if ((transform.position.x - p2.transform.position.x > -0.1f && position == Positions.left) || (transform.position.x - p2.transform.position.x < 0.1f && position == Positions.right))
+                    if ((rb2d.transform.position.x - p2.transform.position.x > -0.1f && position == Positions.left) || (rb2d.transform.position.x - p2.transform.position.x < 0.1f && position == Positions.right))
                     {
                         position = Positions.center;
                         finishedMoving = true;
@@ -60,9 +60,9 @@ public class MovingState_Boss1 : Boss1State
                 
                 if(position != Positions.right)
                 {
-                    transform.position = Vector2.Lerp(transform.position, p3.transform.position, 0.08f);
+                    rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, p3.transform.position, boss.speedInterpolation);
 
-                    if(transform.position.x - p3.transform.position.x > -0.1f)
+                    if(rb2d.transform.position.x - p3.transform.position.x > -0.1f)
                     {
                         position = Positions.right;
                         finishedMoving = true;

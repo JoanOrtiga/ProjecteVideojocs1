@@ -14,16 +14,11 @@ public class Boss1State : CharacterState
 
     protected bool attacking = false;
 
-    public override void InitState()
-    {
-        boss = GameManager.instance.boss1_model;
-    }
-
-
     private void Awake()
     {
+        boss = GameManager.instance.boss1_model;
+
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.isKinematic = true;
     }
 
     // Use this for initialization

@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-
-
 public class PlayerShoot : PlayerState
 {
     private int ammunitionAtTheTime = 5;
