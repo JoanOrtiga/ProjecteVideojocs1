@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class CharacterModel : ScriptableObject
 {
-    public float health;
+    [Header("Character HP")]
+    public float _health;
 }

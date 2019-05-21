@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu(fileName = "Boss1_Model", menuName = "Models/Characters/Enemy/Bosses")]
-public class Boss1_Model : CharacterModel
+[CreateAssetMenu(fileName = "Boss1", menuName = "Models/Characters/Boss")]
+public class Boss1Model : CharacterModel
 {
     public float speed;
     public float attack1Dmg;

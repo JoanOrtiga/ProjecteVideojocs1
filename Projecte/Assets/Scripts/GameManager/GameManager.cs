@@ -6,11 +6,15 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
-    // public EnemyModel doorGuardianModel;
-    // public PlayerModel pModel;
-    // public InventoryController inv;
+    public Boss1Model boss1_model;
+    public PlayerModel playerModel;
+    public EnemyModel exempleEnemy1; //Desde el enemy accedeixes amb GameManager.instance.exempleEnemy1;  /// Exemple al player.
 
-    public Boss1_Model boss1_model;
+    public class SaveGame
+    {
+        //aqui dins van totes les variables que s'han de guardar entre nivells
+        //quan el profe ho pengi completo.
+    }
 
     private void Awake()
     {
@@ -25,15 +29,4 @@ public class GameManager : MonoBehaviour {
                 Destroy(gameObject);
         }
     }
-
-    private void Start()
-    {
-     //   inv = new InventoryController();
-    }
-
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
 }
