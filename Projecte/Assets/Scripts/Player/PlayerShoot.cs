@@ -35,7 +35,9 @@ public class PlayerShoot : MonoBehaviour
 
     private void Aim()
     {
-        Vector2 shootingDirection = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector3 mausepostion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 shootingDirection = new Vector2(mausepostion.x, mausepostion.y);
+        shootingDirection = shootingDirection - (Vector2)transform.position;
         shootingDirection.Normalize();
        
 
