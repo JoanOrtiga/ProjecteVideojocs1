@@ -47,7 +47,7 @@ public class PlayerController : PlayerState
             currentState = PlayerStates.attack;
 
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (!(Input.GetButtonDown("Fire1")))
         {
             animator.SetBool("attacking", false);
             currentState = PlayerStates.idle;
