@@ -14,7 +14,7 @@ public class CameraZoomInOut : MonoBehaviour {
 
     private float normalZoom =  10f;
 
-    float size;
+    private float size;
 
     private void Start()
     {
