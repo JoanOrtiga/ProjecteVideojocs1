@@ -14,7 +14,6 @@ public class CenterCamera : MonoBehaviour {
 	void Start ()
     {
         myCollider = GetComponent<Collider2D>();
-
         varGameObject = GameObject.FindWithTag("MainCamera");
     }
 
@@ -30,6 +29,8 @@ public class CenterCamera : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.transform.tag == "Player")
+        print("XD");
         varGameObject.GetComponent<CameraDeathZoneController>().enabled = true;
     }
 }

@@ -24,17 +24,12 @@ public class Boss1State : CharacterState
     // Use this for initialization
     void Start()
     {
-        p1 = transform.Find("Range1");
-        p2 = transform.Find("Range2");
-        p3 = transform.Find("Range3");
-
+        
         GetComponent<MovingState_Boss1>().enabled = true;
     }
 
     private void Update()
     {
-        p1.parent = null;
-        p2.parent = null;
-        p3.parent = null;
+        
     }
 }

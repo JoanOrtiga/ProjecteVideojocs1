@@ -10,8 +10,6 @@ public class CameraDeathZoneController : MonoBehaviour
     public Transform target;
     public bool isHalf = true;
 
-
-
     private float deathZoneHeight;
     private float deathZoneWidth;
 
