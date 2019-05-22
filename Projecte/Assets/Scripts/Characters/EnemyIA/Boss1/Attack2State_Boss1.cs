@@ -9,7 +9,7 @@ public class Attack2State_Boss1 : Boss1State
     private float time2 = 3f;
 
     // Use this for initialization
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(attack2());
     }
@@ -28,8 +28,7 @@ public class Attack2State_Boss1 : Boss1State
         Instantiate(fireBall, rb2d.transform.position, transform.rotation);
         yield return new WaitForSeconds(time2);
 
-        GetComponent<MovingState_Boss1>().attackingFalse();
-        attacking = false;
+        GetComponent<MovingState_Boss1>().attacking = false;
         GetComponent<Attack2State_Boss1>().enabled = false;
     }
 }

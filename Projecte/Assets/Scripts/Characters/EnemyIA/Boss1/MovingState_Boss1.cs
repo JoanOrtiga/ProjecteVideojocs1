@@ -17,8 +17,6 @@ public class MovingState_Boss1 : Boss1State
 
     private void OnEnable()
     {
-        Transform[] transforms = gameObject.GetComponentsInChildren<Transform>();
-
         p1 = transform.Find("Range1");
         p2 = transform.Find("Range2");
         p3 = transform.Find("Range3");
@@ -84,37 +82,26 @@ public class MovingState_Boss1 : Boss1State
                 }
                 else
                     finishedMoving = true;
-                break;
-               
+                break; 
         }
-
-        
-        
     }
 
     private void Update()
     {
-        print(attacking);
-        
         if (!attacking)
         {
             switch (Random.Range(0, 2))
             {
                 case 0:
-                    attacking = true;
                     GetComponent<Attack1State_Boss1>().enabled = true;
+                    attacking = true;
                     break;
 
-            /*    case 1:
-                    attacking = true;
+                case 1:
                     GetComponent<Attack2State_Boss1>().enabled = true;
-                    break;*/
+                    attacking = true;
+                    break;
             }
         }
-    }
-
-    public void attackingFalse()
-    {
-        attacking = false;
     }
 }

@@ -22,17 +22,21 @@ public class ShakeEffect : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (shakeDuration > 0)
+        if (collision.tag == "Player")
         {
-            Camera.main.transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
+            if (shakeDuration > 0)
+            {
+                Camera.main.transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
 
-            shakeDuration -= Time.deltaTime * dampingSpeed;
+                shakeDuration -= Time.deltaTime * dampingSpeed;
+            }
+            else
+            {
+                shakeDuration = 0f;
+                Camera.main.transform.localPosition = initialPosition;
+            }
         }
-        else
-        {
-            shakeDuration = 0f;
-            Camera.main.transform.localPosition = initialPosition;
-        }
+
     }
 
 }

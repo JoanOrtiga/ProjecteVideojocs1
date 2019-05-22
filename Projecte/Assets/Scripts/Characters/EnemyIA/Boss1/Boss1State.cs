@@ -12,7 +12,7 @@ public class Boss1State : CharacterState
     protected Rigidbody2D rb2d;
     protected Boss1Model boss;
 
-    protected bool attacking = false;
+    public bool attacking = false;
 
     private void Awake()
     {
@@ -24,12 +24,6 @@ public class Boss1State : CharacterState
     // Use this for initialization
     void Start()
     {
-        
         GetComponent<MovingState_Boss1>().enabled = true;
-    }
-
-    private void Update()
-    {
-        
     }
 }

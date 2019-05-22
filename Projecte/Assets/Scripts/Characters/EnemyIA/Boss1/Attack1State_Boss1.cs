@@ -33,7 +33,7 @@ public class Attack1State_Boss1 : Boss1State {
         Instantiate(spikes, new Vector2(Random.Range(center.x - radius / 2, center.x + radius / 2), Random.Range(center.y - radius / 2, center.y + radius / 2)), transform.rotation);
         yield return new WaitForSeconds(time2);
 
-        GetComponent<MovingState_Boss1>().attackingFalse();
+        GetComponent<MovingState_Boss1>().attacking = false;
         GetComponent<Attack1State_Boss1>().enabled = false;
     }
 

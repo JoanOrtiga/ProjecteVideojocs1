@@ -26,11 +26,12 @@ public class CenterCamera : MonoBehaviour {
     {
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(myCollider.transform.position.x, myCollider.transform.position.y, Camera.main.transform.position.z), interpolation);
     }
-
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player")
-        print("XD");
-        varGameObject.GetComponent<CameraDeathZoneController>().enabled = true;
+        if(collision.tag == "Player")
+        {
+            varGameObject.GetComponent<CameraDeathZoneController>().enabled = true;
+        }
     }
 }

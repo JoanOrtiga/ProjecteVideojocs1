@@ -164,18 +164,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDefaultState: 0
+  attacking: 0
 --- !u!114 &114624386043988880
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321644235520728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38ada9ae8714c3d48abbf1b5e391d0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsDefaultState: 0
+  attacking: 0
   fireBall: {fileID: 1717539072167146, guid: d1f82e937318acd44b356bed9a5840bf, type: 2}
 --- !u!114 &114648351877723162
 MonoBehaviour:
@@ -183,12 +185,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321644235520728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68483ba7ef26a3849a7667d57f1e6b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsDefaultState: 0
+  attacking: 0
   spikes: {fileID: 1706700818987920, guid: d766bf0f83d53424d8df65a08195de3f, type: 2}
   radius: 23
   center: {x: -8.33, y: 26.89, z: 0}
@@ -204,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDefaultState: 0
+  attacking: 0
 --- !u!212 &212755956478005604
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -236,9 +240,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1373830457
+  m_SortingLayerID: -432132565
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: 3d821da4fe2892d409f0e9bab84c6911, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
