@@ -20,6 +20,7 @@ public class objecrDestroyer : MonoBehaviour {
     public void Smash()
     {
        anim.SetBool("smash", true);
+       Destroy(gameObject, .3f);
      //   StartCoroutine(breakCo());
         
     }
