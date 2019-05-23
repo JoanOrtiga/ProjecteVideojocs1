@@ -14,9 +14,11 @@ public class EnemyModel : CharacterModel
 
     protected float timeToPerception = 0.2f;
 
-    [HideInInspector]public float chaseSpeed = 1f;
+    public float chaseSpeed = 1f;
 
-    protected float rangeAttack = 0.5f;
+    public float rangeAttack = 0.5f;
+
+    public float enemyHealth;
 
     public enum EnemyType
     {
