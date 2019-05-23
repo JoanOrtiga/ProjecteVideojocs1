@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attack2State_Boss1 : Boss1State
+public class Attack2State_Boss1 : AttackingState
 {
     public GameObject fireBall;
 
@@ -26,9 +26,10 @@ public class Attack2State_Boss1 : Boss1State
         Instantiate(fireBall, rb2d.transform.position, transform.rotation);
         yield return new WaitForSeconds(time1);
         Instantiate(fireBall, rb2d.transform.position, transform.rotation);
+
         yield return new WaitForSeconds(time2);
 
-        GetComponent<MovingState_Boss1>().attacking = false;
+        GetComponent<AttackingState>().attacking = false;
         GetComponent<Attack2State_Boss1>().enabled = false;
     }
 }

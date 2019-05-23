@@ -86,27 +86,4 @@ public class MovingState_Boss1 : Boss1State
         }
     }
 
-    private void Update()
-    {
-        if (!attacking)
-        {
-            switch (Random.Range(0, 3))
-            {
-                case 0:
-                    GetComponent<Attack1State_Boss1>().enabled = true;
-                    attacking = true;
-                    break;
-
-                case 1:
-                    GetComponent<Attack2State_Boss1>().enabled = true;
-                    attacking = true;
-                    break;
-                    
-                case 2:
-                    GetComponent<Attack3State_Boss1>().enabled = true;
-                    attacking = true;
-                    break;
-            }
-        }
-    }
 }

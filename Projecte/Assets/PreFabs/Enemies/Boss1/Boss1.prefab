@@ -34,9 +34,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4345637916235548}
-  - component: {fileID: 114528467845560692}
   - component: {fileID: 212884616317410858}
   - component: {fileID: 61780878427862640}
+  - component: {fileID: 114528467845560692}
   m_Layer: 0
   m_Name: attack3trigger
   m_TagString: Untagged
@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 50901038380412034}
   - component: {fileID: 114569605946157040}
   - component: {fileID: 114492887858891494}
+  - component: {fileID: 114336596574403062}
   - component: {fileID: 114861825531528920}
   - component: {fileID: 114605860926552330}
   - component: {fileID: 114189362359151140}
@@ -191,7 +192,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126960791040640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -219,6 +220,19 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df277eccad5bf6e4cb505306f9df4335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDefaultState: 0
+  attacking: 0
+--- !u!114 &114336596574403062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786168902358394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af45b05fccd64444a80a9a9e000beb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsDefaultState: 0
@@ -342,7 +356,7 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126960791040640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
