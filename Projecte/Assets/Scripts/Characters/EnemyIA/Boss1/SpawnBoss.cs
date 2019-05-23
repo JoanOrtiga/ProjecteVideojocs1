@@ -10,5 +10,6 @@ public class SpawnBoss : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Instantiate(boss1, new Vector2(-8.01f, 40.15f), collision.transform.rotation);
+        Destroy(gameObject);
     }
 }

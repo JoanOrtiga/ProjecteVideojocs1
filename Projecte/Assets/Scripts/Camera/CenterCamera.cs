@@ -14,7 +14,6 @@ public class CenterCamera : MonoBehaviour {
 	void Start ()
     {
         myCollider = GetComponent<Collider2D>();
-
         varGameObject = GameObject.FindWithTag("MainCamera");
     }
 
@@ -27,9 +26,12 @@ public class CenterCamera : MonoBehaviour {
     {
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(myCollider.transform.position.x, myCollider.transform.position.y, Camera.main.transform.position.z), interpolation);
     }
-
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
-        varGameObject.GetComponent<CameraDeathZoneController>().enabled = true;
+        if(collision.tag == "Player")
+        {
+            varGameObject.GetComponent<CameraDeathZoneController>().enabled = true;
+        }
     }
 }

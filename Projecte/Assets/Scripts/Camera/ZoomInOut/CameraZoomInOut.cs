@@ -23,38 +23,45 @@ public class CameraZoomInOut : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (zoomY)
-            size = GetComponent<Collider2D>().bounds.size.y;
-        else if (zoomX)
-            size = GetComponent<Collider2D>().bounds.size.x;
+        if (collision.tag == "Player")
+        {
+            if (zoomY)
+                size = GetComponent<Collider2D>().bounds.size.y;
+            else if (zoomX)
+                size = GetComponent<Collider2D>().bounds.size.x;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
-        if (zoomY)
+        if (collision.tag == "Player")
         {
-            if (Input.GetAxis("Vertical") < 0 && leftToRight_Or_DownToUp || Input.GetAxis("Vertical") > 0 && !leftToRight_Or_DownToUp)
-                Camera.main.orthographicSize = normalZoom;
-            else if (Input.GetAxis("Vertical") > 0 && leftToRight_Or_DownToUp || Input.GetAxis("Vertical") < 0 && !leftToRight_Or_DownToUp)
-                Camera.main.orthographicSize = zoomOut;
+            if (zoomY)
+            {
+                if (Input.GetAxis("Vertical") < 0 && leftToRight_Or_DownToUp || Input.GetAxis("Vertical") > 0 && !leftToRight_Or_DownToUp)
+                    Camera.main.orthographicSize = normalZoom;
+                else if (Input.GetAxis("Vertical") > 0 && leftToRight_Or_DownToUp || Input.GetAxis("Vertical") < 0 && !leftToRight_Or_DownToUp)
+                    Camera.main.orthographicSize = zoomOut;
+            }
+            else if (zoomX)
+            {
+                if (Input.GetAxis("Horizontal") < 0 && leftToRight_Or_DownToUp || Input.GetAxis("Horizontal") > 0 && !leftToRight_Or_DownToUp)
+                    Camera.main.orthographicSize = normalZoom;
+                else if (Input.GetAxis("Horizontal") > 0 && leftToRight_Or_DownToUp || Input.GetAxis("Horizontal") < 0 && !leftToRight_Or_DownToUp)
+                    Camera.main.orthographicSize = zoomOut;
+            }
         }
-        else if (zoomX)
-        {
-            if (Input.GetAxis("Horizontal") < 0 && leftToRight_Or_DownToUp || Input.GetAxis("Horizontal") > 0 && !leftToRight_Or_DownToUp)
-                Camera.main.orthographicSize = normalZoom;
-            else if (Input.GetAxis("Horizontal") > 0 && leftToRight_Or_DownToUp || Input.GetAxis("Horizontal") < 0 && !leftToRight_Or_DownToUp)
-                Camera.main.orthographicSize = zoomOut;    
-        }
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (zoomY)
-            YZoom(collision);
-        else if (zoomX)
-            XZoom(collision);
+        if (collision.tag == "Player")
+        {
+            if (zoomY)
+                YZoom(collision);
+            else if (zoomX)
+                XZoom(collision);
+        }
     }
 
 

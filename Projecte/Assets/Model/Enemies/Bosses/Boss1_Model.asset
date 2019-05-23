@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Boss1_Model
   m_EditorClassIdentifier: 
   _health: 0
-  speedInterpolation: 0.03
+  speedInterpolation: 0.05
   attack1Dmg: 0
   attack2Dmg: 0
   attack3Dmg: 0

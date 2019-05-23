@@ -10,15 +10,11 @@ public class PlayerFlash : PlayerState
 
     private bool flash;
 
-    public Image dashON;
-
-    void Start()
-    {
-        currentState = PlayerStates.idle;
-    }
-
     private void OnEnable()
     {
+        currentState = PlayerStates.idle;
+
+
         flash = true;
         sprPlayer.color = new Color(1, 1, 1, 0.1f);
         saveShadowColor = sprShadow.color;
@@ -70,9 +66,7 @@ public class PlayerFlash : PlayerState
         yield return new WaitForSeconds(playerModel.flashTime * 0.333f);
         sprPlayer.color = new Color(1, 1, 1, 1f);
 
-        dashON.enabled = false;
         flash = false;
-
     }
 
 
@@ -82,7 +76,6 @@ public class PlayerFlash : PlayerState
         {
             GetComponent<TrailRenderer>().emitting = false;
             GetComponent<PlayerController>().enabled = true;
-            dashON.enabled = true;
             this.enabled = false;
         }
     }

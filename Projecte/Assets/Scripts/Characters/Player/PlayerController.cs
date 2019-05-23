@@ -12,8 +12,6 @@ public class PlayerController : PlayerState
     void Start()
     {
         currentState = PlayerStates.idle;
-
-        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame

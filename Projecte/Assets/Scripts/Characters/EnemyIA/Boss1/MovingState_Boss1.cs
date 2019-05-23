@@ -14,7 +14,19 @@ public class MovingState_Boss1 : Boss1State
 
     private int movementNumber;
     private bool finishedMoving = true;
-    
+
+    private void OnEnable()
+    {
+        p1 = transform.Find("Range1");
+        p2 = transform.Find("Range2");
+        p3 = transform.Find("Range3");
+
+        p1.parent = null;
+        p2.parent = null;
+        p3.parent = null;
+    }
+
+
     private void FixedUpdate()
     {
         if (finishedMoving)
@@ -70,25 +82,26 @@ public class MovingState_Boss1 : Boss1State
                 }
                 else
                     finishedMoving = true;
-                break;
-               
+                break; 
         }
+    }
 
+    private void Update()
+    {
         if (!attacking)
         {
-            switch (Random.Range(0, 4))
+            switch (Random.Range(0, 2))
             {
                 case 0:
-                    attacking = true;
                     GetComponent<Attack1State_Boss1>().enabled = true;
+                    attacking = true;
+                    break;
+
+                case 1:
+                    GetComponent<Attack2State_Boss1>().enabled = true;
+                    attacking = true;
                     break;
             }
         }
-        
-    }
-
-    public void attackingFalse()
-    {
-        attacking = false;
     }
 }
