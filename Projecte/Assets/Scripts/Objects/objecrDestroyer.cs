@@ -21,14 +21,8 @@ public class objecrDestroyer : MonoBehaviour {
     {
        anim.SetBool("smash", true);
        Destroy(gameObject, .3f);
-     //   StartCoroutine(breakCo());
-        
     }
-    IEnumerable breakCo()
-    {
-        yield return new WaitForSeconds(.3f);
-        this.gameObject.SetActive(false);
-    }
+   
        
     
 }
