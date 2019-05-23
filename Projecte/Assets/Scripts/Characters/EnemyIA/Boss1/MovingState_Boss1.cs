@@ -5,12 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Boss1State))]
 public class MovingState_Boss1 : Boss1State
 {
-    private enum Positions
+    public enum BossPositions
     {
         left, center, right
     }
 
-    private Positions position = Positions.center;
+    private BossPositions position = BossPositions.center;
 
     private int movementNumber;
     private bool finishedMoving = true;
@@ -35,17 +35,17 @@ public class MovingState_Boss1 : Boss1State
             finishedMoving = false;
         }
 
-        switch ((Positions)movementNumber)
+        switch ((BossPositions)movementNumber)
         {
-            case Positions.left: //0
+            case BossPositions.left: //0
 
-                if (position != Positions.left)
+                if (position != BossPositions.left)
                 {
                     rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, p1.transform.position, boss.speedInterpolation);
 
                     if (rb2d.transform.position.x - p1.transform.position.x < 0.1f)
                     {
-                        position = Positions.left;
+                        position = BossPositions.left;
                         finishedMoving = true;
                     }
                 }
@@ -53,14 +53,14 @@ public class MovingState_Boss1 : Boss1State
                     finishedMoving = true;
                 break;
 
-            case Positions.center: //1
-                if (position != Positions.center)
+            case BossPositions.center: //1
+                if (position != BossPositions.center)
                 {
                     rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, p2.transform.position, boss.speedInterpolation);
 
-                    if ((rb2d.transform.position.x - p2.transform.position.x > -0.1f && position == Positions.left) || (rb2d.transform.position.x - p2.transform.position.x < 0.1f && position == Positions.right))
+                    if ((rb2d.transform.position.x - p2.transform.position.x > -0.1f && position == BossPositions.left) || (rb2d.transform.position.x - p2.transform.position.x < 0.1f && position == BossPositions.right))
                     {
-                        position = Positions.center;
+                        position = BossPositions.center;
                         finishedMoving = true;
                     }
                 }
@@ -68,15 +68,15 @@ public class MovingState_Boss1 : Boss1State
                     finishedMoving = true;
                 break;
 
-            case Positions.right: //2
+            case BossPositions.right: //2
                 
-                if(position != Positions.right)
+                if(position != BossPositions.right)
                 {
                     rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, p3.transform.position, boss.speedInterpolation);
 
                     if(rb2d.transform.position.x - p3.transform.position.x > -0.1f)
                     {
-                        position = Positions.right;
+                        position = BossPositions.right;
                         finishedMoving = true;
                     }
                 }
@@ -90,7 +90,7 @@ public class MovingState_Boss1 : Boss1State
     {
         if (!attacking)
         {
-            switch (Random.Range(0, 2))
+            switch (Random.Range(0, 3))
             {
                 case 0:
                     GetComponent<Attack1State_Boss1>().enabled = true;
@@ -99,6 +99,11 @@ public class MovingState_Boss1 : Boss1State
 
                 case 1:
                     GetComponent<Attack2State_Boss1>().enabled = true;
+                    attacking = true;
+                    break;
+                    
+                case 2:
+                    GetComponent<Attack3State_Boss1>().enabled = true;
                     attacking = true;
                     break;
             }

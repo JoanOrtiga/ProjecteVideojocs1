@@ -5,11 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : PlayerState
 {
-   // private float force = 70f;
-   // private float speed = 4f;
-
     // Start is called before the first frame update
     void Start()
+    {
+        currentState = PlayerStates.idle;
+    }
+
+    private void OnEnable()
     {
         currentState = PlayerStates.idle;
     }

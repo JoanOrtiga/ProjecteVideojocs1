@@ -8,13 +8,11 @@ public class PlayerFlash : PlayerState
 {
     private Color saveShadowColor;
 
-    private bool flash;
+    [HideInInspector] public bool flash;
 
     private void OnEnable()
     {
-        currentState = PlayerStates.idle;
-
-
+        currentState = PlayerStates.flash;
         flash = true;
         sprPlayer.color = new Color(1, 1, 1, 0.1f);
         saveShadowColor = sprShadow.color;
