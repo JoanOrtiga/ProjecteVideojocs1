@@ -41,7 +41,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: 'HitBox Player/up  hit box '
+    path: Box colider Player/up hit box player
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
@@ -68,7 +68,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1671841063
+      path: 1409305674
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -133,7 +133,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: 'HitBox Player/up  hit box '
+    path: Box colider Player/up hit box player
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
