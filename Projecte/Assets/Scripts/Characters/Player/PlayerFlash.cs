@@ -10,13 +10,11 @@ public class PlayerFlash : PlayerState
 
     private bool flash;
 
-    void Start()
-    {
-        currentState = PlayerStates.idle;
-    }
-
     private void OnEnable()
     {
+        currentState = PlayerStates.idle;
+
+
         flash = true;
         sprPlayer.color = new Color(1, 1, 1, 0.1f);
         saveShadowColor = sprShadow.color;
