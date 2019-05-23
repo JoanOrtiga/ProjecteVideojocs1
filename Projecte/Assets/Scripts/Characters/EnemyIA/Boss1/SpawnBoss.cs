@@ -9,7 +9,13 @@ public class SpawnBoss : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(boss1, new Vector2(-8.01f, 40.15f), collision.transform.rotation);
-        Destroy(gameObject);
+        if (collision.GetComponent<PlayPickupRelicInvetory>().relic0 == true &&
+            collision.GetComponent<PlayPickupRelicInvetory>().relic1 == true &&
+            collision.GetComponent<PlayPickupRelicInvetory>().relic2 == true)
+        {
+            Instantiate(boss1, new Vector2(-8.01f, 40.15f), collision.transform.rotation);
+            Destroy(gameObject);
+        }
     }
+        
 }
