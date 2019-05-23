@@ -9,6 +9,5 @@ public class CharacterState : MonoBehaviour
     virtual public void InitState()
     {
 
-    }
-   
+    }   
 }

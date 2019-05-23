@@ -6,4 +6,6 @@ public class CharacterModel : ScriptableObject
 {
     [Header("Character HP")]
     public float _health;
+    public float _speed;
+    public float _power;
 }
