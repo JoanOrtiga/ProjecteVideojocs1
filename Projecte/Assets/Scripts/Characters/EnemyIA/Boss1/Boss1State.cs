@@ -6,9 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Boss1State : CharacterState
 {
-
     protected Transform p1, p2, p3;
-
     protected Rigidbody2D rb2d;
     protected Boss1Model boss;
 
