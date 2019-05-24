@@ -55,54 +55,32 @@ public class PlayerShoot : PlayerState
 
     private void fatherUI()
     {
-        if (ammunitionAtTheTime == 5)
-        { 
-            feathers[0].enabled = true;
-            feathers[1].enabled = true;
-            feathers[2].enabled = true;
-            feathers[3].enabled = true;
-            feathers[4].enabled = true;
-        }
-        else if (ammunitionAtTheTime == 4)
+        switch (ammunitionAtTheTime)
         {
-            feathers[0].enabled = true;
-            feathers[1].enabled = true;
-            feathers[2].enabled = true;
-            feathers[3].enabled = true;
-            feathers[4].enabled = false;
-        }
-        else if (ammunitionAtTheTime == 3)
-        {
-            feathers[0].enabled = true;
-            feathers[1].enabled = true;
-            feathers[2].enabled = true;
-            feathers[3].enabled = false;
-            feathers[4].enabled = false;
-        }
-        else if (ammunitionAtTheTime == 2)
-        {
-
-            feathers[0].enabled = true;
-            feathers[1].enabled = true;
-            feathers[2].enabled = false;
-            feathers[3].enabled = false;
-            feathers[4].enabled = false;
-        }
-        else if (ammunitionAtTheTime == 1)
-        {
-            feathers[0].enabled = true;
-            feathers[1].enabled = false;
-            feathers[2].enabled = false;
-            feathers[3].enabled = false;
-            feathers[4].enabled = false;
-        }
-        else if (ammunitionAtTheTime == 0)
-        {
-            feathers[0].enabled = false;
-            feathers[1].enabled = false;
-            feathers[2].enabled = false;
-            feathers[3].enabled = false;
-            feathers[4].enabled = false; 
+            case 5:
+                feathers[4].enabled = true;
+                break;
+            case 4:
+                feathers[3].enabled = true;
+                feathers[4].enabled = false;
+                break;
+            case 3:
+                feathers[2].enabled = true;
+                feathers[3].enabled = false;
+                break;
+            case 2:
+                feathers[1].enabled = true;
+                feathers[2].enabled = false;
+                break;
+            case 1:
+                feathers[0].enabled = true;
+                feathers[1].enabled = false;
+                break;
+            case 0:
+                feathers[0].enabled = false;
+                break;
         }
     }
+
+
 }

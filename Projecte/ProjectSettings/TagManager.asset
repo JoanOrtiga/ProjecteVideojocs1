@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BackgroundScroller
   - breakable
   - Reliquia
+  - Enemy
   layers:
   - Default
   - TransparentFX
