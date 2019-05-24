@@ -380,26 +380,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flowers_17
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 107
-        width: 96
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b96dece0fc676441a732a5356b5eaae
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: flowers_18
       rect:
         serializedVersion: 2
