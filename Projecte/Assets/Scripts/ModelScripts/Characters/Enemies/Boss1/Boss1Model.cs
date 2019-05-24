@@ -7,7 +7,7 @@ public class Boss1Model : CharacterModel
 {
     public float speedInterpolation = 0.04f;
 
-    public float attackSpikesDmg;
-    public float attackFireBallDmg;
-    public float attackLaserDmg;
+    public float attack1Dmg;
+    public float attack2Dmg;
+    public float attack3Dmg;
 }

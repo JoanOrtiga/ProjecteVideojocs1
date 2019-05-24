@@ -15,8 +15,10 @@ public class SpikesAttack : MonoBehaviour
     SpriteRenderer spikesSR;
     Vector2 finishPoint;
 
+    // Use this for initialization
     void Start()
     {
+
         spikesT = GetComponentsInChildren<Transform>()[1];
         spikesSR = GetComponentsInChildren<SpriteRenderer>()[1];
 
@@ -45,12 +47,15 @@ public class SpikesAttack : MonoBehaviour
         spikesSR.color = new Color(spikesSR.color.r, spikesSR.color.g, spikesSR.color.b, 1f);
         up = true;
 
+        //HERE GOES FUNCTION THAT DAMAGES PLAYER
+
         yield return new WaitForSeconds(timeToDestroy);
 
         Destroy(gameObject);
 
     }
-    
+
+    // Update is called once per frame
     void Update()
     {
         if (up)
@@ -58,22 +63,5 @@ public class SpikesAttack : MonoBehaviour
             spikesT.position = Vector2.Lerp(spikesT.position, finishPoint, 0.2f);
         }
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && up)
-        {
-            GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackSpikesDmg);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && up)
-        {
-            GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackSpikesDmg);
-            print("Player");
-        }
     }
 }

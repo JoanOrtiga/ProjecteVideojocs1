@@ -11,20 +11,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3907a07be9473644f959b7d499b114be, type: 3}
   m_Name: PlayerModel
   m_EditorClassIdentifier: 
-  _health: 200
-  _speed: 0
-  _power: 0
+  _health: 100
   speed: 4
   force: 70
-  power: 20
-  range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 0.5470355
+  timeForFlash: 41.70092
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5
-  ArrowPrefab: {fileID: 1657678894118296, guid: 8d6908bb2e768884b87adaa0b79cff76,
+  ArrowPrefab: {fileID: 1114481113639776, guid: 8d6908bb2e768884b87adaa0b79cff76,
     type: 2}
+  feathers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   shootVelocity: 15
   maximumAmunition: 5
   timeToRecharge: 1

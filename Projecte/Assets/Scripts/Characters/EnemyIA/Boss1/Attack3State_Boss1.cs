@@ -16,14 +16,14 @@ public class Attack3State_Boss1 : AttackingState
     {
         GetComponentInChildren<LaserAttack>().enabled = true;
         GetComponentsInChildren<SpriteRenderer>()[1].enabled = true;
-        GetComponentsInChildren<Collider2D>()[1].enabled = true;
+        GetComponentsInChildren<Collider2D>()[0].enabled = true;
         
         yield return new WaitForSeconds(time1);
 
 
         GetComponentInChildren<LaserAttack>().enabled = false;
         GetComponentsInChildren<SpriteRenderer>()[1].enabled = false;
-        GetComponentsInChildren<Collider2D>()[1].enabled = false;
+        GetComponentsInChildren<Collider2D>()[0].enabled = false;
 
         yield return new WaitForSeconds(time2);
 
