@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212147181282179772}
   - component: {fileID: 95969462664133396}
   m_Layer: 0
-  m_Name: BAT ENEMIES
+  m_Name: BatPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
