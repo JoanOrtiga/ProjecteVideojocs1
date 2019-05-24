@@ -17,8 +17,8 @@ public class Boss1State : CharacterState
         boss = GameManager.instance.boss1_model;
         rb2d = GetComponent<Rigidbody2D>();
 
-        base.health = boss._health;
-        base.initialHealth = boss._health;
+        base.health = boss.health;
+        base.initialHealth = boss.health;
     }
 
     void Start()

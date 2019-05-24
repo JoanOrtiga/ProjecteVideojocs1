@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objecrDestroyer : MonoBehaviour {
+public class objectDestroyer : MonoBehaviour {
 
     private Animator anim;
 
@@ -10,12 +10,7 @@ public class objecrDestroyer : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+
 
     public void Smash()
     {

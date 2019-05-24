@@ -4,34 +4,12 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private GameObject[] _enemies;
-    PlayerModel _player;
-
-    // Use this for initialization
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        _player = GameManager.instance.playerModel;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (Input.GetButtonDown("Fire1"))
+        if (collision.gameObject.tag == "Enemy")
         {
-            Attack();
+            collision.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.power);
+            Destroy(gameObject);
         }
-    }
-
-    private void Attack()
-    {
-        foreach (GameObject enemy in _enemies)
-        {
-            if (Vector3.Distance(this.transform.position, enemy.transform.position) <= _player.range)
-            {
-                enemy.GetComponent<EnemyScript>().SetHealth(-_player.power);
-            }
-        }
-        return;
     }
 }

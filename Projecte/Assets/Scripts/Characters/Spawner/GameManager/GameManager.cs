@@ -8,21 +8,8 @@ public class GameManager : MonoBehaviour {
 
     public Boss1Model boss1_model;
     public PlayerModel playerModel;
-
-    
-    public SkeletonModel skeletonModel;
-
-    /*
-    public TrunkModel trunkModel;
-    public SpiderModel spiderModel;
-    public BatModel batModel;
-    public SwampModel swampModel;
-    public VampireModel vampireModel;
-    public Devil1Model devil1Model;
-    public Devil2Model devil2Model;
-    public Devil3Model devil3Model;
-    public WarriorModel warriorModel;
-    public MagicianModel magicianModel;*/
+  
+   // public SkeletonModel skeletonModel;
 
     public class SaveGame
     {
@@ -44,7 +31,7 @@ public class GameManager : MonoBehaviour {
                 Destroy(gameObject);
         }
 
-        saveGame.playerHealt = playerModel._health;
+        saveGame.playerHealt = playerModel.health;
     }
 
     public void playerGetDmg(float dmgRecieved)

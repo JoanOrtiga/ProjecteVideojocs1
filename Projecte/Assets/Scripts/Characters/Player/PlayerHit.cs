@@ -10,7 +10,7 @@ public class PlayerHit : MonoBehaviour
     {
         if (other.CompareTag("breakable"))
         {   
-            other.GetComponent<objecrDestroyer>().Smash();
+            other.GetComponent<objectDestroyer>().Smash();
         }
 
         if (other.CompareTag("Enemy") && !damaged) 

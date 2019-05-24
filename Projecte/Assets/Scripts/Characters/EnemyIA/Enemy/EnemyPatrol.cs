@@ -13,7 +13,7 @@ public class EnemyPatrol : EnemyState
 
     private void Update()
     {
-        if(Vector2.Distance((Vector2)this.transform.position,dirPoint) <= 0.5f)
+        if(Vector2.Distance((Vector2)rb2D.transform.position,dirPoint) <= 0.5f)
         {
             atorSke.SetBool("Walking", false);
             newPoint();
@@ -23,15 +23,14 @@ public class EnemyPatrol : EnemyState
     private void FixedUpdate()
     {   
         
-        this.transform.position = Vector2.MoveTowards(this.transform.position, dirPoint, enemy._speed);      
+        this.transform.position = Vector2.MoveTowards(rb2D.transform.position, dirPoint, enemy.speed);      
 
     }
 
     private void newPoint()
     {
-        dirPoint = Random.insideUnitCircle * 5f + (Vector2)this.transform.position;
-        print(dirPoint);
-        //atorSke.SetBool("Walking", true);
+        dirPoint = Random.insideUnitCircle * 5f + (Vector2)rb2D.transform.position;
+        atorSke.SetBool("Walking", true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
