@@ -10,13 +10,15 @@ public class Boss1State : CharacterState
     protected Rigidbody2D rb2d;
     protected Boss1Model boss;
 
-    public bool attacking = false;
+    [HideInInspector] public bool attacking = false;
+
+    protected float health;
 
     private void Awake()
     {
         boss = GameManager.instance.boss1_model;
-
         rb2d = GetComponent<Rigidbody2D>();
+        health = boss._health;
     }
 
     // Use this for initialization

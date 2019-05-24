@@ -10,17 +10,17 @@ public class GameManager : MonoBehaviour {
     public PlayerModel playerModel;
     public EnemyModel exempleEnemy1; //Desde el enemy accedeixes amb GameManager.instance.exempleEnemy1;  /// Exemple al player.
 
-    public TrunkModel trunkModel;
-    public SpiderModel spiderModel;
-    public BatModel batModel;
-    public SkeletonModel skeletonModel;
-    public SwampModel swampModel;
-    public VampireModel vampireModel;
-    public Devil1Model devil1Model;
-    public Devil2Model devil2Model;
-    public Devil3Model devil3Model;
-    public WarriorModel warriorModel;
-    public MagicianModel magicianModel;
+    public EnemyModel trunkModel;
+    public EnemyModel spiderModel;
+    public EnemyModel batModel;
+    public EnemyModel skeletonModel;
+    public EnemyModel swampModel;
+    public EnemyModel vampireModel;
+    public EnemyModel devil1Model;
+    public EnemyModel devil2Model;
+    public EnemyModel devil3Model;
+    public EnemyModel warriorModel;
+    public EnemyModel magicianModel;
 
     public class SaveGame
     {
