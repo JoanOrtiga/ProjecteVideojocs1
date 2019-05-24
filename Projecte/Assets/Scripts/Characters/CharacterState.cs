@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterState : MonoBehaviour
 {
     public bool IsDefaultState = false;
 
-    public float health { get; set; }
+    protected float health;
+
+    protected float initialHealth;
 
     virtual public void InitState()
     {
@@ -16,10 +19,13 @@ public class CharacterState : MonoBehaviour
     public void recieveDmg(float damage)
     {
         health -= damage;
-        print("BOSS: " + health);
+
         if (health < 0)
         {
             Destroy(gameObject);
         }
+
+        if(GetComponentsInChildren<Image>().Length == 2)
+            GetComponentsInChildren<Image>()[1].fillAmount = health / initialHealth;
     }
 }

@@ -18,6 +18,7 @@ public class Boss1State : CharacterState
         rb2d = GetComponent<Rigidbody2D>();
 
         base.health = boss._health;
+        base.initialHealth = boss._health;
     }
 
     void Start()

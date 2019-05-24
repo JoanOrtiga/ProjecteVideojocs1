@@ -15,6 +15,6 @@ MonoBehaviour:
   _speed: 0
   _power: 0
   speedInterpolation: 0.05
-  attack1Dmg: 0
-  attack2Dmg: 0
-  attack3Dmg: 0
+  attackSpikesDmg: 10
+  attackFireBallDmg: 10
+  attackLaserDmg: 10

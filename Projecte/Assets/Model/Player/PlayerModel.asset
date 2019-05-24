@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3907a07be9473644f959b7d499b114be, type: 3}
   m_Name: PlayerModel
   m_EditorClassIdentifier: 
-  _health: 100
+  _health: 200
   _speed: 0
   _power: 0
   speed: 4
@@ -19,7 +19,7 @@ MonoBehaviour:
   power: 20
   range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 225.6951
+  timeForFlash: 0.5470355
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5

@@ -43,12 +43,14 @@ public class GameManager : MonoBehaviour {
             if(instance != this)
                 Destroy(gameObject);
         }
+
+        saveGame.playerHealt = playerModel._health;
     }
 
     public void playerGetDmg(float dmgRecieved)
     {
         saveGame.playerHealt -= dmgRecieved;
-        print(saveGame.playerHealt);
+        print("Player: " + saveGame.playerHealt);
     }
 
     public void playerHpUp(float healtIncreased)

@@ -67,4 +67,13 @@ public class SpikesAttack : MonoBehaviour
             GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackSpikesDmg);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && up)
+        {
+            GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackSpikesDmg);
+            print("Player");
+        }
+    }
 }
