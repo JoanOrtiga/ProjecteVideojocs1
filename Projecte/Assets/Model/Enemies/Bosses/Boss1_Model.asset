@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ddd82aa709cb347ba3527a58a11ce1, type: 3}
   m_Name: Boss1_Model
   m_EditorClassIdentifier: 
-  _health: 0
+  _health: 500
+  _speed: 0
+  _power: 0
   speedInterpolation: 0.05
-  attack1Dmg: 0
-  attack2Dmg: 0
-  attack3Dmg: 0
+  attackSpikesDmg: 10
+  attackFireBallDmg: 10
+  attackLaserDmg: 10

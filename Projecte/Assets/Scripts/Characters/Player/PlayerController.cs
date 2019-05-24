@@ -19,7 +19,7 @@ public class PlayerController : PlayerState
     // Update is called once per frame
     void Update()
     {
-        playerModel.timeForFlash  = Time.deltaTime + playerModel.timeForFlash;
+        playerModel.timeForFlash = Time.deltaTime + playerModel.timeForFlash;
 
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
@@ -57,8 +57,8 @@ public class PlayerController : PlayerState
 
     private void FixedUpdate()
     {
-            rb2D.AddForce(new Vector2(h, v) * playerModel.force);
-            rb2D.velocity = new Vector2(h, v) * Mathf.Clamp(rb2D.velocity.magnitude, -playerModel.speed, playerModel.speed);
+        rb2D.AddForce(new Vector2(h, v) * playerModel.force);
+        rb2D.velocity = new Vector2(h, v) * Mathf.Clamp(rb2D.velocity.magnitude, -playerModel.speed, playerModel.speed);
     }
 
     private void LateUpdate()

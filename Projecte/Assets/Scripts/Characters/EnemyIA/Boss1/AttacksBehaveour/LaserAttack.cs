@@ -11,8 +11,7 @@ public class LaserAttack : MonoBehaviour {
         {
             if (collision.GetComponent<PlayerFlash>().flash != true)
             {
-                //dmgPlyr;
-                print("DMG");
+                GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackLaserDmg);
             }
         }
     }
@@ -23,8 +22,7 @@ public class LaserAttack : MonoBehaviour {
         {
             if (collision.GetComponent<PlayerFlash>().flash != true)
             {
-                print("DM");
-                //dmgPlyr;
+                GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackLaserDmg * Time.deltaTime);
             }
         }
     }
