@@ -8,15 +8,72 @@ public class PlayerShoot : PlayerState
 {
     private int ammunitionAtTheTime = 5;
     private float timePast = 0;
+    private float rechargeTimePowerUpPast = 30f;
+    public float powerUpTime;
+    public float rechargeTimePower = 30f;
+    private float powerUpTimePast = 0;
+
+
 
     public Image[] feathers;
 
-	// Update is called once per frame
-	void Update ()
+    public Image PUFeatherActive;
+    public Image PUFeatherNotActive;
+    public Image PUFeatherAvailable;
+
+    private void Start()
+    {
+        powerUpTime = 5;
+        rechargeTimePowerUpPast = 0;
+        rechargeTimePowerUpPast = 30;
+
+        PUFeatherAvailable.enabled = true;
+        PUFeatherNotActive.enabled = true;
+        PUFeatherActive.enabled = false;
+
+    }
+    // Update is called once per frame
+    void Update ()
     {
         Aim();
         Reacharge();
         fatherUI();
+        PowerUpFeather();
+    }
+
+
+    private void PowerUpFeather()
+    {
+        rechargeTimePowerUpPast = rechargeTimePowerUpPast + Time.deltaTime;
+        powerUpTimePast = powerUpTimePast + Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.E) && rechargeTimePowerUpPast >= rechargeTimePower)
+        {
+            Debug.Log("DAÑO EAUEMNTADO");
+            powerUpTimePast = 0;
+            rechargeTimePowerUpPast = 0;
+            PUFeatherActive.enabled = true;
+            //daño ++
+          
+        }
+        if (powerUpTimePast >= powerUpTime)
+        {
+            if (rechargeTimePowerUpPast>= rechargeTimePower)
+            {
+                Debug.Log("PUEDES VOVLER A USAR");
+                PUFeatherAvailable.enabled = true;
+                PUFeatherNotActive.enabled = false;
+            }
+            else 
+            {
+                Debug.Log("TOCA ESPERAR");
+                PUFeatherActive.enabled = false;
+                PUFeatherAvailable.enabled = false;
+                PUFeatherNotActive.enabled = true;
+            }
+            
+            //daño original
+        }
     }
 
     private void Aim()
@@ -55,6 +112,10 @@ public class PlayerShoot : PlayerState
 
     private void fatherUI()
     {
+       
+
+
+
         switch (ammunitionAtTheTime)
         {
             case 5:
