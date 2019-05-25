@@ -18,8 +18,6 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
         relic[0].enabled = false;
         relic[1].enabled = false;
         relic[2].enabled = false;
-
-       
     }
 	
 	// Update is called once per frame

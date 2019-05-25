@@ -12,16 +12,15 @@ public class Boss1State : CharacterState
 
     [HideInInspector] public bool attacking = false;
 
-    protected float health;
-
     private void Awake()
     {
         boss = GameManager.instance.boss1_model;
         rb2d = GetComponent<Rigidbody2D>();
-        health = boss._health;
+
+        base.health = boss.health;
+        base.initialHealth = boss.health;
     }
 
-    // Use this for initialization
     void Start()
     {
         GetComponent<MovingState_Boss1>().enabled = true;

@@ -8,8 +8,6 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "PlayerModel", menuName = "Models/Characters/Player")]
 public class PlayerModel : CharacterModel
 {
-    //[Tooltip("This is THE VALUE!")]
-
     //PlayerController
     [Header("Player Controller")]
     [Range(0f, 20f)] public float speed = 4f;
