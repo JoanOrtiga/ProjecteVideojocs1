@@ -11,7 +11,7 @@ public class LaserAttack : MonoBehaviour {
         {
             if (collision.GetComponent<PlayerFlash>().flash != true)
             {
-                GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackLaserDmg);
+                collision.GetComponent<PlayerState>().getDmg(GameManager.instance.boss1_model.attackLaserDmg);
             }
         }
     }
@@ -22,7 +22,8 @@ public class LaserAttack : MonoBehaviour {
         {
             if (collision.GetComponent<PlayerFlash>().flash != true)
             {
-                GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackLaserDmg * Time.deltaTime);
+                collision.GetComponent<PlayerState>().getDmg(GameManager.instance.boss1_model.attackLaserDmg * Time.deltaTime);
+
             }
         }
     }
