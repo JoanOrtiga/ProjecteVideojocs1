@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114988982302371678}
   m_Layer: 0
   m_Name: TumbaDestroyer 1
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5eb3b263d10f448ae7fc000c355bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 1286351587995970, guid: 61a68223f677c054aa5f1a1860538c79, type: 2}
+  Enemy: {fileID: 1495634222485618, guid: c32b2d5a87d891449b51334bde1481db, type: 2}
   maxNumberOfEnemy: 4
 --- !u!212 &212398320415583364
 SpriteRenderer:
