@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     // public SkeletonModel skeletonModel;
 
 
-    public float featherDmg;
+    [HideInInspector] public float featherDmg;
 
     public class SaveGame
     {

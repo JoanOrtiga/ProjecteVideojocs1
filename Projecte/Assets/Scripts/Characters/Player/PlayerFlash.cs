@@ -72,7 +72,6 @@ public class PlayerFlash : PlayerState
     {
         if (!flash)
         {
-            GetComponent<TrailRenderer>().emitting = false;
             GetComponent<PlayerController>().enabled = true;
             this.enabled = false;
         }

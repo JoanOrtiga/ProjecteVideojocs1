@@ -13,6 +13,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 600
   speedInterpolation: 0.05
-  attackSpikesDmg: 10
   attackFireBallDmg: 10
+  ballSpeed: 20
+  timeBetweenFireBall: 0.4
+  CooldownFireball: 3
+  attackSpikesDmg: 10
+  timeBetweenSpikes: 0.05
+  Cooldown: 3
+  radius: 17
+  center: {x: -8.33, y: 26.89}
   attackLaserDmg: 10
+  laserTime: 3
+  CooldownLaser: 3

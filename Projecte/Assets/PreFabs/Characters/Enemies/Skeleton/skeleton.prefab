@@ -213,6 +213,7 @@ MonoBehaviour:
   enemyName: Skeleton
   baseAttack: 1
   moveSpeed: 4
+  healthOnDeath: 20
   target: {fileID: 0}
   chaseRadius: 5
   attackRedius: 1

@@ -8,9 +8,9 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
 
     public Image[] relic;
 
-    public bool relic0 = false;
-    public bool relic1 = false;
-    public bool relic2 = false;
+    [HideInInspector] public bool relic0 = false;
+    [HideInInspector] public bool relic1 = false;
+    [HideInInspector] public bool relic2 = false;
 
 
     // Use this for initialization

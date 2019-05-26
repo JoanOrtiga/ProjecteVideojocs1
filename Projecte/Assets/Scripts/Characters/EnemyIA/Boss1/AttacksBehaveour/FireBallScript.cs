@@ -6,8 +6,6 @@ public class FireBallScript : MonoBehaviour
     Vector2 playerPosition;
     Rigidbody2D rb2d;
 
-    private float speed = 20f;
-
     void Start()
     {
         playerPosition = (Vector2)GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>().transform.position - (Vector2)transform.position;
@@ -19,8 +17,8 @@ public class FireBallScript : MonoBehaviour
 
     void Update()
     {
-        rb2d.AddForce(playerPosition * speed, ForceMode2D.Impulse);
-        rb2d.velocity = playerPosition * speed;
+        rb2d.AddForce(playerPosition * GameManager.instance.boss1_model.ballSpeed, ForceMode2D.Impulse);
+        rb2d.velocity = playerPosition * GameManager.instance.boss1_model.ballSpeed;
        
         Destroy(this.gameObject, 2.2f);
     }

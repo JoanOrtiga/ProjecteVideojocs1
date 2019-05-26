@@ -10,7 +10,7 @@ public class PlayerShoot : PlayerState
     private float timePast = 0;
     private float rechargeTimePowerUpPast = 30f;
     public float powerUpTime;
-    public float rechargeTimePower = 30f;
+
     private float powerUpTimePast = 0;
 
 
@@ -47,7 +47,7 @@ public class PlayerShoot : PlayerState
         rechargeTimePowerUpPast = rechargeTimePowerUpPast + Time.deltaTime;
         powerUpTimePast = powerUpTimePast + Time.deltaTime;
 
-        if (Input.GetButton("PowerUp1") && rechargeTimePowerUpPast >= rechargeTimePower)
+        if (Input.GetButton("PowerUp1") && rechargeTimePowerUpPast >= playerModel.rechargeTimePower)
         {
             powerUpTimePast = 0;
             rechargeTimePowerUpPast = 0;
@@ -58,7 +58,7 @@ public class PlayerShoot : PlayerState
 
         if (powerUpTimePast >= powerUpTime)
         {
-            if (rechargeTimePowerUpPast>= rechargeTimePower)
+            if (rechargeTimePowerUpPast>= playerModel.rechargeTimePower)
             {
                 PUFeatherAvailable.enabled = true;
                 PUFeatherNotActive.enabled = false;

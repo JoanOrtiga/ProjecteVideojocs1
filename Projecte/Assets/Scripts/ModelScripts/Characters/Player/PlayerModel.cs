@@ -23,7 +23,7 @@ public class PlayerModel : CharacterModel
     [Range(0f, 20f)] public float speedFlash = 10f;
     [Range(0f, 100f)] public float forceFlash = 100f;
     public float flashTime = 0.5f;
-
+    public float rechargeTimePower = 30f;
     //PlayerShoot
     [Header("Player Shoot")]
 

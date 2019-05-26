@@ -7,19 +7,25 @@ public class EnemySkeleton : CharacterState
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public float healthOnDeath;
 
 
     private Rigidbody2D myRigidbody;
-    public Transform target;
+    private  Transform target;
     public float chaseRadius;
     public float attackRedius;
-    public Transform homePosition;
-    public Animator anim;
+    private Transform homePosition;
+    private Animator anim;
 
     private void Awake()
     {
         base.health = 100f;
         base.initialHealth = 100f;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.playerHpUp(healthOnDeath);
     }
 
     // Use this for initialization
