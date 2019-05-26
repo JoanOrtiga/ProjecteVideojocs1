@@ -9,9 +9,9 @@ public class EnemyChase : EnemyState
 
     private void Update()
     {
-        if (dirPoint !=null)
+        if (dirPoint != null)
         {
-            this.transform.position = Vector2.MoveTowards(this.transform.position, dirPoint, enemy.chaseSpeed);
+            transform.position = Vector2.MoveTowards(this.transform.position, dirPoint, enemy.chaseSpeed);
         }       
     }
 
