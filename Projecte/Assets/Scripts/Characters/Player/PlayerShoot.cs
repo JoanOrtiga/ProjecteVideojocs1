@@ -49,11 +49,10 @@ public class PlayerShoot : PlayerState
 
         if (Input.GetButton("PowerUp1") && rechargeTimePowerUpPast >= rechargeTimePower)
         {
-            Debug.Log("DAÑO EAUEMNTADO");
             powerUpTimePast = 0;
             rechargeTimePowerUpPast = 0;
             PUFeatherActive.enabled = true;
-            //daño ++
+
             GameManager.instance.featherDmg = playerModel.featherPowered;
         }
 
@@ -61,13 +60,11 @@ public class PlayerShoot : PlayerState
         {
             if (rechargeTimePowerUpPast>= rechargeTimePower)
             {
-                Debug.Log("PUEDES VOVLER A USAR");
                 PUFeatherAvailable.enabled = true;
                 PUFeatherNotActive.enabled = false;
             }
             else 
             {
-                Debug.Log("TOCA ESPERAR");
                 PUFeatherActive.enabled = false;
                 PUFeatherAvailable.enabled = false;
                 PUFeatherNotActive.enabled = true;

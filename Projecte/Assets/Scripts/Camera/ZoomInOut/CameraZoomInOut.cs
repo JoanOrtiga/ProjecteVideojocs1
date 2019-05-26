@@ -14,22 +14,9 @@ public class CameraZoomInOut : MonoBehaviour {
 
     private float normalZoom =  10f;
 
-    private float size;
-
     private void Start()
     {
         normalZoom = Camera.main.orthographicSize;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            if (zoomY)
-                size = GetComponent<Collider2D>().bounds.size.y;
-            else if (zoomX)
-                size = GetComponent<Collider2D>().bounds.size.x;
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -64,58 +51,78 @@ public class CameraZoomInOut : MonoBehaviour {
         }
     }
 
-
-
-    /*
-     * 
-     * ESTO ESTA WORK IN PROGRES. NUESTRA INTENCIÓN ES QUE SEGUN LA POSICIÓN DEL PLAYER DENTRO DEL TRIGGER, LA CAMARA TENGA UN ZOOM O OTRO.
-     * DEMOMENTO LO HEMOS HECHO FUNCIONAR A MEDIAS.
-     * 
-     */
-
-
     private void YZoom(Collider2D collision)
     {
         float interpolation_value;
 
-        if (Input.GetAxis("Vertical") > 0 && leftToRight_Or_DownToUp || Input.GetAxis("Vertical") < 0 && !leftToRight_Or_DownToUp)
+        if (leftToRight_Or_DownToUp)
         {
-            //interpolation_value = Mathf.Max(0, ((collision.transform.position.y - transform.position.y + size) / (transform.position.y - transform.position.y + size)) * (interpolationRange - 0) + 0);
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                interpolation_value = (Input.GetAxis("Vertical")) * 5f;
 
-            interpolation_value = (Input.GetAxis("Vertical")) * 5f;
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, zoomOut, Time.deltaTime * interpolation_value);
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                interpolation_value = (Input.GetAxis("Vertical") * -1) * 5f;
 
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, zoomOut, Time.deltaTime * interpolation_value);
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, normalZoom, Time.deltaTime * interpolation_value);
+            }
         }
-        else if (Input.GetAxis("Vertical") < 0 && leftToRight_Or_DownToUp || Input.GetAxis("Vertical") > 0 && !leftToRight_Or_DownToUp) 
+        else
         {
-            //interpolation_value = (((collision.transform.position.y - transform.position.y) / (transform.position.y + size - transform.position.y)) * (interpolationRange - 0) + 0) * -1;
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                interpolation_value = (Input.GetAxis("Vertical")) * 5f;
 
-            interpolation_value = (Input.GetAxis("Vertical") * -1) * 5f;
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, normalZoom, Time.deltaTime * interpolation_value);
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                interpolation_value = (Input.GetAxis("Vertical") * -1) * 5f;
 
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, normalZoom, Time.deltaTime * interpolation_value);
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, zoomOut, Time.deltaTime * interpolation_value);
+            }
         }
+        
     }
 
     private void XZoom(Collider2D collision)
     {
         float interpolation_value;
 
-        if (Input.GetAxis("Horizontal") < 0 && leftToRight_Or_DownToUp || Input.GetAxis("Horizontal") < 0 && !leftToRight_Or_DownToUp)
+        if (leftToRight_Or_DownToUp)
         {
-            //  interpolation_value = ((collision.transform.position.x - transform.position.x + size) / (transform.position.x - transform.position.x + size)) * (interpolationRange - 0) + 0;
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                interpolation_value = (Input.GetAxis("Horizontal")) * 5f;
 
-            interpolation_value = (Input.GetAxis("Horizontal") * -1)  * 5f;
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, zoomOut, Time.deltaTime * interpolation_value);
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                interpolation_value = (Input.GetAxis("Horizontal") * -1) * 5f;
 
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, zoomOut, Time.deltaTime * interpolation_value);
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, normalZoom, Time.deltaTime * interpolation_value);
+            }
         }
-        else if (Input.GetAxis("Horizontal") > 0 && leftToRight_Or_DownToUp || Input.GetAxis("Horizontal") > 0 && !leftToRight_Or_DownToUp)
+        else
         {
-            //   interpolation_value = (((collision.transform.position.x - transform.position.x) / (transform.position.x + size - transform.position.x)) * (interpolationRange - 0) + 0) * -1;
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                interpolation_value = (Input.GetAxis("Horizontal")) * 5f;
 
-            interpolation_value = (Input.GetAxis("Horizontal")) * 5f;
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, normalZoom, Time.deltaTime * interpolation_value);
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                interpolation_value = (Input.GetAxis("Horizontal") * -1) * 5f;
 
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, normalZoom, Time.deltaTime * interpolation_value);
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, zoomOut, Time.deltaTime * interpolation_value);
+            }
         }
+
     }
 }
 
