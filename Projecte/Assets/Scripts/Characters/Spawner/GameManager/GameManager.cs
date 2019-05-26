@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -47,5 +48,10 @@ public class GameManager : MonoBehaviour {
     public void playerHpUp(float healtIncreased)
     {
         saveGame.playerHealt += healtIncreased;
+    }
+
+    public float getplayerHealth()
+    {
+        return saveGame.playerHealt;
     }
 }

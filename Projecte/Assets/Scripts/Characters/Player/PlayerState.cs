@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum PlayerStates
 {
@@ -30,5 +30,11 @@ public class PlayerState : CharacterState {
         sprShadow = transform.Find("Shadow").gameObject.GetComponent<SpriteRenderer>();
 
         animator = GetComponent<Animator>();
+    }
+
+    public void getDmg(float damageRecieved)
+    {
+        GameManager.instance.playerGetDmg(damageRecieved);
+        GetComponentsInChildren<Image>()[2].fillAmount = GameManager.instance.getplayerHealth() / playerModel.health;
     }
 }
