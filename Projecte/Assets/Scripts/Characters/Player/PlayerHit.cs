@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-    private bool damaged = false;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("breakable"))
@@ -13,15 +11,9 @@ public class PlayerHit : MonoBehaviour
             other.GetComponent<objectDestroyer>().Smash();
         }
 
-        if (other.CompareTag("Enemy") && !damaged)
+        if (other.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.swordDmg);
-            damaged = true;
+            other.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.swordDmg);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        damaged = false;
     }
 }

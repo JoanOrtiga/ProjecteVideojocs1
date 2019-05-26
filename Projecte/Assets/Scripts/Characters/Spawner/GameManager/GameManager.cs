@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour {
     public void playerGetDmg(float dmgRecieved)
     {
         saveGame.playerHealt -= dmgRecieved;
-        print("Player: " + saveGame.playerHealt);
     }
 
     public void playerHpUp(float healtIncreased)

@@ -14,13 +14,14 @@ MonoBehaviour:
   health: 400
   speed: 4
   force: 70
-  swordDmg: 30
+  swordDmg: 10
   range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 32.90693
+  timeForFlash: 74.0825
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5
+  rechargeTimePower: 30
   ArrowPrefab: {fileID: 1657678894118296, guid: 8d6908bb2e768884b87adaa0b79cff76,
     type: 2}
   arrowDmg: 20
@@ -28,4 +29,4 @@ MonoBehaviour:
   shootVelocity: 15
   maximumAmunition: 5
   timeToRecharge: 1
-  crossHair: {fileID: 1191158858068286, guid: fdc423d1c0138a94485f335cbdc773bd, type: 2}
+  crossHair: {fileID: 1032887642907118, guid: fdc423d1c0138a94485f335cbdc773bd, type: 2}
