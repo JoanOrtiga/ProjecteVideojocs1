@@ -19,12 +19,14 @@ public class CenterCamera : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        varGameObject.GetComponent<CameraDeathZoneController>().enabled = false;
+        if(collision.CompareTag("Player"))
+            varGameObject.GetComponent<CameraDeathZoneController>().enabled = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(myCollider.transform.position.x, myCollider.transform.position.y, Camera.main.transform.position.z), interpolation);
+        if (collision.CompareTag("Player"))
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(myCollider.transform.position.x, myCollider.transform.position.y, Camera.main.transform.position.z), interpolation);
     }
     
     private void OnTriggerExit2D(Collider2D collision)

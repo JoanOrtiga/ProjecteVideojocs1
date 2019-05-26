@@ -15,8 +15,11 @@ public class ShakeEffect : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        shakeDuration = 2f;
-        initialPosition = Camera.main.transform.localPosition;
+        if (collision.CompareTag("Player"))
+        {
+            shakeDuration = 2f;
+            initialPosition = Camera.main.transform.localPosition;
+        } 
     }
 
 
