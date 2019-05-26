@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3907a07be9473644f959b7d499b114be, type: 3}
   m_Name: PlayerModel
   m_EditorClassIdentifier: 
-  health: 0
+  health: 400
   speed: 4
   force: 70
   swordDmg: 30
   range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 211.39276
+  timeForFlash: 32.90693
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5

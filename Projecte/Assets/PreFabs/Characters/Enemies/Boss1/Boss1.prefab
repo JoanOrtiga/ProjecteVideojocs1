@@ -419,8 +419,8 @@ MonoBehaviour:
   IsDefaultState: 0
   attacking: 0
   spikes: {fileID: 1193813917509974, guid: d766bf0f83d53424d8df65a08195de3f, type: 2}
-  radius: 23
-  center: {x: -8.33, y: 26.89, z: 0}
+  radius: 17
+  center: {x: -8.33, y: 26.89}
 --- !u!114 &114796375479668540
 MonoBehaviour:
   m_ObjectHideFlags: 1

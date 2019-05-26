@@ -64,16 +64,7 @@ public class SpikesAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && up)
         {
-            GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackSpikesDmg);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && up)
-        {
-            GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackSpikesDmg);
-            print("Player");
+            collision.GetComponent<PlayerState>().getDmg(GameManager.instance.boss1_model.attackSpikesDmg);
         }
     }
 }
