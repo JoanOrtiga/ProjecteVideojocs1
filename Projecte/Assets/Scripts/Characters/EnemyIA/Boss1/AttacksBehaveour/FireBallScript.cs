@@ -29,7 +29,7 @@ public class FireBallScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameManager.instance.playerGetDmg(GameManager.instance.boss1_model.attackFireBallDmg);
+            collision.GetComponent<PlayerState>().getDmg(GameManager.instance.boss1_model.attackFireBallDmg);
             Destroy(gameObject);
         }
     }

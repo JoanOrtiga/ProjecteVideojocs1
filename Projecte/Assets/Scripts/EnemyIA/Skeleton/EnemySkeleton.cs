@@ -25,9 +25,6 @@ public class EnemySkeleton : CharacterState
     // Use this for initialization
     void Start ()
     {
-
-
-
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -52,7 +49,7 @@ public class EnemySkeleton : CharacterState
         }
         if (Vector3.Distance(target.position, transform.position) < attackRedius)
         {
-            Debug.Log("ATAKAN");
+            target.GetComponent<PlayerState>().getDmg(20 * Time.deltaTime);
             anim.SetBool("attaking", true);
         }
         else if (!(Vector3.Distance(target.position, transform.position) < attackRedius))
