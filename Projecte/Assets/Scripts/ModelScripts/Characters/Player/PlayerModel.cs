@@ -12,7 +12,7 @@ public class PlayerModel : CharacterModel
     [Header("Player Controller")]
     [Range(0f, 20f)] public float speed = 4f;
     [Range(0f, 100f)] public float force = 70f;
-    [Range(0f, 50f)] public float power = 20f;
+    public float swordDmg = 20f;
     [Range(0f, 20f)] public float range = 10f;
     [Range(0, 10f)] public float TimeBetweenFlash = 3f;
     public float timeForFlash = 5f;
@@ -28,7 +28,8 @@ public class PlayerModel : CharacterModel
     [Header("Player Shoot")]
 
     public GameObject ArrowPrefab;
-
+    public float arrowDmg = 20f;
+    public float featherPowered = 20f;
     public float shootVelocity = 15f;
     public float maximumAmunition = 5f;
     public float timeToRecharge = 1f;

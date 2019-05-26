@@ -51,7 +51,6 @@ public class PlayerController : PlayerState
         {
             animator.SetBool("attacking", false);
             currentState = PlayerStates.idle;
-
         }
     }
 

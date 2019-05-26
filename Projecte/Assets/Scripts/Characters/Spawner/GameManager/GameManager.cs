@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour {
 
     public Boss1Model boss1_model;
     public PlayerModel playerModel;
-  
-   // public SkeletonModel skeletonModel;
+
+    // public SkeletonModel skeletonModel;
+
+
+    public float featherDmg;
 
     public class SaveGame
     {
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour {
         }
 
         saveGame.playerHealt = playerModel.health;
+        featherDmg = playerModel.arrowDmg;
     }
 
     public void playerGetDmg(float dmgRecieved)

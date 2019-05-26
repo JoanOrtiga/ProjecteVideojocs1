@@ -9,13 +9,13 @@ public class PlayerHit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("breakable"))
-        {   
+        { 
             other.GetComponent<objectDestroyer>().Smash();
         }
 
-        if (other.CompareTag("Enemy") && !damaged) 
+        if (other.CompareTag("Enemy") && !damaged)
         {
-            other.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.power);
+            other.gameObject.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.swordDmg);
             damaged = true;
         }
     }
