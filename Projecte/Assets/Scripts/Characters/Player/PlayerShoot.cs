@@ -47,15 +47,16 @@ public class PlayerShoot : PlayerState
         rechargeTimePowerUpPast = rechargeTimePowerUpPast + Time.deltaTime;
         powerUpTimePast = powerUpTimePast + Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.E) && rechargeTimePowerUpPast >= rechargeTimePower)
+        if (Input.GetButton("PowerUp1") && rechargeTimePowerUpPast >= rechargeTimePower)
         {
             Debug.Log("DAÑO EAUEMNTADO");
             powerUpTimePast = 0;
             rechargeTimePowerUpPast = 0;
             PUFeatherActive.enabled = true;
             //daño ++
-          
+            GameManager.instance.featherDmg = playerModel.featherPowered;
         }
+
         if (powerUpTimePast >= powerUpTime)
         {
             if (rechargeTimePowerUpPast>= rechargeTimePower)
@@ -71,8 +72,8 @@ public class PlayerShoot : PlayerState
                 PUFeatherAvailable.enabled = false;
                 PUFeatherNotActive.enabled = true;
             }
-            
-            //daño original
+
+            GameManager.instance.featherDmg = playerModel.arrowDmg;
         }
     }
 

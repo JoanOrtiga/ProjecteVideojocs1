@@ -20,12 +20,11 @@ public class CharacterState : MonoBehaviour
     {
         health -= damage;
 
-        if (health < 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
 
-        if(GetComponentsInChildren<Image>().Length == 2)
-            GetComponentsInChildren<Image>()[1].fillAmount = health / initialHealth;
+        GetComponentsInChildren<Image>()[1].fillAmount = health / initialHealth;
     }
 }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySkeleton : MonoBehaviour
+public class EnemySkeleton : CharacterState
 {
-    public int health;
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
@@ -17,9 +16,18 @@ public class EnemySkeleton : MonoBehaviour
     public Transform homePosition;
     public Animator anim;
 
-	// Use this for initialization
-	void Start ()
+    private void Awake()
     {
+        base.health = 100f;
+        base.initialHealth = 100f;
+    }
+
+    // Use this for initialization
+    void Start ()
+    {
+
+
+
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
         myRigidbody = GetComponent<Rigidbody2D>();

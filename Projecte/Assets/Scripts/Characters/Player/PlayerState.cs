@@ -14,6 +14,8 @@ public class PlayerState : CharacterState {
     protected Rigidbody2D rb2D;
     protected Animator animator;
 
+    protected float featherPower;
+
     protected float h, v;
 
     protected PlayerStates currentState;
