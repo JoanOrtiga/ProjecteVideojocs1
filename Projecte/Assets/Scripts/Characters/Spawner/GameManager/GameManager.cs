@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour {
     public Boss1Model boss1_model;
     public PlayerModel playerModel;
 
-    public GameObject pauseMenu;
-
     // public SkeletonModel skeletonModel;
 
 
@@ -54,16 +52,5 @@ public class GameManager : MonoBehaviour {
     public float getplayerHealth()
     {
         return saveGame.playerHealt;
-    }
-
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Pause"))
-        {
-            // GameObject.FindGameObjectsWithTag
-            Time.timeScale = 0; //time general de tot el joc y poner event sismtem
-            pauseMenu.SetActive(true);
-        }
     }
 }

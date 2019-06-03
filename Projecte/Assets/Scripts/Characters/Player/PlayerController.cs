@@ -5,10 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : PlayerState
 {
+    public AudioClip attackSound;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         currentState = PlayerStates.idle;
+        source = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -45,6 +49,7 @@ public class PlayerController : PlayerState
         {
             animator.SetBool("attacking", true);
             currentState = PlayerStates.attack;
+            source.PlayOneShot(attackSound);
 
         }
         if (!(Input.GetButtonDown("Fire1")))

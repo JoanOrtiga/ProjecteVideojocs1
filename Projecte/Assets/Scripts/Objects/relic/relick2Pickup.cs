@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class relick2Pickup : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public AudioClip PickUpSound;
+    private AudioSource source;
+    // Use this for initialization
+    void Start ()
+    {
+        source = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+       
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,6 +24,8 @@ public class relick2Pickup : MonoBehaviour {
         {
             other.GetComponent<PlayPickupRelicInvetory>().relic2 = true;
             Destroy(gameObject);
+
+            source.PlayOneShot(PickUpSound);
         }
     }
 }

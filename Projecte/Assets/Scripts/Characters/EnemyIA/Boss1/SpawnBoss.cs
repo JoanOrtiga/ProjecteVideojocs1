@@ -20,6 +20,7 @@ public class SpawnBoss : MonoBehaviour
 
                 if (Input.GetButton("ActionKey"))
                 {
+                    PressF.enabled = false;
                     Instantiate(boss1, spawnPlace, collision.transform.rotation);
                     Destroy(gameObject);
                 }

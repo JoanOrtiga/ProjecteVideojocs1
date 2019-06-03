@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class relick0PickUp : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+
+    public AudioClip PickUpSound;
+    private AudioSource source;
+
+    // Use this for initialization
+    void Start ()
+    {
+        source = GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,6 +27,8 @@ public class relick0PickUp : MonoBehaviour {
             other.GetComponent<PlayPickupRelicInvetory>().relic0 = true;
             Destroy(gameObject);
 
+            
+            source.PlayOneShot(PickUpSound);
         }
     }
 }

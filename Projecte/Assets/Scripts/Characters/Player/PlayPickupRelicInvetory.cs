@@ -11,6 +11,8 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
     [HideInInspector] public bool relic0 = false;
     [HideInInspector] public bool relic1 = false;
     [HideInInspector] public bool relic2 = false;
+    
+
 
 
     // Use this for initialization
@@ -18,6 +20,7 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
         relic[0].enabled = false;
         relic[1].enabled = false;
         relic[2].enabled = false;
+
     }
 	
 	// Update is called once per frame

@@ -16,6 +16,7 @@ public class PlayerModel : CharacterModel
     [Range(0f, 20f)] public float range = 10f;
     [Range(0, 10f)] public float TimeBetweenFlash = 3f;
     public float timeForFlash = 5f;
+    
 
     //PlayerFlash
     [Header("Player Flash")]
