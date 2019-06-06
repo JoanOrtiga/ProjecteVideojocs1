@@ -55,6 +55,7 @@ public class EnemySkeleton : CharacterState
         }
         if (Vector3.Distance(target.position, transform.position) < attackRedius)
         {
+            Debug.Log("ATACANDOO");
             target.GetComponent<PlayerState>().getDmg(20 * Time.deltaTime);
             anim.SetBool("attaking", true);
         }
