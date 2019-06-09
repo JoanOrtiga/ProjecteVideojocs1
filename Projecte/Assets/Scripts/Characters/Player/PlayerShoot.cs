@@ -35,8 +35,6 @@ public class PlayerShoot : PlayerState
         PUFeatherAvailable.enabled = true;
         PUFeatherNotActive.enabled = true;
         PUFeatherActive.enabled = false;
-
-        sourceShoot = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update ()
@@ -61,7 +59,7 @@ public class PlayerShoot : PlayerState
             PowerUpActive = true;
             GameManager.instance.featherDmg = playerModel.featherPowered;
 
-            sourceShoot.PlayOneShot(powerUpSound);
+            source.PlayOneShot(playerModel.powerUpSound);
         }
 
         if (powerUpTimePast >= powerUpTime)
@@ -95,7 +93,7 @@ public class PlayerShoot : PlayerState
         if (Input.GetButtonDown("fireArrow") && ammunitionAtTheTime > 0)
         {
             
-            sourceShoot.PlayOneShot(shootSound);
+            source.PlayOneShot(playerModel.shootSound);
             ammunitionAtTheTime = ammunitionAtTheTime - 1;
             if (PowerUpActive == true)
             {

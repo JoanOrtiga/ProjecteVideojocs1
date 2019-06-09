@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     public class SaveGame
     {
         public float playerHealt;
+        public PlayerInventory inv;
     }
 
     SaveGame saveGame = new SaveGame();
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour {
 
         saveGame.playerHealt = playerModel.health;
         featherDmg = playerModel.arrowDmg;
+
+        saveGame.inv = new PlayerInventory();
     }
 
     public void playerGetDmg(float dmgRecieved)
@@ -52,5 +55,10 @@ public class GameManager : MonoBehaviour {
     public float getplayerHealth()
     {
         return saveGame.playerHealt;
+    }
+
+    public PlayerInventory getPlayerInv()
+    {
+        return saveGame.inv;
     }
 }

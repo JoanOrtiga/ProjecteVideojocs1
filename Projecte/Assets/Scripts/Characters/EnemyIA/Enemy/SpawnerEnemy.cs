@@ -30,7 +30,8 @@ public class SpawnerEnemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        spawnerIniciated = true;
+        if(collision.tag == "Player")
+            spawnerIniciated = true;
         
     }
 

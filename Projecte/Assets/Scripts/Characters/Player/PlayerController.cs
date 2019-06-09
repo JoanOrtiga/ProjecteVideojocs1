@@ -14,7 +14,6 @@ public class PlayerController : PlayerState
     void Start()
     {
         currentState = PlayerStates.idle;
-        source = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -54,8 +53,7 @@ public class PlayerController : PlayerState
         {
             animator.SetBool("attacking", true);
             currentState = PlayerStates.attack;
-         
-            
+            source.PlayOneShot(playerModel.attackSound);
 
         }
         if (!(Input.GetButtonDown("Fire1")))
