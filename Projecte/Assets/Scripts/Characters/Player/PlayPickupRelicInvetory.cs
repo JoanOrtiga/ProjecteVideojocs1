@@ -6,21 +6,22 @@ using UnityEngine.UI;
 public class PlayPickupRelicInvetory : MonoBehaviour {
 
     
-    private AudioSource source;
     public Image[] relic;
 
     [HideInInspector] public bool relic0 = false;
     [HideInInspector] public bool relic1 = false;
     [HideInInspector] public bool relic2 = false;
 
-    private bool AudioActiveRelic0 = false;
+    /*private bool AudioActiveRelic0 = false;
     private bool AudioActiveRelic1 = false;
-    private bool AudioActiveRelic2 = false;
+    private bool AudioActiveRelic2 = false;*/
+    //  private AudioSource source;
+
 
 
     // Use this for initialization
     void Start () {
-        source = GetComponent<AudioSource>();
+        //source = GetComponent<AudioSource>();
         relic[0].enabled = false;
         relic[1].enabled = false;
         relic[2].enabled = false;
