@@ -7,6 +7,8 @@ TagManager:
   - breakable
   - Reliquia
   - Enemy
+  - Pause
+  - GameOver
   layers:
   - Default
   - TransparentFX

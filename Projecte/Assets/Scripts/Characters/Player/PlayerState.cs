@@ -22,7 +22,11 @@ public class PlayerState : CharacterState {
 
     protected PlayerModel playerModel;
 
-  
+    public float getHealth()
+    {
+        return this.health;
+    }
+
     public override void InitState()
     {
         playerModel = GameManager.instance.playerModel;

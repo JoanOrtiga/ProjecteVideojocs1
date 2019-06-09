@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    [SerializeField]
+    private GameObject gameOver;
+
+    // Use this for initialization
+    void Start () {
+        gameOver.SetActive(false);
+    }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if(GameManager.instance.getplayerHealth() <= 0)
+        {
+            gameOver.SetActive(true);
+        }
+    }
 }
