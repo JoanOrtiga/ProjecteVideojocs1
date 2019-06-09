@@ -7,6 +7,8 @@ public class PlayerController : PlayerState
 {
     public AudioClip attackSound;
     private AudioSource source;
+    public bool AudioEffectPlaying = false;
+    private float Actualtime;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,9 @@ public class PlayerController : PlayerState
     // Update is called once per frame
     void Update()
     {
+        soundEffect();
+        Actualtime = Time.deltaTime + Actualtime;
+
         playerModel.timeForFlash = Time.deltaTime + playerModel.timeForFlash;
 
         h = Input.GetAxis("Horizontal");
@@ -49,7 +54,8 @@ public class PlayerController : PlayerState
         {
             animator.SetBool("attacking", true);
             currentState = PlayerStates.attack;
-            source.PlayOneShot(attackSound);
+         
+            
 
         }
         if (!(Input.GetButtonDown("Fire1")))
@@ -74,5 +80,13 @@ public class PlayerController : PlayerState
             this.enabled = false;
 
         }
+    }
+    private void soundEffect()
+    {
+        if (AudioEffectPlaying && Actualtime >= 0.2f)
+        {
+            Actualtime = 0;
+            source.PlayOneShot(attackSound);
+        }   
     }
 }

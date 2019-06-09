@@ -6,9 +6,17 @@ using UnityEngine.UI;
 public class SpawnBoss : MonoBehaviour
 {
 
+   
     public GameObject boss1;
     public Image PressF;
     public Vector2 spawnPlace;
+
+
+    private void Start()
+    {
+        
+    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {

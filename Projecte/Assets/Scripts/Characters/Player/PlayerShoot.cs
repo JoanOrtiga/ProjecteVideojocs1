@@ -14,10 +14,11 @@ public class PlayerShoot : PlayerState
     public AudioClip shootSound;
     public AudioClip powerUpSound;
     private AudioSource sourceShoot;
+   
 
     private float powerUpTimePast = 0;
 
-
+    private bool PowerUpActive = false;
 
     public Image[] feathers;
 
@@ -57,7 +58,7 @@ public class PlayerShoot : PlayerState
             powerUpTimePast = 0;
             rechargeTimePowerUpPast = 0;
             PUFeatherActive.enabled = true;
-
+            PowerUpActive = true;
             GameManager.instance.featherDmg = playerModel.featherPowered;
 
             sourceShoot.PlayOneShot(powerUpSound);
@@ -75,6 +76,8 @@ public class PlayerShoot : PlayerState
                 PUFeatherActive.enabled = false;
                 PUFeatherAvailable.enabled = false;
                 PUFeatherNotActive.enabled = true;
+
+                PowerUpActive = false;
             }
 
             GameManager.instance.featherDmg = playerModel.arrowDmg;
@@ -94,12 +97,22 @@ public class PlayerShoot : PlayerState
             
             sourceShoot.PlayOneShot(shootSound);
             ammunitionAtTheTime = ammunitionAtTheTime - 1;
+            if (PowerUpActive == true)
+            {
 
-            GameObject arrow = Instantiate(playerModel.ArrowPrefab, transform.position, Quaternion.identity);
-            arrow.GetComponent<Rigidbody2D>().velocity = shootingDirection * playerModel.shootVelocity;
-
-            arrow.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-            Destroy(arrow, 2.0f);
+                GameObject arrowPowerUp = Instantiate(playerModel.ArrowPowerUpPrefab, transform.position, Quaternion.identity);
+                arrowPowerUp.GetComponent<Rigidbody2D>().velocity = shootingDirection * playerModel.shootVelocity;
+                arrowPowerUp.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+                Destroy(arrowPowerUp, 2.0f);
+            }
+            else
+            {
+                GameObject arrow = Instantiate(playerModel.ArrowPrefab, transform.position, Quaternion.identity);
+                arrow.GetComponent<Rigidbody2D>().velocity = shootingDirection * playerModel.shootVelocity;
+                arrow.transform.Rotate(0.0f, 0.0f, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+                Destroy(arrow, 2.0f);
+            }
+           
         }     
     }
 

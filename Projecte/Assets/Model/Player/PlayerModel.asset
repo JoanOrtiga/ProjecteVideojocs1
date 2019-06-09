@@ -17,12 +17,14 @@ MonoBehaviour:
   swordDmg: 10
   range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 74.0825
+  timeForFlash: 224.51181
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5
   rechargeTimePower: 30
   ArrowPrefab: {fileID: 1657678894118296, guid: 8d6908bb2e768884b87adaa0b79cff76,
+    type: 2}
+  ArrowPowerUpPrefab: {fileID: 1229845331098636, guid: fd93a97f320bb1746bf6494fb52bdf86,
     type: 2}
   arrowDmg: 20
   featherPowered: 40

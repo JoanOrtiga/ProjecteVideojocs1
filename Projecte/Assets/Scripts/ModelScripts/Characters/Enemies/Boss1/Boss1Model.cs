@@ -25,5 +25,6 @@ public class Boss1Model : CharacterModel
     public float laserTime = 3f;
     public float CooldownLaser = 3f;
 
+    
 
 }

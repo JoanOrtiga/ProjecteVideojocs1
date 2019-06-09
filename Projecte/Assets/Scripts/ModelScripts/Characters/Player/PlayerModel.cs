@@ -29,6 +29,7 @@ public class PlayerModel : CharacterModel
     [Header("Player Shoot")]
 
     public GameObject ArrowPrefab;
+    public GameObject ArrowPowerUpPrefab;
     public float arrowDmg = 20f;
     public float featherPowered = 20f;
     public float shootVelocity = 15f;

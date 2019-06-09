@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class PlayPickupRelicInvetory : MonoBehaviour {
 
-
+    public AudioClip PickUpSound;
+    private AudioSource source;
     public Image[] relic;
 
     [HideInInspector] public bool relic0 = false;
     [HideInInspector] public bool relic1 = false;
     [HideInInspector] public bool relic2 = false;
-    
 
+    private bool AudioActiveRelic0 = false;
+    private bool AudioActiveRelic1 = false;
+    private bool AudioActiveRelic2 = false;
 
 
     // Use this for initialization
     void Start () {
+        source = GetComponent<AudioSource>();
         relic[0].enabled = false;
         relic[1].enabled = false;
         relic[2].enabled = false;
@@ -27,11 +31,22 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
 	void Update ()
     {
         relicUI();
+        relicSound();
 		
 	}
+    public void relicSound()
+    {
+
+       // if (relic0 == true && AudioActiveRelic0 != false) Debug.Log("SOUNDS222"); source.PlayOneShot(PickUpSound); AudioActiveRelic0 = true;
+      //  if (relic1 == true && AudioActiveRelic1 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(PickUpSound); AudioActiveRelic1 = true;
+      //  if (relic2 == true && AudioActiveRelic2 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(PickUpSound); AudioActiveRelic2 = true;
+
+
+    }
+
     public void relicUI()
     {
-        if (relic0 == true) { relic[0].enabled = true; }
+        if (relic0 == true) { relic[0].enabled = true;  }
         else if (relic0 == false) { relic[0].enabled = false; }
        
         if (relic1 == true) {relic[1].enabled = true; }

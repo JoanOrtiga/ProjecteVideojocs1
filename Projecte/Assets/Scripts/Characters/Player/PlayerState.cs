@@ -22,6 +22,7 @@ public class PlayerState : CharacterState {
 
     protected PlayerModel playerModel;
 
+  
     public override void InitState()
     {
         playerModel = GameManager.instance.playerModel;
@@ -34,6 +35,7 @@ public class PlayerState : CharacterState {
 
     public void getDmg(float damageRecieved)
     {
+        
         GameManager.instance.playerGetDmg(damageRecieved);
         GetComponentsInChildren<Image>()[2].fillAmount = GameManager.instance.getplayerHealth() / playerModel.health;
     }
