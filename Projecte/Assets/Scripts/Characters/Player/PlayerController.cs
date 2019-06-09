@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : PlayerState
 {
-    public AudioClip attackSound;
-    private AudioSource source;
     public bool AudioEffectPlaying = false;
     private float Actualtime;
 
@@ -84,7 +82,7 @@ public class PlayerController : PlayerState
         if (AudioEffectPlaying && Actualtime >= 0.2f)
         {
             Actualtime = 0;
-            source.PlayOneShot(attackSound);
+            source.PlayOneShot(playerModel.attackSound);
         }   
     }
 }

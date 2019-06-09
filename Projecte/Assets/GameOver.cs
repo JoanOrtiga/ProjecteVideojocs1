@@ -6,11 +6,6 @@ public class GameOver : MonoBehaviour {
 
     [SerializeField]
     private GameObject gameOver;
-
-    // Use this for initialization
-    void Start () {
-        gameOver.SetActive(false);
-    }
 	
 	// Update is called once per frame
 	void Update ()

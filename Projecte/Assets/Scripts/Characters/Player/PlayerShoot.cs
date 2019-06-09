@@ -11,8 +11,6 @@ public class PlayerShoot : PlayerState
     private float rechargeTimePowerUpPast = 30f;
     public float powerUpTime;
 
-    public AudioClip shootSound;
-    public AudioClip powerUpSound;
     private AudioSource sourceShoot;
    
 

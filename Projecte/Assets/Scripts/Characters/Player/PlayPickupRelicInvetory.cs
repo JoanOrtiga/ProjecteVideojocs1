@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayPickupRelicInvetory : MonoBehaviour {
 
-    public AudioClip PickUpSound;
+    
     private AudioSource source;
     public Image[] relic;
 
@@ -37,9 +37,9 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
     public void relicSound()
     {
 
-       // if (relic0 == true && AudioActiveRelic0 != false) Debug.Log("SOUNDS222"); source.PlayOneShot(PickUpSound); AudioActiveRelic0 = true;
-      //  if (relic1 == true && AudioActiveRelic1 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(PickUpSound); AudioActiveRelic1 = true;
-      //  if (relic2 == true && AudioActiveRelic2 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(PickUpSound); AudioActiveRelic2 = true;
+        // if (relic0 == true && AudioActiveRelic0 != false) Debug.Log("SOUNDS222"); source.PlayOneShot(GameManager.playerModel.pickUpSound); AudioActiveRelic0 = true;
+        //  if (relic1 == true && AudioActiveRelic1 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(GameManager.playerModel.pickUpSound); AudioActiveRelic1 = true;
+        //  if (relic2 == true && AudioActiveRelic2 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(GameManager.playerModel.pickUpSound); AudioActiveRelic2 = true;
 
 
     }

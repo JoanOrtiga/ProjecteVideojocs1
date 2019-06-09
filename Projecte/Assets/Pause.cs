@@ -7,17 +7,19 @@ public class Pause : MonoBehaviour {
     
     [SerializeField]
     private GameObject pausePanel;
-    bool active = false; 
+    private bool active = false;
 
-	void Update ()
+    private void Update ()
     {
 	    if (Input.GetButtonDown("Pause"))
         {
-            print("GAS");  
             active = !active;
-         
+
+            pausePanel.SetActive(active);
+
             Time.timeScale = (active) ? 0 : 1f;
         }
-        pausePanel.SetActive(active);
+
+       
     }
 }

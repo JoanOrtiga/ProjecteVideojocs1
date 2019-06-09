@@ -50,12 +50,10 @@ public class EnemySkeleton : CharacterState
             myRigidbody.MovePosition(temp);
             changeAnim(temp - transform.position);
            
-            Debug.Log("PERSEGUINT");
             anim.SetBool("walking", true);
         }
         if (Vector3.Distance(target.position, transform.position) < attackRedius)
         {
-            Debug.Log("ATACANDOO");
             target.GetComponent<PlayerState>().getDmg(20 * Time.deltaTime);
             anim.SetBool("attaking", true);
         }

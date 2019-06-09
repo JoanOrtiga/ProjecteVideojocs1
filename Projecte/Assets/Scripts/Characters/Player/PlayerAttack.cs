@@ -6,10 +6,16 @@ public class PlayerAttack : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if(collision.tag != "Player")
         {
-            collision.GetComponent<CharacterState>().recieveDmg(GameManager.instance.featherDmg);
-            Destroy(gameObject);
+            if (collision.tag == "Enemy")
+            {
+                collision.GetComponent<CharacterState>().recieveDmg(GameManager.instance.featherDmg);
+            }
+
+            if(!collision.isTrigger)
+                Destroy(gameObject);
         }
+
     }
 }
