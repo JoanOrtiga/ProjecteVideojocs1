@@ -16,7 +16,7 @@ public class PlayerModel : CharacterModel
     [Range(0f, 20f)] public float range = 10f;
     [Range(0, 10f)] public float TimeBetweenFlash = 3f;
     public float timeForFlash = 5f;
-    
+
 
     //PlayerFlash
     [Header("Player Flash")]
@@ -37,6 +37,10 @@ public class PlayerModel : CharacterModel
 
     //CrossHair
     [Header("CrossHair")]
-
     public GameObject crossHair;
+
+    [Header("Sound Effects")]
+    public AudioClip shootSound;
+    public AudioClip powerUpSound;
+    public AudioClip attackSound;
 }

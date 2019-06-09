@@ -8,6 +8,8 @@ public enum PlayerStates
     attack, walk, idle, flash
 }
 
+
+[RequireComponent(typeof(AudioSource))]
 public class PlayerState : CharacterState {
 
     protected SpriteRenderer sprPlayer, sprShadow;
@@ -22,6 +24,8 @@ public class PlayerState : CharacterState {
 
     protected PlayerModel playerModel;
 
+    protected AudioSource source;
+
     public override void InitState()
     {
         playerModel = GameManager.instance.playerModel;
@@ -30,6 +34,13 @@ public class PlayerState : CharacterState {
         sprShadow = transform.Find("Shadow").gameObject.GetComponent<SpriteRenderer>();
 
         animator = GetComponent<Animator>();
+
+        source = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        
     }
 
     public void getDmg(float damageRecieved)

@@ -11,10 +11,6 @@ public class PlayerShoot : PlayerState
     private float rechargeTimePowerUpPast = 30f;
     public float powerUpTime;
 
-    public AudioClip shootSound;
-    public AudioClip powerUpSound;
-    private AudioSource sourceShoot;
-
     private float powerUpTimePast = 0;
 
 
@@ -34,8 +30,6 @@ public class PlayerShoot : PlayerState
         PUFeatherAvailable.enabled = true;
         PUFeatherNotActive.enabled = true;
         PUFeatherActive.enabled = false;
-
-        sourceShoot = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update ()
@@ -60,7 +54,7 @@ public class PlayerShoot : PlayerState
 
             GameManager.instance.featherDmg = playerModel.featherPowered;
 
-            sourceShoot.PlayOneShot(powerUpSound);
+            source.PlayOneShot(playerModel.powerUpSound);
         }
 
         if (powerUpTimePast >= powerUpTime)
@@ -92,7 +86,7 @@ public class PlayerShoot : PlayerState
         if (Input.GetButtonDown("fireArrow") && ammunitionAtTheTime > 0)
         {
             
-            sourceShoot.PlayOneShot(shootSound);
+            source.PlayOneShot(playerModel.shootSound);
             ammunitionAtTheTime = ammunitionAtTheTime - 1;
 
             GameObject arrow = Instantiate(playerModel.ArrowPrefab, transform.position, Quaternion.identity);

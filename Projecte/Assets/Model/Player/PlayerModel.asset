@@ -17,7 +17,7 @@ MonoBehaviour:
   swordDmg: 10
   range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 74.0825
+  timeForFlash: 33.97111
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5
@@ -30,3 +30,6 @@ MonoBehaviour:
   maximumAmunition: 5
   timeToRecharge: 1
   crossHair: {fileID: 1032887642907118, guid: fdc423d1c0138a94485f335cbdc773bd, type: 2}
+  shootSound: {fileID: 8300000, guid: 53a01bcada8eb2e459e9ac72fa529024, type: 3}
+  powerUpSound: {fileID: 8300000, guid: 075fde9963c83874692d5a64f7ca7df0, type: 3}
+  attackSound: {fileID: 8300000, guid: 53a01bcada8eb2e459e9ac72fa529024, type: 3}
