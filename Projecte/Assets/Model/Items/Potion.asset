@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: HP
   description: 
   duration: 0
-  healthUp: 90
+  healthUp: 120
   powerUp: 0
   isFlash: 0
   coolDown: 0
