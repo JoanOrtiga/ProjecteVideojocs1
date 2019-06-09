@@ -11,12 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c6490016f0c984da3ee1a3538a62e7, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  quantity: 1
+  quantity: 0
   displayImage: {fileID: 21300000, guid: 3ac82252e45a79344be9f3c451090eda, type: 3}
   displayName: HP
   description: 
   duration: 0
-  healthUp: 20
+  healthUp: 90
   powerUp: 0
   isFlash: 0
   coolDown: 0
