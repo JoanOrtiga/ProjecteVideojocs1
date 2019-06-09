@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoading : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Vector2 PlayerSpawnPoint;
 
-    
+    public GameObject player;
+    public GameObject Cameras;
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Awake()
+    {
+        //GameObject.Instantiate()
+    }
 }
