@@ -5,41 +5,42 @@ using UnityEngine.UI;
 
 public class SpawnBoss : MonoBehaviour
 {
-
+    public GameObject shakeCamera;
    
     public GameObject boss1;
     public Image PressF;
     public Vector2 spawnPlace;
 
+    public float time = 1.5f;
 
-    private void Start()
+    private void Update()
     {
-        
-    }
-
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if(GetComponentsInChildren<RelicInAltar>(true)[0].relicPlaced && GetComponentsInChildren<RelicInAltar>(true)[1].relicPlaced && GetComponentsInChildren<RelicInAltar>(true)[2].relicPlaced)
         {
-            if (collision.GetComponent<PlayPickupRelicInvetory>().relic0 == true && collision.GetComponent<PlayPickupRelicInvetory>().relic1 == true && collision.GetComponent<PlayPickupRelicInvetory>().relic2 == true){
+            
 
-                PressF.enabled = true;
+            Instantiate(shakeCamera, transform.position, transform.rotation);
 
-                if (Input.GetButton("ActionKey"))
-                {
-                    PressF.enabled = false;
-                    Instantiate(boss1, spawnPlace, collision.transform.rotation);
-                    Destroy(gameObject);
-                }
-            }
+
+
+
+            StartCoroutine(spawnTime());
+
+
         }
-        
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    IEnumerator spawnTime()
     {
-        PressF.enabled = false;
+        yield return new WaitForSeconds(time);
+        Instantiate(boss1, spawnPlace, transform.rotation);
+
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        Destroy(gameObject);
     }
 
 }
