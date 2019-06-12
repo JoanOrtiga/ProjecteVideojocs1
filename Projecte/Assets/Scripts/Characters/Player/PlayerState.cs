@@ -51,6 +51,11 @@ public class PlayerState : CharacterState {
     {
         
         GameManager.instance.playerGetDmg(damageRecieved);
+        updateHealthBar();
+    }
+
+    public void updateHealthBar()
+    {
         GetComponentsInChildren<Image>()[2].fillAmount = GameManager.instance.getplayerHealth() / playerModel.health;
     }
 }

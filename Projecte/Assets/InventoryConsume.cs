@@ -14,8 +14,10 @@ public class InventoryConsume : MonoBehaviour {
         HPpotionModel potion = itm as HPpotionModel;
         if (potion != null)
         {
+            
             GameManager.instance.playerHpUp(potion.healthUp);
-        }
 
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>().updateHealthBar();
+        }
     }
 }
