@@ -12,8 +12,12 @@ public class Boss1State : CharacterState
 
     [HideInInspector] public bool attacking = false;
 
+    private GameObject bossWalls;
+
     private void Awake()
     {
+
+
         boss = GameManager.instance.boss1_model;
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -24,5 +28,26 @@ public class Boss1State : CharacterState
     void Start()
     {
         GetComponent<MovingState_Boss1>().enabled = true;
+        bossWalls = GameObject.Find("bossWalls").gameObject;
     }
+
+    private void OnDestroy()
+    {
+        if(bossWalls != null)
+        {
+            foreach (Transform child in bossWalls.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            foreach (GameObject item in GameObject.FindGameObjectsWithTag("BossComponents"))
+            {
+                Destroy(item);
+            }
+
+            Destroy(bossWalls);
+        }
+        
+    }
+
 }

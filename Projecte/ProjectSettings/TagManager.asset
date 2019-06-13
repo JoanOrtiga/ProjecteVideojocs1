@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Pause
   - GameOver
+  - BossComponents
   layers:
   - Default
   - TransparentFX

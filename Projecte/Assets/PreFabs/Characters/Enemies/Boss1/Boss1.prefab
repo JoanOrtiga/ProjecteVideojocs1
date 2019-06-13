@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4711983343419324}
   m_Layer: 0
   m_Name: Range1
-  m_TagString: Untagged
+  m_TagString: BossComponents
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4628615261312112}
   m_Layer: 0
   m_Name: Range3
-  m_TagString: Untagged
+  m_TagString: BossComponents
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4174382330292904}
   m_Layer: 0
   m_Name: Range2
-  m_TagString: Untagged
+  m_TagString: BossComponents
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
