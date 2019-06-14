@@ -8,6 +8,7 @@ public class ArrowController : MonoBehaviour
 
     public float speed = 4f;
     public GameObject explosion;
+    public float DMG = 50;
 
 
     private Rigidbody2D rb2D;
@@ -33,6 +34,11 @@ public class ArrowController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Instantiate(explosion, transform.position, transform.rotation);
+
+        if(collision.tag == "Player")
+            collision.GetComponent<PlayerState>().getDmg(DMG);
+
+
         Destroy(gameObject);
     }
 }
