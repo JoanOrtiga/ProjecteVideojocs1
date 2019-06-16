@@ -33,7 +33,7 @@ public class ArrowController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(explosion, transform.position, transform.rotation);
+      //  Instantiate(explosion, transform.position, transform.rotation);
 
         if(collision.tag == "Player")
             collision.GetComponent<PlayerState>().getDmg(DMG);
