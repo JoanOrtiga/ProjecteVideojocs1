@@ -202,9 +202,9 @@ MonoBehaviour:
   IsDefaultState: 0
   enemyName: Skeleton
   baseAttack: 1
-  moveSpeed: 4
+  moveSpeed: 5.5
   healthOnDeath: 20
-  chaseRadius: 5
+  chaseRadius: 8
   attackRedius: 1.3
 --- !u!114 &114695397750014010
 MonoBehaviour:
