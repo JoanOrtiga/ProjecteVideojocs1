@@ -5,11 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ArrowController : MonoBehaviour
 {
-
     public float speed = 4f;
     public GameObject explosion;
     public float DMG = 50;
-
 
     private Rigidbody2D rb2D;
 

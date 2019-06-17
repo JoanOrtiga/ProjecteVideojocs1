@@ -110457,7 +110457,7 @@ TilemapRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 4b137cd0d8e191f4b9396f8422e57f37, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119352,6 +119352,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114761847086638878, guid: 5352f1ac9d1000340a7baeedeadb6db7,
+        type: 2}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 62527245}
+    - target: {fileID: 114371690615671424, guid: 5352f1ac9d1000340a7baeedeadb6db7,
+        type: 2}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1087741638}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5352f1ac9d1000340a7baeedeadb6db7, type: 2}
   m_IsPrefabAsset: 0
