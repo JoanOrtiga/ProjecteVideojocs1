@@ -10,7 +10,10 @@ public class PlayerAttack : MonoBehaviour
         {
             if (collision.tag == "Enemy")
             {
-                collision.GetComponent<CharacterState>().recieveDmg(GameManager.instance.featherDmg);
+                if (collision.isTrigger == false)
+                {
+                    collision.GetComponent<CharacterState>().recieveDmg(GameManager.instance.featherDmg);
+                }
             }
 
             if(!collision.isTrigger)

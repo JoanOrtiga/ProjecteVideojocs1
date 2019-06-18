@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: SkeletonModel
   m_EditorClassIdentifier: 
   health: 300
-  chaseSpeed: 1
-  rangeAttack: 0.5
+  chaseSpeed: 3
+  rangeAttack: 1.5
   enemyHealth: 200
-  speed: 10
+  speed: 2
   damage: 20
   useless: 0

@@ -4,21 +4,36 @@ using UnityEngine;
 
 public class SkeletonState : CharacterState {
 
-    SkeletonModel skeletonModel;
-    Rigidbody2D rb2d;
+    protected SkeletonModel skeletonModel;
+    protected Rigidbody2D rb2d;
+    protected Animator anim;
+
 
     private void Awake()
     {
-        skeletonModel = GameManager.instance.skeletonModel;
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
-    void Start ()
+    public override void InitState()
     {
+        skeletonModel = GameManager.instance.skeletonModel;
         base.health = skeletonModel.health;
         base.initialHealth = skeletonModel.health;
 
+        GetComponent<SkeletonPatrol>().enabled = true;
+    }
 
+    protected void changeAnim(Vector2 objectiveVector)
+    {
+        Vector2 direction = (objectiveVector - (Vector2)rb2d.transform.position).normalized;
 
-	}
+        anim.SetFloat("moveX", direction.x);
+        anim.SetFloat("moveY", direction.y);
+    }
+
+    private void FixedUpdate()
+    {
+        rb2d.velocity = Vector2.zero;
+    }
 }
