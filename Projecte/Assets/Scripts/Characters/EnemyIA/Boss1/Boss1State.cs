@@ -16,8 +16,6 @@ public class Boss1State : CharacterState
 
     private void Awake()
     {
-
-
         boss = GameManager.instance.boss1_model;
         rb2d = GetComponent<Rigidbody2D>();
 

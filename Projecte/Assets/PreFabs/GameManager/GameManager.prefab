@@ -94,4 +94,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss1_model: {fileID: 11400000, guid: e62a98d04a1ae82499509c1639f0c5e1, type: 2}
   playerModel: {fileID: 11400000, guid: 30c3aa736899c9a448c2d8359a9ebdb2, type: 2}
+  skeletonModel: {fileID: 11400000, guid: 32fdf00e6a5c71f4db9410cda7c6782d, type: 2}
   featherDmg: 0

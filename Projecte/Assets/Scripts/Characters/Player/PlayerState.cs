@@ -50,7 +50,6 @@ public class PlayerState : CharacterState {
 
     public void getDmg(float damageRecieved)
     {
-        
         GameManager.instance.playerGetDmg(damageRecieved);
         updateHealthBar();
     }
