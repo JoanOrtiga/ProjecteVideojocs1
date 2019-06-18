@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 50512457461619290}
   - component: {fileID: 70417472640801312}
   m_Layer: 8
-  m_Name: Swamp Enemie
+  m_Name: Swamp Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

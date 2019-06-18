@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
     public Boss1Model boss1_model;
     public PlayerModel playerModel;
     public SkeletonModel skeletonModel;
+    public LogModel logModel;
+    public SwampManModel swampManModel;
 
     [HideInInspector] public float featherDmg;
 

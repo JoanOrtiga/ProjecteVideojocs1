@@ -21,10 +21,14 @@ GameObject:
   - component: {fileID: 4333165654336100}
   - component: {fileID: 212392352978994572}
   - component: {fileID: 95354705909385904}
-  - component: {fileID: 114051624099854292}
   - component: {fileID: 50522758409243458}
   - component: {fileID: 70000591997902168}
+  - component: {fileID: 114854000609217702}
+  - component: {fileID: 114260452304291612}
+  - component: {fileID: 114584049791130398}
+  - component: {fileID: 114250894025739482}
   - component: {fileID: 114442999563676678}
+  - component: {fileID: 58826792831851738}
   m_Layer: 0
   m_Name: Log Enemie
   m_TagString: Enemy
@@ -91,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1601586414576244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.37491, y: 122.42841, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224769483639682120}
@@ -118,6 +122,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58826792831851738
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601586414576244}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08629036, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.849943
 --- !u!70 &70000591997902168
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -130,8 +149,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: 0}
-  m_Size: {x: 0.9130435, y: 1}
+  m_Offset: {x: 0.010164261, y: -0.10021591}
+  m_Size: {x: 0.90359116, y: 0.90359116}
   m_Direction: 0
 --- !u!95 &95354705909385904
 Animator:
@@ -151,24 +170,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114051624099854292
+--- !u!114 &114250894025739482
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1601586414576244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727e8f272153a4744a92f92a645cef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f07b12fc3449e84cbdd912deda56307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDefaultState: 1
+--- !u!114 &114260452304291612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601586414576244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b6094435f048f47a6999d9559a2459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsDefaultState: 0
-  enemyName: Log
-  baseAttack: 1
-  moveSpeed: 4
-  healthOnDeath: 20
-  chaseRadius: 8
-  attackRedius: 1.3
 --- !u!114 &114390071932350152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0c5c5a3c1c23f479e45b9acbdeb6e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDefaultState: 0
+  IsDefaultState: 1
 --- !u!114 &114508338759958164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,6 +243,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114584049791130398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601586414576244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037831d21e2b06d48aeb4cd7e9255e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDefaultState: 0
 --- !u!114 &114779920264400530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,6 +282,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114854000609217702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601586414576244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed075148170261042b5a8a61429a939c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114969256194713900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,8 +352,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 491646999
-  m_SortingLayer: 1
+  m_SortingLayerID: -432132565
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300022, guid: e4b58b3d8d920af4fa338db4a1bfb047, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -349,7 +397,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -432132565
+  m_SortingLayerID: -222142183
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &224375430863188938

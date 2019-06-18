@@ -10,7 +10,6 @@ public class SkeletonChase : SkeletonState {
     private void OnEnable()
     {
         chasing = false;
-    //    anim.SetBool("walking", true);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

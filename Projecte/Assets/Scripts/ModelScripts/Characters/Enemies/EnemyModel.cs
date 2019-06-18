@@ -8,7 +8,6 @@ public class EnemyModel : CharacterModel
     [Header("Enemies")]
     public float chaseSpeed = 1f;
     public float rangeAttack = 0.5f;
-    public float enemyHealth = 200f;   
     public float speed = 10f;
     public float damage = 20f;
 }
