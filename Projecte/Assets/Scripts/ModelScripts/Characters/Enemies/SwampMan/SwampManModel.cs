@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SwampMan", menuName = "Models/Characters/Enemy/SwampMan")]
 public class SwampManModel : EnemyModel
 {
-
+    [Header("SwampMan")]
+    public GameObject ball;
 }
