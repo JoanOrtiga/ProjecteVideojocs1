@@ -13,7 +13,10 @@ public class PlayerHit : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.swordDmg);
+            if(other.isTrigger == false)
+            {
+                other.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.swordDmg);
+            }
         }
     }
 }
