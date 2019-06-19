@@ -20,7 +20,7 @@ public class FireBallScript : MonoBehaviour
         rb2d.AddForce(playerPosition * GameManager.instance.boss1_model.ballSpeed, ForceMode2D.Impulse);
         rb2d.velocity = playerPosition * GameManager.instance.boss1_model.ballSpeed;
        
-        Destroy(this.gameObject, 2.2f);
+        Destroy(this.gameObject, GameManager.instance.boss1_model.timeToDestroy);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -19,6 +19,7 @@ public class Boss1Model : CharacterModel
     public float Cooldown = 3f;
     public float radius;
     public Vector2 center;
+    public float timeToDestroy = 2.2f;
 
     [Header("LaserAttack")]
     public float attackLaserDmg;

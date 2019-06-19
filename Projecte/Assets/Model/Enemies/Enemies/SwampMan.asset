@@ -13,7 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 150
   chaseSpeed: 200
-  rangeAttack: 4
+  rangeAttack: 5
   speed: 10
   damage: 20
   ball: {fileID: 1906243311694286, guid: 1bc1f33784ffb064f8221cb9d47f4cd8, type: 2}
+  attackBallMud: 20
+  ballSpeed: 10
+  timeBetweenAttacks: 0.5
+  CoolDown: 3
+  timeToDestroy: 2

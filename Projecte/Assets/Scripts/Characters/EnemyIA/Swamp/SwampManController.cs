@@ -25,38 +25,34 @@ public class SwampManController : SwampManState
 
     private void FixedUpdate()
     {
+        timeBetweenAttacksCooldownSecurity -= Time.fixedDeltaTime;
+
         if (runAway)
         {
             Vector2 vl = ((Vector2)rb2d.transform.position - playerPosition).normalized * swampManModel.chaseSpeed * Time.fixedDeltaTime;
 
             rb2d.velocity = vl;
 
-            if (((Vector2)rb2d.transform.position - playerPosition).SqrMagnitude() > swampManModel.rangeAttack)
+            if (Vector2.Distance(playerPosition, (Vector2)rb2d.transform.position) >= swampManModel.rangeAttack)
             {
                 GetComponent<SwampManAttack>().enabled = true;
                 this.enabled = false;
             }
 
-            print(vl);
-
-
             base.changeAnim(vl);
-        }
-        else
-        {
-            rb2d.velocity = Vector2.zero;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        runAway = false;
+        runAway = false; 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            anim.SetBool("walking", false);
             runAway = false;
         }
     }

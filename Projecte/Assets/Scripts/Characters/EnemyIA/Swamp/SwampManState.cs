@@ -8,6 +8,8 @@ public class SwampManState : CharacterState {
     protected Rigidbody2D rb2d;
     protected Animator anim;
 
+    protected float timeBetweenAttacksCooldownSecurity = 0;
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -25,8 +27,6 @@ public class SwampManState : CharacterState {
 
     protected void changeAnim(Vector2 objectiveVector)
     {
-        print(objectiveVector.x + "  " + objectiveVector.y);
-
         anim.SetFloat("moveX", objectiveVector.x);
         anim.SetFloat("moveY", objectiveVector.y);
     }
