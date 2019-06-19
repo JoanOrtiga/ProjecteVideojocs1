@@ -26,7 +26,7 @@ public class EnemyAttack : EnemyState
         if (collision.tag == "Player")
         {
             //Change PlayerModel For the script that manages player life
-            collision.GetComponent<PlayerModel>().health = -enemy.power;
+            collision.GetComponent<PlayerModel>().health = -enemy.damage;
         }
     }
 

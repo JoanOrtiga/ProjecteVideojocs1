@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   explosion: {fileID: 1344311982267048, guid: a5fed755ea6a2064a850836d3a3f89a8, type: 2}
+  DMG: 100
 --- !u!212 &212370476817316690
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,7 +125,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1373830457
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21301214, guid: f13c3aa157beb2c4fa8938b27afa8f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
