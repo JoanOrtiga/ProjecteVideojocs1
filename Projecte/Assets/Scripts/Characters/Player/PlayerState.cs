@@ -36,7 +36,6 @@ public class PlayerState : CharacterState {
         playerModel = GameManager.instance.playerModel;
         rb2D = GetComponent<Rigidbody2D>();
         sprPlayer = GetComponent<SpriteRenderer>();
-        sprShadow = transform.Find("Shadow").gameObject.GetComponent<SpriteRenderer>();
 
         animator = GetComponent<Animator>();
 
@@ -56,6 +55,6 @@ public class PlayerState : CharacterState {
 
     public void updateHealthBar()
     {
-        GetComponentsInChildren<Image>()[2].fillAmount = GameManager.instance.getplayerHealth() / playerModel.health;
+        GetComponentsInChildren<Image>()[1].fillAmount = GameManager.instance.getplayerHealth() / playerModel.health;
     }
 }

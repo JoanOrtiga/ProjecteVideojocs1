@@ -48,7 +48,7 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
     public void relicUI()
     {
         if (relic_grail == true) { relic[0].enabled = true;  }
-        else if (relic_grail == false) { relic[0].enabled = false; }
+    
        
         if (relic_bible == true) {relic[1].enabled = true; }
         else if(relic_bible == false) { relic[1].enabled = false; }
