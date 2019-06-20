@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwampManController : SwampManState {
+public class SwampManController : SwampManState
+{
 
-    private bool chasing;
+    private bool runAway;
     private Vector2 playerPosition;
 
     private void OnEnable()
     {
-        chasing = false;
+        runAway = false;
+        anim.SetBool("walking", true);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -17,45 +19,41 @@ public class SwampManController : SwampManState {
         if (collision.tag == "Player")
         {
             playerPosition = collision.GetComponent<Rigidbody2D>().transform.position;
-            chasing = true;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            chasing = false;
-        }
-        if (collision.gameObject.tag == "Player")
-        {
-            GetComponent<SkeletonAttack>().enabled = true;
-            this.enabled = false;
+            runAway = true;
         }
     }
 
     private void FixedUpdate()
     {
-        if (chasing)
-        {
-            rb2d.transform.position = Vector2.MoveTowards(rb2d.transform.position, playerPosition, swampManModel.chaseSpeed * Time.fixedDeltaTime);
+        timeBetweenAttacksCooldownSecurity -= Time.fixedDeltaTime;
 
-            if (((Vector2)rb2d.transform.position - playerPosition).SqrMagnitude() < swampManModel.rangeAttack)
+        if (runAway)
+        {
+            Vector2 vl = ((Vector2)rb2d.transform.position - playerPosition).normalized * swampManModel.chaseSpeed * Time.fixedDeltaTime;
+
+            rb2d.velocity = vl;
+
+            if (Vector2.Distance(playerPosition, (Vector2)rb2d.transform.position) >= swampManModel.rangeAttack)
             {
-                GetComponent<SkeletonAttack>().enabled = true;
+                GetComponent<SwampManAttack>().enabled = true;
                 this.enabled = false;
             }
 
-            base.changeAnim(playerPosition);
+            base.changeAnim(vl);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        runAway = false; 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            GetComponent<SkeletonPatrol>().enabled = true;
-            this.enabled = false;
+            anim.SetBool("walking", false);
+            runAway = false;
         }
     }
 }

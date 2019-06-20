@@ -6,8 +6,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(PlayerController))]
 public class PlayerFlash : PlayerState
 {
-    private Color saveShadowColor;
-
     [HideInInspector] public bool flash;
 
     private void OnEnable()
@@ -15,8 +13,6 @@ public class PlayerFlash : PlayerState
         currentState = PlayerStates.flash;
         flash = true;
         sprPlayer.color = new Color(1, 1, 1, 0.1f);
-        saveShadowColor = sprShadow.color;
-        sprShadow.color = new Color(1, 1, 1, 0);
 
         StartCoroutine(DeFlashPlayer());
     }
@@ -24,7 +20,6 @@ public class PlayerFlash : PlayerState
     // Update is called once per frame
     void Update()
     {
-        sprShadow.sprite = sprPlayer.sprite;
 
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
@@ -59,7 +54,6 @@ public class PlayerFlash : PlayerState
         sprPlayer.color = new Color(1, 1, 1, 0.5f);
 
         yield return new WaitForSeconds(playerModel.flashTime * 0.333f);
-        sprShadow.color = saveShadowColor;
 
         yield return new WaitForSeconds(playerModel.flashTime * 0.333f);
         sprPlayer.color = new Color(1, 1, 1, 1f);

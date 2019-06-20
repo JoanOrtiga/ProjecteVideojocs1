@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4715629883611414}
   - component: {fileID: 212874409037863052}
   - component: {fileID: 50493518197362660}
-  - component: {fileID: 114533022566480206}
   - component: {fileID: 58843218606600638}
+  - component: {fileID: 114452540581523324}
   m_Layer: 8
   m_Name: BallMud
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1906243311694286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.00968, y: 6.1429825, z: 0}
+  m_LocalPosition: {x: -38.084858, y: 35.976643, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.125
---- !u!114 &114533022566480206
+  m_Radius: 0.298481
+--- !u!114 &114452540581523324
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,12 +86,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906243311694286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 376524ddb2b0cbc4e8b57f9ac2a934c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 62312e7951fb03c4a8a7401348c3aa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  explosion: {fileID: 1344311982267048, guid: a5fed755ea6a2064a850836d3a3f89a8, type: 2}
-  DMG: 50
 --- !u!212 &212874409037863052
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,6 +8,8 @@ public class SwampManState : CharacterState {
     protected Rigidbody2D rb2d;
     protected Animator anim;
 
+    protected float timeBetweenAttacksCooldownSecurity = 0;
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -20,19 +22,12 @@ public class SwampManState : CharacterState {
         base.health = swampManModel.health;
         base.initialHealth = swampManModel.health;
 
-     //   GetComponent<SkeletonPatrol>().enabled = true;
+        GetComponent<SwampManController>().enabled = true;
     }
 
     protected void changeAnim(Vector2 objectiveVector)
     {
-        Vector2 direction = (objectiveVector - (Vector2)rb2d.transform.position).normalized;
-
-        anim.SetFloat("moveX", direction.x);
-        anim.SetFloat("moveY", direction.y);
-    }
-
-    private void FixedUpdate()
-    {
-        rb2d.velocity = Vector2.zero;
+        anim.SetFloat("moveX", objectiveVector.x);
+        anim.SetFloat("moveY", objectiveVector.y);
     }
 }

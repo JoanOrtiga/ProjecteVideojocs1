@@ -39,7 +39,7 @@ public class CameraDeathZoneController : MonoBehaviour
             Vector3 newPos = transform.position + new Vector3(deltaX, deltaY, 0);
             transform.position = Vector3.Lerp(transform.position, newPos, smoothFactor);
         }
-    }
+    }   
 
     private bool IsInDeadZone(ref float deltaX, ref float deltaY)
     {

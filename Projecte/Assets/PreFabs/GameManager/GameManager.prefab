@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4482371113961176}
   - component: {fileID: 114855750845497220}
-  - component: {fileID: 114255018840534944}
   - component: {fileID: 114761847086638878}
   - component: {fileID: 114371690615671424}
   m_Layer: 0
@@ -43,20 +42,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114255018840534944
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790107761731732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cf46ec6c28a28b468dbdfb45ad956e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerSpawnPoint: {x: 0, y: 0}
-  player: {fileID: 0}
-  Cameras: {fileID: 0}
 --- !u!114 &114371690615671424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,4 +80,7 @@ MonoBehaviour:
   boss1_model: {fileID: 11400000, guid: e62a98d04a1ae82499509c1639f0c5e1, type: 2}
   playerModel: {fileID: 11400000, guid: 30c3aa736899c9a448c2d8359a9ebdb2, type: 2}
   skeletonModel: {fileID: 11400000, guid: 32fdf00e6a5c71f4db9410cda7c6782d, type: 2}
+  logModel: {fileID: 11400000, guid: 11c658adcb4f1c54fa61c9e4fce85079, type: 2}
+  swampManModel: {fileID: 11400000, guid: d950eab6506d4704bb751f127ba6a13a, type: 2}
+  knightModel: {fileID: 11400000, guid: 8831248d3a6015d47af0f7033641d51b, type: 2}
   featherDmg: 0
