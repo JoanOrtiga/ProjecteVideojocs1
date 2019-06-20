@@ -10,6 +10,7 @@ TagManager:
   - Pause
   - GameOver
   - BossComponents
+  - Door
   layers:
   - Default
   - TransparentFX
