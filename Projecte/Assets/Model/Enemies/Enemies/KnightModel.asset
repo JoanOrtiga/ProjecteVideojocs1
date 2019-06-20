@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Name: KnightModel
   m_EditorClassIdentifier: 
   health: 400
+  drops:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  randomPercentatges: 0000000000000000
   chaseSpeed: 1
   rangeAttack: 7
   speed: 5
