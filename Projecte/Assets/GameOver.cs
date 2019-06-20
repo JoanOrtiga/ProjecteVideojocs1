@@ -13,6 +13,7 @@ public class GameOver : MonoBehaviour {
         if(GameManager.instance.getplayerHealth() <= 0)
         {
             gameOver.SetActive(true);
+            //Time.timeScale = 0f;
         }
     }
 }

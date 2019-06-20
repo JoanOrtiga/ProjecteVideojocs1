@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5eb3b263d10f448ae7fc000c355bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 1495634222485618, guid: c32b2d5a87d891449b51334bde1481db, type: 2}
+  Enemy: {fileID: 1505219378927132, guid: c32b2d5a87d891449b51334bde1481db, type: 2}
   maxNumberOfEnemy: 4
 --- !u!212 &212398320415583364
 SpriteRenderer:

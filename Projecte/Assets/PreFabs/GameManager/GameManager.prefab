@@ -82,4 +82,5 @@ MonoBehaviour:
   skeletonModel: {fileID: 11400000, guid: 32fdf00e6a5c71f4db9410cda7c6782d, type: 2}
   logModel: {fileID: 11400000, guid: 11c658adcb4f1c54fa61c9e4fce85079, type: 2}
   swampManModel: {fileID: 11400000, guid: d950eab6506d4704bb751f127ba6a13a, type: 2}
+  knightModel: {fileID: 11400000, guid: 8831248d3a6015d47af0f7033641d51b, type: 2}
   featherDmg: 0

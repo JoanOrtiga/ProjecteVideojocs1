@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public SkeletonModel skeletonModel;
     public LogModel logModel;
     public SwampManModel swampManModel;
+    public KnightModel knightModel;
 
     [HideInInspector] public float featherDmg;
 
