@@ -12,6 +12,8 @@ public class CharacterState : MonoBehaviour
     protected float initialHealth;
 
     protected List<GameObject> drops;
+    protected List<int> dropChances;
+
 
     virtual public void InitState()
     {
@@ -33,14 +35,16 @@ public class CharacterState : MonoBehaviour
 
     private void Drops(Vector2 position, Quaternion rotation)
     {
-        if(drops.Count > 0)
+        if (drops.Count > 0)
         {
-       //     int drop = Random.Range(0f, drops.Count);
+            int drop = Random.Range(0, drops.Count);
+            int dropping = Random.Range(0, 100);
 
-   
+            if(dropping )
 
-          //  Instantiate(drops[drop], position, rotation);
+
+            //  Instantiate(drops[drop], position, rotation);
         }
-        
+
     }
 }

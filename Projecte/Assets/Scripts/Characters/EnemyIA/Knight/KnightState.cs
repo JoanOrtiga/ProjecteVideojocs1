@@ -21,6 +21,7 @@ public class KnightState : CharacterState {
         base.health = knightModel.health;
         base.initialHealth = knightModel.health;
         base.drops = knightModel.drops;
+        base.dropChances = knightModel.randomDropPercentatges;
 
         GetComponent<KnightChase>().enabled = true;
     }
