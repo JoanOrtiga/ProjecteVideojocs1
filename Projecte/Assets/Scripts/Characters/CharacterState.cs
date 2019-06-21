@@ -35,7 +35,7 @@ public class CharacterState : MonoBehaviour
 
     private void Drops(Vector2 position, Quaternion rotation)
     {
-        if (drops.Count > 0)
+        if (drops != null && dropChances != null)
         {
             int drop = Random.Range(0, drops.Count);
             int dropping = Random.Range(0, 100);
