@@ -21,7 +21,7 @@ public class SatanasFreeMov : SatanasMovementController
     private void FixedUpdate()
     {
         if(objective != null) 
-            rb2d.transform.position = Vector2.Lerp(rb2d.transform.position, objective, satanModel.speed * Time.deltaTime);
+            rb2d.transform.position = Vector2.MoveTowards(rb2d.transform.position, objective, satanModel.speed * Time.deltaTime);
 
         if ((objective - (Vector2)rb2d.transform.position).SqrMagnitude() < 0.5f)
         {
@@ -31,7 +31,7 @@ public class SatanasFreeMov : SatanasMovementController
         }
     }
 
-    private void changeMov()
+    protected override void changeMov()
     {
         switch (base.switchMov())
         {
@@ -51,12 +51,14 @@ public class SatanasFreeMov : SatanasMovementController
     private void OnCollisionEnter2D(Collision2D collision)
     {   
         objective = findObjective();
+        switchMov();
 
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         objective = findObjective();
+        switchMov();
     }
 
 
