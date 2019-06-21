@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(EnemyModel))]
+[CanEditMultipleObjects]
+[CustomEditor(typeof(EnemyModel), true)]
 public class EnemyModelGUI : Editor
-{
+{ 
+
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
         EnemyModel enemyModel = (EnemyModel)target;
 
-        if (enemyModel.drops.Count != enemyModel.randomPercentatges.Count)
+        if (enemyModel.drops.Count != enemyModel.randomDropPercentatges.Count)
         {
             EditorGUILayout.HelpBox("Los drops y Random Percentatges deben tener el mismo numero de elementos.", MessageType.Error, true);
         }
-        /*
+        EditorUtility.SetDirty(enemyModel);
+        
         foreach (GameObject item in enemyModel.drops)
         {
             if(item == null)
@@ -25,32 +28,12 @@ public class EnemyModelGUI : Editor
             }
         }
 
-        foreach (int item in enemyModel.randomPercentatges)
+        foreach (int item in enemyModel.randomDropPercentatges)
         {
             if (item <= 0 || item > 100 )
             {
                 EditorGUILayout.HelpBox("No puedes tener numeros por debajo de 0 o más grandes de 100", MessageType.Error, true);
             }
-        }*/
-    }
-}
-
-/*
-[CustomEditor(typeof(CameraZoomInOut))]
-public class CameraZoomInOutCustomGUI : Editor
-{
-
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-
-        CameraZoomInOut myCameraZoomInOut = (CameraZoomInOut)target;
-
-        if (myCameraZoomInOut.zoomX == true && myCameraZoomInOut.zoomY == true)
-        {
-            EditorGUILayout.HelpBox("No puedes seleccionar zoomX y zoomY a la vez", MessageType.Error, true);
         }
     }
-
-}*/
-
+}

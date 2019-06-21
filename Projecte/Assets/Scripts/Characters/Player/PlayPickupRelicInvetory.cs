@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PlayPickupRelicInvetory : MonoBehaviour {
 
     
-
     public Image[] relic;
 
     [HideInInspector] public bool relic_grail = false;
@@ -33,10 +32,18 @@ public class PlayPickupRelicInvetory : MonoBehaviour {
 	void Update ()
     {
         relicUI();
-        
+        relicSound();
 		
 	}
-    
+    public void relicSound()
+    {
+
+        // if (relic0 == true && AudioActiveRelic0 != false) Debug.Log("SOUNDS222"); source.PlayOneShot(GameManager.playerModel.pickUpSound); AudioActiveRelic0 = true;
+        //  if (relic1 == true && AudioActiveRelic1 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(GameManager.playerModel.pickUpSound); AudioActiveRelic1 = true;
+        //  if (relic2 == true && AudioActiveRelic2 == false) Debug.Log("SOUNDS222"); source.PlayOneShot(GameManager.playerModel.pickUpSound); AudioActiveRelic2 = true;
+
+
+    }
 
     public void relicUI()
     {

@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class relick1Pickup : MonoBehaviour {
 
+   
 
-    public AudioClip PickUpSound;
-    public AudioSource RelicAudioSoure;
     // Use this for initialization
     void Start ()
     {
-        RelicAudioSoure.clip = PickUpSound;
+      
     }
 	
 	// Update is called once per frame
@@ -22,10 +21,9 @@ public class relick1Pickup : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
            other.GetComponent<PlayPickupRelicInvetory>().relic_bible = true;
-
-            RelicAudioSoure.Play();
-            Destroy(gameObject, 0.1f);
-
+       
+            Destroy(gameObject);
+           
         }
     }
 }

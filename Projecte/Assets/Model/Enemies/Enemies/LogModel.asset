@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: LogModel
   m_EditorClassIdentifier: 
   health: 300
+  drops: []
+  randomPercentatges: 
   chaseSpeed: 3
   rangeAttack: 1.5
   speed: 3

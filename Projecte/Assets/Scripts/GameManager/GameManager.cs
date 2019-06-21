@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public LogModel logModel;
     public SwampManModel swampManModel;
     public KnightModel knightModel;
+    public SatanModel satanModel;
 
     [HideInInspector] public float featherDmg;
 
