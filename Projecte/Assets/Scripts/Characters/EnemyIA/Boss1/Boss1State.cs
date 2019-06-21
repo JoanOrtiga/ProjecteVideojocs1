@@ -49,7 +49,7 @@ public class Boss1State : CharacterState
 
     public bool Health()
     {
-        if (this.health <= 0)
+        if (this.health <= 0 || this.gameObject == null)
         {
             return true;
         }
