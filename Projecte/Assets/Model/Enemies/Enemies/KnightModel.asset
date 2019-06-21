@@ -13,12 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 400
   drops:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  randomPercentatges: 0000000000000000
+  - {fileID: 1549760201995098, guid: f7efddee07f9aca4c9238ca61d131dc9, type: 2}
+  randomDropPercentatges: 3c000000
   chaseSpeed: 1
   rangeAttack: 7
   speed: 5
   damage: 50
   timeBetweenDamage: 0.35
+  rangeVision: 8

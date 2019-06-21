@@ -16,6 +16,15 @@ public class RelicInAltar : MonoBehaviour
 
     [HideInInspector] public bool relicPlaced = false;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
+
+
+    private void Start()
+    {
+        audioSource.clip = audioClip;
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -41,7 +50,8 @@ public class RelicInAltar : MonoBehaviour
 
     private void spawnRelic()
     {
-       GameObject relic =  Instantiate(relicToSpawn, (Vector2)transform.position + new Vector2(-0.10f, 0.40f), transform.rotation);
+        audioSource.Play();
+        GameObject relic =  Instantiate(relicToSpawn, (Vector2)transform.position + new Vector2(-0.10f, 0.40f), transform.rotation);
         relic.transform.parent = this.transform.parent;
 
 

@@ -7,8 +7,8 @@ public class EnemyModel : CharacterModel
 {
     [Header("Drops")]
     public List<GameObject> drops;
+    public List<int> randomDropPercentatges;
 
-    public List<int> randomPercentatges;
     [Header("Enemies")]
     public float chaseSpeed = 1f;
     public float rangeAttack = 0.5f;
