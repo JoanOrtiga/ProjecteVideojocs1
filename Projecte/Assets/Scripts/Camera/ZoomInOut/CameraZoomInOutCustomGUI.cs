@@ -7,8 +7,7 @@ using UnityEditor;
 [CustomEditor(typeof(CameraZoomInOut))]
 public class CameraZoomInOutCustomGUI : Editor
 {
-
-
+   
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();

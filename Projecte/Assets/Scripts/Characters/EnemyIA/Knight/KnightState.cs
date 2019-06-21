@@ -17,16 +17,12 @@ public class KnightState : CharacterState {
     public override void InitState()
     {
         knightModel = GameManager.instance.knightModel;
+
         base.health = knightModel.health;
         base.initialHealth = knightModel.health;
+        base.drops = knightModel.drops;
 
         GetComponent<KnightChase>().enabled = true;
-    }
-
-    private void Update()
-    {
-
-        print(base.health);
     }
 
     protected void changeAnim(Vector2 objectiveVector)
