@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class InventoryConsume : MonoBehaviour {
 
+    public AudioClip DrinkSound;
+    public AudioSource InventoryAudioSource;
+
     private void Start()
     {
+        InventoryAudioSource.clip = DrinkSound;
         GameManager.instance.getPlayerInv().itemSelectionEvent.AddListener(ItemSelection);
     }
 
@@ -18,6 +22,8 @@ public class InventoryConsume : MonoBehaviour {
             GameManager.instance.playerHpUp(potion.healthUp);
 
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>().updateHealthBar();
+            InventoryAudioSource.Play();
+            
         }
     }
 }
