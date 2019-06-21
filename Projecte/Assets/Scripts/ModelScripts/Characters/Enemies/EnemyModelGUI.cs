@@ -14,7 +14,7 @@ public class EnemyModelGUI : Editor
 
         EnemyModel enemyModel = (EnemyModel)target;
 
-        if (enemyModel.drops.Count != enemyModel.randomPercentatges.Count)
+        if (enemyModel.drops.Count != enemyModel.randomDropPercentatges.Count)
         {
             EditorGUILayout.HelpBox("Los drops y Random Percentatges deben tener el mismo numero de elementos.", MessageType.Error, true);
         }
@@ -28,7 +28,7 @@ public class EnemyModelGUI : Editor
             }
         }
 
-        foreach (int item in enemyModel.randomPercentatges)
+        foreach (int item in enemyModel.randomDropPercentatges)
         {
             if (item <= 0 || item > 100 )
             {

@@ -40,11 +40,11 @@ public class CharacterState : MonoBehaviour
             int drop = Random.Range(0, drops.Count);
             int dropping = Random.Range(0, 100);
 
-            if(dropping )
+            if(dropping < dropChances[drop])
+            {
+                Instantiate(drops[drop], position, rotation);
+            }
 
-
-            //  Instantiate(drops[drop], position, rotation);
         }
-
     }
 }

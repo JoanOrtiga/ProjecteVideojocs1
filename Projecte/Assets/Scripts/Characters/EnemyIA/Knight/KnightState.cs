@@ -24,6 +24,8 @@ public class KnightState : CharacterState {
         base.dropChances = knightModel.randomDropPercentatges;
 
         GetComponent<KnightChase>().enabled = true;
+
+        GetComponent<CircleCollider2D>().radius = knightModel.rangeVision;
     }
 
     protected void changeAnim(Vector2 objectiveVector)

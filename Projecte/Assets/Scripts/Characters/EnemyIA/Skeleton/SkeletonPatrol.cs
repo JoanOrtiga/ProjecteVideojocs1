@@ -47,6 +47,4 @@ public class SkeletonPatrol : SkeletonState
             this.enabled = false;
         }
     }
-
-    
 }
