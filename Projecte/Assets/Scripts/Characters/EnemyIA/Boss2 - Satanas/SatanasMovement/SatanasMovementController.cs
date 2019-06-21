@@ -4,10 +4,12 @@ using UnityEngine;
 
 public enum SatanMov
 {
-    SatanasFreeMov, SatanasPlatformMov, SatanasFollowPlayerMov
+    Loop, SatanasFreeMov, SatanasPlatformMov, SatanasFollowPlayerMov
 }
 
 public class SatanasMovementController : SatanasState {
+
+    public int changeMovPossibilityPercentatge = 50;
 
 	// Use this for initialization
 	void Start () {
@@ -18,4 +20,16 @@ public class SatanasMovementController : SatanasState {
 	void Update () {
 	    	
 	}
+
+    protected SatanMov switchMov()
+    {
+        if(Random.Range(0, 100) < changeMovPossibilityPercentatge)
+        {
+            print("xox");
+            return (SatanMov)Random.Range(1, 3);
+        }
+
+        print("sad");
+        return SatanMov.Loop;
+    }
 }
