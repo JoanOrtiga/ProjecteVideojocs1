@@ -44,6 +44,7 @@ public class PlayerModel : CharacterModel
     public AudioClip shootSound;
     public AudioClip powerUpSound;
     public AudioClip attackSound;
-
     public AudioClip pickUpSound;
+
+  
 }

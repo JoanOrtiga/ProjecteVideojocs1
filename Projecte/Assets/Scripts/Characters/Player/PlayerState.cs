@@ -17,6 +17,7 @@ public class PlayerState : CharacterState {
     protected Animator animator;
 
     protected float featherPower;
+    
 
     protected float h, v;
 

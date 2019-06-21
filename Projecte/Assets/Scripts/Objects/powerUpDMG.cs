@@ -19,7 +19,7 @@ public class powerUpDMG : PlayerState {
         if (other.CompareTag("Player"))
         {
             audioSource.Play();
-            GameManager.instance.featherDmg = playerModel.featherPowered;
+           // GameManager.instance.featherDmg = playerModel.featherPowered;
             Destroy(gameObject, 0.2f);
         }
     }
