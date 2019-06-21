@@ -7,6 +7,7 @@ public class LoadMap : MonoBehaviour
 {
     public AudioClip soundEffect;
     public AudioSource soundAudioSource;
+    public bool pickUpMap = false;
     
 
     [SerializeField]
@@ -20,7 +21,7 @@ public class LoadMap : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Map"))
+        if (Input.GetButtonDown("Map") && pickUpMap)
         {
             soundAudioSource.Play();
             active = !active;
