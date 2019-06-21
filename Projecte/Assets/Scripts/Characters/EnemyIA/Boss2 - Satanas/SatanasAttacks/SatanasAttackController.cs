@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SatanasAttackController : SatanasState {
 
+    
+
     private void Start()
     {
         newAtt();
