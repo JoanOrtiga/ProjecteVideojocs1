@@ -25,7 +25,6 @@ public class CrossbowTrap : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(inTigger);
         actualTIme = actualTIme + Time.deltaTime ;
 
         if (actualTIme >= timeToShoot && inTigger)

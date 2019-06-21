@@ -7,29 +7,34 @@ public enum SatanMov
     Loop, SatanasFreeMov, SatanasPlatformMov, SatanasFollowPlayerMov
 }
 
-public class SatanasMovementController : SatanasState {
+public class SatanasMovementController : SatanasState
+{
 
-    public int changeMovPossibilityPercentatge = 50;
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         GetComponent<SatanasFreeMov>().enabled = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    	
-	}
+    }
+
+    private void FixedUpdate()
+    {
+        rb2d.velocity = Vector2.zero;
+    }
 
     protected SatanMov switchMov()
     {
-        if(Random.Range(0, 100) < changeMovPossibilityPercentatge)
+        if (Random.Range(0, 100) < satanModel.changeMovPercentatge)
         {
-            print("xox");
-            return (SatanMov)Random.Range(1, 3);
+            return (SatanMov)Random.Range(1, 4);
         }
 
-        print("sad");
         return SatanMov.Loop;
     }
+
+    protected virtual void changeMov()
+    {
+
+    }
+
+
 }
