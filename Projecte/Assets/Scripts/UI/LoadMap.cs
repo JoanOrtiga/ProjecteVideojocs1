@@ -5,16 +5,24 @@ using UnityEngine.UI;
 
 public class LoadMap : MonoBehaviour
 {
+    public AudioClip soundEffect;
+    public AudioSource soundAudioSource;
+    
 
     [SerializeField]
     private GameObject map;
     private bool active = false;
 
+
+    private void Start()
+    {
+        soundAudioSource.clip = soundEffect;
+    }
     private void Update()
     {
         if (Input.GetButtonDown("Map"))
         {
-            Debug.Log("MAP");
+            soundAudioSource.Play();
             active = !active;
 
             map.SetActive(active);
