@@ -7,6 +7,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     public GameObject Enemy;
     private float timeOfSpawn = 0f;
+    public float timeBetweenEnemies = 3;
     private bool spawnerIniciated = false;
     public int maxNumberOfEnemy = 4;
     private int numebrOfEnemiesMade;
@@ -20,7 +21,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         timeOfSpawn = timeOfSpawn + Time.deltaTime;
 
-        if (timeOfSpawn >= 3 && spawnerIniciated && numebrOfEnemiesMade < maxNumberOfEnemy)
+        if (timeOfSpawn >= timeBetweenEnemies && spawnerIniciated && numebrOfEnemiesMade < maxNumberOfEnemy)
         {
             timeOfSpawn = 0;
             Instantiate(Enemy, new Vector2(this.transform.position.x, this.transform.position.y), this.transform.rotation);
