@@ -12,19 +12,8 @@ public class doorWay3 : MonoBehaviour {
         {
             if (collision.GetComponent<PlayPickupRelicInvetory>().relic_bible && collision.GetComponent<PlayPickupRelicInvetory>().relic_grail)
             {
-                Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
             }
         }
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-
-	}
 }
