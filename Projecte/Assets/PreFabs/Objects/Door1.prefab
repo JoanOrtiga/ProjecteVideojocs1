@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b0d5ec2e2ae294683e82860460f112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpKey: 0
   keyRenderer: {fileID: 212896638747226484}
   audioClip: {fileID: 8300000, guid: ecc3642505552554f95a99fe8ac25d8c, type: 3}
   audioSource: {fileID: 82190199929389018}
@@ -330,7 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9709e3dd889f64aa4d0652ec10ff7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: 0
+  key: {fileID: 1631448300835202}
+  keyBool: 0
   lockGameObject: {fileID: 1441908147133330}
 --- !u!212 &212384403540906094
 SpriteRenderer:
