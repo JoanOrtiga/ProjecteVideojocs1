@@ -30,7 +30,7 @@ public class CollectableController : MonoBehaviour
         {
             audioSource.Play();
             GameManager.instance.getPlayerInv().Add(item, quantity);
-            Destroy(gameObject,0.3f);
+            Destroy(gameObject,0.2f);
         }
     }
 

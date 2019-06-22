@@ -5,6 +5,9 @@ using UnityEngine;
 public class SpawnerEnemy : MonoBehaviour
 {
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
     public GameObject Enemy;
     private float timeOfSpawn = 0f;
     public float timeBetweenEnemies = 3;
@@ -14,6 +17,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void Start()
     {
+        audioSource.clip = audioClip;
         timeOfSpawn = 3;
     }
 
@@ -23,6 +27,7 @@ public class SpawnerEnemy : MonoBehaviour
 
         if (timeOfSpawn >= timeBetweenEnemies && spawnerIniciated && numebrOfEnemiesMade < maxNumberOfEnemy)
         {
+            audioSource.Play();
             timeOfSpawn = 0;
             Instantiate(Enemy, new Vector2(this.transform.position.x, this.transform.position.y), this.transform.rotation);
             numebrOfEnemiesMade++;
