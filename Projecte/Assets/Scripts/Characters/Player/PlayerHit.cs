@@ -15,7 +15,7 @@ public class PlayerHit : MonoBehaviour
         {
             if(other.isTrigger == false)
             {
-                other.GetComponent<CharacterState>().recieveDmg(GameManager.instance.playerModel.swordDmg);
+                other.GetComponent<CharacterState>().recieveDmg(GameManager.instance.swordDmg);
             }
         }
     }
