@@ -44,8 +44,16 @@ public class Boss1State : CharacterState
             }
 
             Destroy(bossWalls);
+        }       
+    }
+
+    public bool Health()
+    {
+        if (this.health <= 0 || this.gameObject == null)
+        {
+            return true;
         }
-        
+        return false;
     }
 
 }
