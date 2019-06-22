@@ -29,7 +29,7 @@ public class powerUpDMG : PlayerState {
 
         
         normalDmg = GameManager.instance.swordDmg;
-        Debug.Log(normalDmg);
+        
         rendererGameObject = GetComponent<Renderer>();
         boxColliderGameObject = GetComponent<BoxCollider2D>();
        
@@ -41,7 +41,7 @@ public class powerUpDMG : PlayerState {
     private void Update()
     {
         //Debug.Log(actualTime);
-        Debug.Log(GameManager.instance.swordDmg);
+        
         actualTime = actualTime + Time.deltaTime;
 
 
