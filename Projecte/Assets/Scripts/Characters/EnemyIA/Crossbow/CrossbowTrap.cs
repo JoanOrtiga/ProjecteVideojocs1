@@ -7,46 +7,43 @@ public class CrossbowTrap : MonoBehaviour
 
     public AudioClip ArrowSound;
     public AudioSource CrossbowAudioSource;
-    public float timeToShoot = 3;
 
     private float actualTIme;
     public GameObject Arrow;
     public Transform spawnArrowPos;
+    public float timeForArrows = 2;
 
-    private bool inTigger;
+    private bool oneTime = false;
 
     private void Start()
     {
-        inTigger = false;
-        actualTIme = 2;
+
         CrossbowAudioSource.clip = ArrowSound;
     }
 
 
-    private void Update()
-    {
-        actualTIme = actualTIme + Time.deltaTime ;
-
-        if (actualTIme >= timeToShoot && inTigger)
-        {
-            actualTIme = 0;
-            Shoot();
-        }
-    }
+  
 
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && oneTime == false)
         {
-            inTigger = true;
-            //  InvokeRepeating("Shoot", 0, 2);
+            oneTime = true;
+              InvokeRepeating("Shoot", 0, timeForArrows);
         }
         
     }
-    
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            CancelInvoke("Shoot");
+            oneTime = false;
+        }
+    }
     private void Shoot()
     {
       
