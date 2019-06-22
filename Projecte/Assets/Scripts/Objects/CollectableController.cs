@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CollectableController : MonoBehaviour
 {
+
+    public Renderer rendererGameObject;
+
     public AudioClip audioClip;
     public AudioSource audioSource;
 
@@ -14,6 +17,10 @@ public class CollectableController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        rendererGameObject = GetComponent<Renderer>();
+        rendererGameObject.enabled = true;
+
+
         audioSource.clip = audioClip;
         GetComponent<SpriteRenderer>().sprite = item.displayImage;
     }
@@ -28,6 +35,7 @@ public class CollectableController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            rendererGameObject.enabled = false;
             audioSource.Play();
             GameManager.instance.getPlayerInv().Add(item, quantity);
             Destroy(gameObject,0.2f);
