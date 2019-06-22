@@ -7,7 +7,7 @@ public class closedDoorLvl2 : Boss1State {
     // Update is called once per frame
     void Update ()
     {
-        if (Health())
+        if (BossDead())
         {
             Destroy(gameObject);
         }

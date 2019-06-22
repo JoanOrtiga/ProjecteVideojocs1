@@ -11,6 +11,7 @@ TagManager:
   - GameOver
   - BossComponents
   - Door
+  - BossLvl1
   layers:
   - Default
   - TransparentFX
