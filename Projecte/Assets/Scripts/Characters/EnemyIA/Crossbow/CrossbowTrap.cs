@@ -17,23 +17,16 @@ public class CrossbowTrap : MonoBehaviour
 
     private void Start()
     {
-
         CrossbowAudioSource.clip = ArrowSound;
     }
-
-
-  
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && oneTime == false)
         {
             oneTime = true;
-              InvokeRepeating("Shoot", 0, timeForArrows);
+            InvokeRepeating("Shoot", 0, timeForArrows);
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -46,7 +39,6 @@ public class CrossbowTrap : MonoBehaviour
     }
     private void Shoot()
     {
-      
         Instantiate(Arrow, spawnArrowPos.position, transform.rotation);
         CrossbowAudioSource.Play();
     }
