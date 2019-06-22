@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: LogModel
   m_EditorClassIdentifier: 
   health: 300
-  drops: []
-  randomPercentatges: 
+  drops:
+  - {fileID: 1903766858607174, guid: e71d2898367deed41a322f3d5d265fa5, type: 2}
+  randomDropPercentatges: 14000000
   chaseSpeed: 3
   rangeAttack: 1.5
   speed: 3

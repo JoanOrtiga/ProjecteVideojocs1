@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PickUpKey : MonoBehaviour
 {
+
+    public Renderer keyRenderer;
     public AudioClip audioClip;
     public AudioSource audioSource;
 
@@ -11,6 +13,9 @@ public class PickUpKey : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        keyRenderer = GetComponent<Renderer>();
+        keyRenderer.enabled = true;
+
         audioSource.clip = audioClip;
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -18,6 +23,7 @@ public class PickUpKey : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.Play();
+            keyRenderer.enabled = false;
             Destroy(gameObject, 0.8f);
             //posar true al script de doorOpen;
         }
