@@ -27,12 +27,6 @@ public class CharacterState : MonoBehaviour
         if (health <= 0)
         {
             Drops(gameObject.GetComponent<Rigidbody2D>().transform.position, gameObject.GetComponent<Rigidbody2D>().transform.rotation);
-
-            if (base.tag == GameObject.FindWithTag("BossLvl1").tag)
-            {
-                BossDead();
-            }
-
             Destroy(gameObject);
         }
 
@@ -52,10 +46,5 @@ public class CharacterState : MonoBehaviour
             }
 
         }
-    }
-
-    public bool BossDead()
-    {
-        return true;
     }
 }

@@ -41,7 +41,7 @@ public class powerUpDMG : PlayerState {
     private void Update()
     {
         //Debug.Log(actualTime);
-        Debug.Log(GameManager.instance.swordDmg);
+        //Debug.Log(GameManager.instance.swordDmg);
         actualTime = actualTime + Time.deltaTime;
 
 

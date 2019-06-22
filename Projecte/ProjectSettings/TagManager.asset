@@ -12,6 +12,8 @@ TagManager:
   - BossComponents
   - Door
   - BossLvl1
+  - OpenedDoorLvl1
+  - ClosedDoorLvl2
   layers:
   - Default
   - TransparentFX

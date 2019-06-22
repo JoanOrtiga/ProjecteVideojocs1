@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class closedDoorLvl2 : Boss1State {
 
+    private bool bossAlive;
+
     // Update is called once per frame
     void Update ()
     {
-        if (BossDead())
+        if (GameObject.Find("Boss1") != null)
         {
-            Destroy(gameObject);
+            bossAlive = true;
+        }
+
+        if (bossAlive == true)
+        {
+            if (GameObject.Find("Boss1") == null)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+                transform.GetChild(0).gameObject.SetActive(true);
+            }
         }
     }
 }
