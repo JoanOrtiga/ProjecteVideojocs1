@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: SkeletonModel
   m_EditorClassIdentifier: 
   health: 300
+  drops:
+  - {fileID: 1549760201995098, guid: f7efddee07f9aca4c9238ca61d131dc9, type: 2}
+  randomDropPercentatges: 32000000
   chaseSpeed: 3
   rangeAttack: 1.5
-  enemyHealth: 200
   speed: 2
   damage: 20
-  useless: 0
