@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: SwampMan
   m_EditorClassIdentifier: 
   health: 150
+  drops: []
+  randomDropPercentatges: 
   chaseSpeed: 200
   rangeAttack: 5
   speed: 10

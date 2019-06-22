@@ -13,21 +13,35 @@ public class SatanasAttackController : SatanasState {
 
     protected void newAtt()
     {
+        deActivate();
         switch (whichMov())
         {
             case 0:
-                GetComponent<SatanasFirePlatforms>().enabled = true;
+                GetComponent<SatanasFireBallAttack>().enabled = true;
+               //GetComponent<SatanasFirePlatforms>().enabled = true;
                 break;
 
             case 1:
+                GetComponent<SatanasFireBallAttack>().enabled = true;
+             //   GetComponent<SatanasFirePlatforms>().enabled = true;
                 break;
 
             case 2:
+                GetComponent<SatanasFireBallAttack>().enabled = true;
+                //GetComponent<SatanasFirePlatforms>().enabled = true;
                 break;
 
             default:
                 break;
         }
+
+
+    }
+
+    private void deActivate()
+    {
+        GetComponent<SatanasFirePlatforms>().enabled = false;
+        GetComponent<SatanasFireBallAttack>().enabled = false;
     }
 
     private int whichMov()

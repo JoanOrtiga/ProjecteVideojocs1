@@ -20,3 +20,13 @@ MonoBehaviour:
   damage: 20
   changeMovPercentatge: 20
   followPlayerSpeed: 2
+  maxTimeFollowPlayer: 5
+  coolDownBetweenAttacks: 2
+  chanceOf2Platforms: 50
+  timeOfLive: 4
+  marginTime: 1.5
+  lavaDamage: 30
+  timeBetweenFireBall: 0.4
+  timeToDestroy: 2.2
+  fireBallDmg: 20
+  fireBallSpeed: 20
