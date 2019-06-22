@@ -2,30 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SatanasFirePlatforms : MonoBehaviour {
+public class SatanasFirePlatforms : SatanasAttackController {
 
     public GameObject[] firePlatforms;
-
-    private int[] activeFire = new int[2];
 
     private void OnEnable()
     {
         firePlatforms[randomPlatform()].SetActive(true);
 
-
-        int rnd;
-
-        do
+        if (Random.Range(0, 100) < satanModel.chanceOf2Platforms)
         {
-            rnd = randomPlatform();
+            int rnd;
 
-        } while (firePlatforms[rnd].activeSelf);
+            do
+            {
+                rnd = randomPlatform();
 
-        firePlatforms[rnd].SetActive(true);
+                print(rnd + "  " +  firePlatforms[rnd].activeSelf);
+            } while (firePlatforms[rnd].activeSelf);
+
+            firePlatforms[rnd].SetActive(true);
+        }
     }
 
     private int randomPlatform()
     {
         return Random.Range(0, 3);
+    }
+
+    private void Update()
+    {
+
+        if (!firePlatforms[0].activeSelf && !firePlatforms[1].activeSelf && !firePlatforms[2].activeSelf)
+        {
+            base.newAtt();
+        }
+            
     }
 }

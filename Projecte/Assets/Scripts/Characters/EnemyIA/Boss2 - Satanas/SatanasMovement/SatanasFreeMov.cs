@@ -20,7 +20,7 @@ public class SatanasFreeMov : SatanasMovementController
 
     private void FixedUpdate()
     {
-        if(objective != null) 
+        if(objective != new Vector2(0,0)) 
             rb2d.transform.position = Vector2.MoveTowards(rb2d.transform.position, objective, satanModel.speed * Time.deltaTime);
 
         if ((objective - (Vector2)rb2d.transform.position).SqrMagnitude() < 0.5f)

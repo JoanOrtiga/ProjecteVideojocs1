@@ -8,7 +8,6 @@ public class CharacterState : MonoBehaviour
     public bool IsDefaultState = false;
 
     protected float health;
-
     protected float initialHealth;
 
     protected List<GameObject> drops;

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700153752f530c4ea5a1babe98b6044, type: 3}
   m_Name: SatanModel
   m_EditorClassIdentifier: 
-  health: 400
+  health: 500
   drops: []
   randomDropPercentatges: 
   chaseSpeed: 1
@@ -20,3 +20,19 @@ MonoBehaviour:
   damage: 20
   changeMovPercentatge: 20
   followPlayerSpeed: 2
+  maxTimeFollowPlayer: 5
+  coolDownBetweenAttacks: 2
+  chanceOf2Platforms: 50
+  timeOfLive: 4
+  marginTime: 1.5
+  lavaDamage: 30
+  timeBetweenFireBall: 1
+  timeToDestroy: 2.2
+  fireBallDmg: 20
+  fireBallSpeed: 20
+  fireBallCooldownAfterAttack: 4
+  crossDmgAttack: 50
+  rotationSpeedMax: 100
+  rotationSpeedMin: 0
+  lerpRotationSpeed: 0.01
+  timeRotating: 15
