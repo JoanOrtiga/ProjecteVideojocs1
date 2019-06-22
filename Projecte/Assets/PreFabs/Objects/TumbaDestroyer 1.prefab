@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114593312839038970}
   - component: {fileID: 82243001297866542}
   m_Layer: 0
-  m_Name: TumbaDestroyer 1
+  m_Name: Lvl2TumbaDestroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
