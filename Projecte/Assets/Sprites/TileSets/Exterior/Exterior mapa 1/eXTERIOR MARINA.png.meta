@@ -3946,9 +3946,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 560
-        y: 480
-        width: 16
-        height: 16
+        y: 464
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3962,33 +3962,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OverworldMAsMurto_229
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ae5c364285230341930f0b20cac358c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: OverworldMAsMurto_230
       rect:
         serializedVersion: 2
         x: 592
-        y: 480
-        width: 16
-        height: 16
+        y: 464
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3997,26 +3977,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d262671435ec01f4faa172e7afe47558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OverworldMAsMurto_231
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca629e61655ae88458aec0f01dd946b0
       vertices: []
       indices: 
       edges: []
@@ -4437,86 +4397,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d6df334bae3b85c43abd685b2289eb98
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OverworldMAsMurto_268
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7652693d5f9fb2a419c8d7f6a09b8207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OverworldMAsMurto_269
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86b4de33438dd1f408a79a6fa7e522a8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OverworldMAsMurto_270
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6cec4f6083b0214db0a58b41bf01199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OverworldMAsMurto_271
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbc83d67460b1554396fff65d022457a
       vertices: []
       indices: 
       edges: []
