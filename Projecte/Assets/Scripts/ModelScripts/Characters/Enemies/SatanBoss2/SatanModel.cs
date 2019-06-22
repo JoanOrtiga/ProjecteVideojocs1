@@ -23,4 +23,14 @@ public class SatanModel : EnemyModel {
     public float timeToDestroy;
     public float fireBallDmg;
     public float fireBallSpeed;
+    public float fireBallCooldownAfterAttack = 7f;
+
+    [Header("SatanCrossAttack")]
+    public float crossDmgAttack = 30f;
+    public float rotationSpeedMax = 70f;
+    public float rotationSpeedMin = 50f;
+    public float lerpRotationSpeed = 0.1f;
+    public float timeRotating = 5f;
+
+
 }

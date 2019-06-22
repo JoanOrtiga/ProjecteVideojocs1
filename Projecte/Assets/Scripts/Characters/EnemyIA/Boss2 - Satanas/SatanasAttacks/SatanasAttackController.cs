@@ -6,7 +6,7 @@ public class SatanasAttackController : SatanasState {
 
     
 
-    private void Start()
+    private void Awake()
     {
         newAtt();
     }
@@ -18,30 +18,34 @@ public class SatanasAttackController : SatanasState {
         {
             case 0:
                 GetComponent<SatanasFireBallAttack>().enabled = true;
-               //GetComponent<SatanasFirePlatforms>().enabled = true;
                 break;
 
             case 1:
-                GetComponent<SatanasFireBallAttack>().enabled = true;
-             //   GetComponent<SatanasFirePlatforms>().enabled = true;
+                GetComponent<SatanasFirePlatforms>().enabled = true;
                 break;
 
             case 2:
-                GetComponent<SatanasFireBallAttack>().enabled = true;
-                //GetComponent<SatanasFirePlatforms>().enabled = true;
+                GetComponent<SatanCrossAttack>().enabled = true;
                 break;
 
             default:
                 break;
         }
+    }
 
-
+    private void Update()
+    {
+        if(!GetComponent<SatanasFirePlatforms>().enabled && !GetComponent<SatanasFireBallAttack>().enabled && !GetComponent<SatanCrossAttack>().enabled)
+        {
+            newAtt();
+        }
     }
 
     private void deActivate()
     {
         GetComponent<SatanasFirePlatforms>().enabled = false;
         GetComponent<SatanasFireBallAttack>().enabled = false;
+        GetComponent<SatanCrossAttack>().enabled = false;
     }
 
     private int whichMov()

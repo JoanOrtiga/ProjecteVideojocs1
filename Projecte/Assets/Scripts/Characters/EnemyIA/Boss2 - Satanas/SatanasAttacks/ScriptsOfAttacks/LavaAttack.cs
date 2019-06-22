@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class LavaAttack : MonoBehaviour {
 
-    private float coolDown;
     private SpriteRenderer spr;
-
     private bool doDmg = false;
 
 	// Use this for initialization
 	void Start () {
-        coolDown = GameManager.instance.satanModel.timeOfLive;
         spr = GetComponent<SpriteRenderer>();
         spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, 0f);
 

@@ -9,23 +9,20 @@ public class SatanasFireBallAttack : SatanasAttackController {
     private void OnEnable()
     {
         StartCoroutine(FireBall());
+        InvokeRepeating("SpawnFireBall", 0, satanModel.timeBetweenFireBall);
     }
 
-    IEnumerator FireBall()
+    private void SpawnFireBall()
     {
-        yield return new WaitForSeconds(satanModel.timeBetweenFireBall);
         Instantiate(fireBall, rb2d.transform.position, rb2d.transform.rotation);
-        yield return new WaitForSeconds(satanModel.timeBetweenFireBall);
-        Instantiate(fireBall, rb2d.transform.position, rb2d.transform.rotation);
-        yield return new WaitForSeconds(satanModel.timeBetweenFireBall);
-        Instantiate(fireBall, rb2d.transform.position, rb2d.transform.rotation);
-        yield return new WaitForSeconds(satanModel.timeBetweenFireBall);
-        Instantiate(fireBall, rb2d.transform.position, rb2d.transform.rotation);
-        yield return new WaitForSeconds(satanModel.timeBetweenFireBall);
-        Instantiate(fireBall, rb2d.transform.position, rb2d.transform.rotation);
+    }
+    
+    private IEnumerator FireBall()
+    {
+        yield return new WaitForSeconds(satanModel.fireBallCooldownAfterAttack);
+        CancelInvoke("SpawnFireBall");
 
         yield return new WaitForSeconds(satanModel.coolDownBetweenAttacks);
-
         base.newAtt();
     }
 }

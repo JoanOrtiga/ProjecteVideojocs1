@@ -26,24 +26,11 @@ public class FireBallsAttackSatan : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerState>().getDmg(GameManager.instance.satanModel.fireBallDmg);
+            collision.GetComponent<PlayerState>().getDmg(GameManager.instance.boss1_model.attackFireBallDmg);
             Destroy(gameObject);
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag != "Player")
-            Destroy(gameObject);
     }
 
 
