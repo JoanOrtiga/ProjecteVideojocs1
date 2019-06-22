@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class PickUpMap : MonoBehaviour {
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
     public Image mapIcon;
     public GameObject gameManager;
 	// Use this for initialization
 	void Start ()
     {
+        audioSource.clip = audioClip;
         mapIcon.enabled = false;
 	}
 	
@@ -22,10 +25,11 @@ public class PickUpMap : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.Play();
             mapIcon.enabled = true;
             gameManager.GetComponent<LoadMap>().pickUpMap = true;
 
-            Destroy(gameObject);
+            Destroy(gameObject, 0.7f);
         }
     }
 
