@@ -5,6 +5,10 @@ using UnityEngine;
 public class PickUpKey : MonoBehaviour
 {
 
+    [HideInInspector]
+    public bool pickUpKey = false;
+
+
     public Renderer keyRenderer;
     public AudioClip audioClip;
     public AudioSource audioSource;
@@ -22,10 +26,11 @@ public class PickUpKey : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            pickUpKey = true;
             audioSource.Play();
             keyRenderer.enabled = false;
             Destroy(gameObject, 0.8f);
-            //posar true al script de doorOpen;
+           
         }
     }
 }
