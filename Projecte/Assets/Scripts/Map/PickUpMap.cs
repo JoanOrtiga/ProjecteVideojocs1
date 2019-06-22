@@ -7,9 +7,9 @@ public class PickUpMap : MonoBehaviour {
 
 
     public Renderer rendererGameObject;
+
     public AudioClip audioClip;
     public AudioSource audioSource;
-
 
     public Image mapIcon;
     public GameObject gameManager;

@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour {
     public KnightModel knightModel;
     public SatanModel satanModel;
 
+
     [HideInInspector] public float featherDmg;
+    [HideInInspector] public float swordDmg;
 
     public class SaveGame
     {
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour {
 
         saveGame.playerHealt = playerModel.health;
         featherDmg = playerModel.arrowDmg;
+        swordDmg = playerModel.swordDmg;
 
         saveGame.inv = new PlayerInventory();
     }
