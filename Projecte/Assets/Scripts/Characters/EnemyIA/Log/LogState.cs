@@ -20,6 +20,8 @@ public class LogState : CharacterState {
         logModel = GameManager.instance.logModel;
         base.health = logModel.health;
         base.initialHealth = logModel.health;
+        base.drops = knightModel.drops;
+        base.dropChances = knightModel.randomDropPercentatges;
 
         GetComponent<LogChase>().enabled = true;
     }

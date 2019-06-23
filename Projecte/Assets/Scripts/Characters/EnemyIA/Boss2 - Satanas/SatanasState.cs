@@ -17,6 +17,8 @@ public class SatanasState : CharacterState
 
         base.health = satanModel.health;
         base.initialHealth = satanModel.health;
+        base.drops = satanModel.drops;
+        base.dropChances = satanModel.randomDropPercentatges;
     }
 
     private void Start()

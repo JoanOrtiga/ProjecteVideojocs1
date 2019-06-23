@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Boss1", menuName = "Models/Characters/Boss")]
-public class Boss1Model : CharacterModel
+public class Boss1Model : EnemyModel
 {
     public float speedInterpolation = 0.04f;
 

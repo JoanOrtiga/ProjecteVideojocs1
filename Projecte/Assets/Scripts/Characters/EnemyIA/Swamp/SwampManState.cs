@@ -21,6 +21,8 @@ public class SwampManState : CharacterState {
         swampManModel = GameManager.instance.swampManModel;
         base.health = swampManModel.health;
         base.initialHealth = swampManModel.health;
+        base.drops = swampManModel.drops;
+        base.dropChances = swampManModel.randomDropPercentatges;
 
         GetComponent<SwampManController>().enabled = true;
     }

@@ -20,6 +20,8 @@ public class SkeletonState : CharacterState {
         skeletonModel = GameManager.instance.skeletonModel;
         base.health = skeletonModel.health;
         base.initialHealth = skeletonModel.health;
+        base.drops = skeletonModel.drops;
+        base.dropChances = skeletonModel.randomDropPercentatges;
 
         GetComponent<SkeletonPatrol>().enabled = true;
     }
