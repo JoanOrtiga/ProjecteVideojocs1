@@ -5,6 +5,7 @@ using UnityEngine;
 public class mazeFalling : CharacterState {
 
     private Transform target;
+    public float DmgTaken;
 
     // Use this for initialization
     void Start ()
@@ -20,8 +21,8 @@ public class mazeFalling : CharacterState {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player") { 
-            target.GetComponent<PlayerState>().getDmg(400);
-            Debug.Log("F");
+            target.GetComponent<PlayerState>().getDmg(DmgTaken);
+            
         }
     }
 }
