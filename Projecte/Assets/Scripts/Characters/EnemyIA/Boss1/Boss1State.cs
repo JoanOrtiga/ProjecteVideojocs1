@@ -21,8 +21,6 @@ public class Boss1State : CharacterState
 
         base.health = boss.health;
         base.initialHealth = boss.health;
-        base.drops = boss.drops;
-        base.dropChances = boss.randomDropPercentatges;
     }
 
     void Start()
