@@ -8,12 +8,6 @@ public class GameOver : MonoBehaviour {
     [SerializeField]
     private GameObject gameOver;
 
-    private void Start()
-    {
-        gameOver = GameObject.FindGameObjectWithTag("GameOver");
-    }
-
-
     // Update is called once per frame
     void Update ()
     {
