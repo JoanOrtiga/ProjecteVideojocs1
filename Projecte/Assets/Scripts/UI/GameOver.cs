@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour {
             Time.timeScale = (true) ? 0 : 1f;
         }
 
-        if (Input.GetButton("Restart"))
+        if (Input.GetButton("Restart") && gameOver.activeSelf)
         {
             SceneManager.LoadScene(0);
         }
