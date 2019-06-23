@@ -7,9 +7,15 @@ public class GameOver : MonoBehaviour {
 
     [SerializeField]
     private GameObject gameOver;
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Start()
+    {
+        gameOver = GameObject.FindGameObjectWithTag("GameOver");
+    }
+
+
+    // Update is called once per frame
+    void Update ()
     {
         if(GameManager.instance.getplayerHealth() <= 0)
         {

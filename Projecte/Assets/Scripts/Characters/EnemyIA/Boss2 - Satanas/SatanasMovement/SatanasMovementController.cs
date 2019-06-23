@@ -16,11 +16,6 @@ public class SatanasMovementController : SatanasState
         GetComponent<SatanasFreeMov>().enabled = true;
     }
 
-    private void FixedUpdate()
-    {
-        rb2d.velocity = Vector2.zero;
-    }
-
     protected SatanMov switchMov()
     {
         if (Random.Range(0, 100) < satanModel.changeMovPercentatge)
