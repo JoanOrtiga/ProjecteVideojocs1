@@ -10,8 +10,7 @@ public class PickUpKey : MonoBehaviour
 
 
     public Renderer keyRenderer;
-    public AudioClip audioClip;
-    public AudioSource audioSource;
+  
 
 
     // Use this for initialization
@@ -19,15 +18,15 @@ public class PickUpKey : MonoBehaviour
     {
         keyRenderer = GetComponent<Renderer>();
         keyRenderer.enabled = true;
-
-        audioSource.clip = audioClip;
+        
+       
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             pickUpKey = true;
-            audioSource.Play();
+            
             keyRenderer.enabled = false;
             Destroy(gameObject, 0.8f);
            

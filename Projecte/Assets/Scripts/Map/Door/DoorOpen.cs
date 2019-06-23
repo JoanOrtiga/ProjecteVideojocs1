@@ -5,12 +5,14 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour {
 
     public GameObject key;
+    public GameObject lockGameObject;
+  
 
     [HideInInspector]
     public bool keyBool = false;
 
 
-    public GameObject lockGameObject;
+   
     // Use this for initialization
     private void Update()
     {
@@ -24,8 +26,10 @@ public class DoorOpen : MonoBehaviour {
     {
         if (other.CompareTag("Player") && keyBool)
         {
-
-            Destroy(lockGameObject);
+            
+                Destroy(lockGameObject);
+            
+           
             Destroy(gameObject);
         }
     }
