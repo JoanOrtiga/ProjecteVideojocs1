@@ -24,6 +24,8 @@ public class MovingState_Boss1 : Boss1State
         p1.parent = null;
         p2.parent = null;
         p3.parent = null;
+
+        GetComponent<AttackingState>().enabled = true;
     }
 
 
