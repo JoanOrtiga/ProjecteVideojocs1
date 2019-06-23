@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     [HideInInspector] public float featherDmg;
     [HideInInspector] public float swordDmg;
 
+    [HideInInspector] public bool paused;
+
     public class SaveGame
     {
         public float playerHealt;

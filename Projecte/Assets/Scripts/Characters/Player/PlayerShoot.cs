@@ -49,7 +49,7 @@ public class PlayerShoot : PlayerState
         rechargeTimePowerUpPast = rechargeTimePowerUpPast + Time.deltaTime;
         powerUpTimePast = powerUpTimePast + Time.deltaTime;
 
-        if (Input.GetButton("PowerUp1") && rechargeTimePowerUpPast >= playerModel.rechargeTimePower)
+        if (Input.GetButton("PowerUp1") && rechargeTimePowerUpPast >= playerModel.rechargeTimePower && !GameManager.instance.paused)
         {
             powerUpTimePast = 0;
             rechargeTimePowerUpPast = 0;
@@ -88,7 +88,7 @@ public class PlayerShoot : PlayerState
         shootingDirection.Normalize();
 
 
-        if (Input.GetButtonDown("fireArrow") && ammunitionAtTheTime > 0)
+        if (Input.GetButtonDown("fireArrow") && ammunitionAtTheTime > 0 && !GameManager.instance.paused)
         {
             
             source.PlayOneShot(playerModel.shootSound);

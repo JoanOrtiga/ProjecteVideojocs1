@@ -20,9 +20,13 @@ public class PlayerFlash : PlayerState
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.instance.paused)
+        {
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+        }
 
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+     
 
         if (currentState == PlayerStates.attack)
         {

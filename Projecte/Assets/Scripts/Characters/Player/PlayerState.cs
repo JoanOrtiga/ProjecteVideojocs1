@@ -43,11 +43,6 @@ public class PlayerState : CharacterState {
         source = GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
-        
-    }
-
     public void getDmg(float damageRecieved)
     {
         GameManager.instance.playerGetDmg(damageRecieved);

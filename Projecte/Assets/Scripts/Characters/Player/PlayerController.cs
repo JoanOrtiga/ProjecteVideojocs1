@@ -27,8 +27,13 @@ public class PlayerController : PlayerState
 
         playerModel.timeForFlash = Time.deltaTime + playerModel.timeForFlash;
 
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+
+        if (!GameManager.instance.paused)
+        {
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+        }
+        
 
         if (currentState == PlayerStates.attack)
         {

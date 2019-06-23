@@ -17,10 +17,6 @@ public class LoadScene : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Cursor.visible = true;
-        if(GameManager.instance != null)
-        {
-            
-        }
     }
 
     public void LoadScenes()

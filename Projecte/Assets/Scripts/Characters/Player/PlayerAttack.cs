@@ -19,6 +19,5 @@ public class PlayerAttack : MonoBehaviour
             if(!collision.isTrigger)
                 Destroy(gameObject);
         }
-
     }
 }
