@@ -9,7 +9,6 @@ public class SpawnBoss : MonoBehaviour
     public GameObject bossLimits;
 
     public GameObject boss1;
-    public Image PressF;
     public Vector2 spawnPlace;
     public Vector2[] spawnPlaceLimit;
 
@@ -29,8 +28,6 @@ public class SpawnBoss : MonoBehaviour
 
                 Instantiate(bossWalls, new Vector2(0, 0), new Quaternion(0, 0, 0, 0));
                 bossWalls.name = "bossWalls";
-
-                
 
                 Instantiate(bossLimits, spawnPlaceLimit[0], bossLimits.transform.rotation).transform.parent = bossWalls.transform;
                 Instantiate(bossLimits, spawnPlaceLimit[1], bossLimits.transform.rotation * new Quaternion(0,0,90,90)).transform.parent = bossWalls.transform;
