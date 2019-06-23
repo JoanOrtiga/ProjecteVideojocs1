@@ -29,11 +29,14 @@ public class EndGame : MonoBehaviour {
 
     public void LoadScenes()
     {
+        Debug.Log("LOAD NEW SCENE");
         SceneManager.LoadScene(0);
+       
     }
 
     public void OnApplicationQuit()
     {
         Application.Quit();
+        Debug.Log("QUIT");
     }
 }
