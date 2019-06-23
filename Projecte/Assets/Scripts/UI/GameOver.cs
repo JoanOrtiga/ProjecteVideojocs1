@@ -19,8 +19,7 @@ public class GameOver : MonoBehaviour {
     {
         if(GameManager.instance.getplayerHealth() <= 0)
         {
-            if(gameOver != null)
-                gameOver.SetActive(true);
+            gameOver.SetActive(true);
 
             Time.timeScale = (true) ? 0 : 1f;
             GameManager.instance.paused = true;
