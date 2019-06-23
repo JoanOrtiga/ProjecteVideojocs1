@@ -14,6 +14,7 @@ TagManager:
   - BossLvl1
   - OpenedDoorLvl1
   - ClosedDoorLvl2
+  - Map
   layers:
   - Default
   - TransparentFX

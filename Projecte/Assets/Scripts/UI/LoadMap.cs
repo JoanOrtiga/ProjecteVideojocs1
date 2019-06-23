@@ -12,6 +12,7 @@ public class LoadMap : MonoBehaviour
 
     [SerializeField]
     private GameObject map;
+
     private bool active = false;
 
 
@@ -28,8 +29,6 @@ public class LoadMap : MonoBehaviour
             active = !active;
 
             map.SetActive(active);
-
-            Time.timeScale = (active) ? 0 : 1f;
         }
 
 
