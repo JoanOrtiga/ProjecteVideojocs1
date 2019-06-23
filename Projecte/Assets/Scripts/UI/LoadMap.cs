@@ -19,6 +19,7 @@ public class LoadMap : MonoBehaviour
     {
         soundAudioSource.clip = soundEffect;
     }
+
     private void Update()
     {
         if (Input.GetButtonDown("Map") && pickUpMap)
