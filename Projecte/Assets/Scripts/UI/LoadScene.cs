@@ -4,6 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Cursor.visible = true;
+        if(GameManager.instance != null)
+        {
+            
+        }
+    }
 
     public void LoadScenes()
     {
