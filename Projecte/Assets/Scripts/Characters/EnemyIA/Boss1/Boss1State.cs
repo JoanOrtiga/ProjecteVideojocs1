@@ -25,8 +25,11 @@ public class Boss1State : CharacterState
 
     void Start()
     {
-        GetComponent<MovingState_Boss1>().enabled = true;
-        bossWalls = GameObject.Find("bossWalls").gameObject;
+        if(gameObject.GetComponent<MovingState_Boss1>() != null)
+            this.gameObject.GetComponent<MovingState_Boss1>().enabled = true;
+
+        if(GameObject.Find("bossWalls") != null)
+            bossWalls = GameObject.Find("bossWalls").gameObject;
     }
 
     private void OnDestroy()

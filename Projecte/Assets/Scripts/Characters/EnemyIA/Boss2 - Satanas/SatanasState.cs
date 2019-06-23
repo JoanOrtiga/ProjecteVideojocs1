@@ -21,8 +21,8 @@ public class SatanasState : CharacterState
 
     private void Start()
     {
-        
-
         GetComponent<SatanasMovementController>().enabled = true;
+        GetComponent<SatanasAttackController>().enabled = true;
     }
+
 }

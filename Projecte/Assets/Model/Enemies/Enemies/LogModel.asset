@@ -13,8 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   drops:
+  - {fileID: 1549760201995098, guid: f7efddee07f9aca4c9238ca61d131dc9, type: 2}
   - {fileID: 1903766858607174, guid: e71d2898367deed41a322f3d5d265fa5, type: 2}
-  randomDropPercentatges: 14000000
+  randomDropPercentatges: 6400000064000000
   chaseSpeed: 3
   rangeAttack: 1.5
   speed: 3

@@ -14,10 +14,10 @@ MonoBehaviour:
   health: 400
   speed: 4
   force: 70
-  swordDmg: 10
+  swordDmg: 30
   range: 10
   TimeBetweenFlash: 3
-  timeForFlash: 224.51181
+  timeForFlash: 29.140326
   speedFlash: 10
   forceFlash: 100
   flashTime: 0.5
@@ -35,3 +35,4 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 53a01bcada8eb2e459e9ac72fa529024, type: 3}
   powerUpSound: {fileID: 8300000, guid: 075fde9963c83874692d5a64f7ca7df0, type: 3}
   attackSound: {fileID: 8300000, guid: 53a01bcada8eb2e459e9ac72fa529024, type: 3}
+  pickUpSound: {fileID: 0}
