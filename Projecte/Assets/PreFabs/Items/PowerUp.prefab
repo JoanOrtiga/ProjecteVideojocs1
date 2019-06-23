@@ -196,7 +196,7 @@ MonoBehaviour:
   IsDefaultState: 0
   rendererGameObject: {fileID: 212900981304374766}
   boxColliderGameObject: {fileID: 61826571045458280}
-  Ui: {fileID: 0}
+  Ui: {fileID: 1810576687759964, guid: 903b56795df19ec4fad3a71f9b02dcff, type: 2}
   audioClip: {fileID: 8300000, guid: 768812b5131ffa2498e6fbbe3a786219, type: 3}
   audioSource: {fileID: 82631977050894556}
   powerUpDmg: 100
