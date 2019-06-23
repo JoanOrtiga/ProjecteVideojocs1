@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(CameraZoomInOut))]
 public class CameraZoomInOutCustomGUI : Editor
 {
@@ -21,3 +23,4 @@ public class CameraZoomInOutCustomGUI : Editor
     }   
 
 }
+#endif

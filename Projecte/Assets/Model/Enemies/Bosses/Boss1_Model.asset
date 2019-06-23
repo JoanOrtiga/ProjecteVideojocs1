@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ddd82aa709cb347ba3527a58a11ce1, type: 3}
   m_Name: Boss1_Model
   m_EditorClassIdentifier: 
-  health: 50
+  health: 600
   speedInterpolation: 0.05
   attackFireBallDmg: 10
   ballSpeed: 20
@@ -22,6 +22,7 @@ MonoBehaviour:
   Cooldown: 3
   radius: 17
   center: {x: -8.33, y: 26.89}
+  timeToDestroy: 2.2
   attackLaserDmg: 10
   laserTime: 3
   CooldownLaser: 3

@@ -32,7 +32,6 @@ public class CrossbowArrow : MonoBehaviour
         {
             collision.GetComponent<PlayerState>().getDmg(DMG);
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

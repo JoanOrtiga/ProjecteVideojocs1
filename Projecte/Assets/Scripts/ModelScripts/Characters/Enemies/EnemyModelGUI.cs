@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
+
+#if UNITY_EDITOR
 [CanEditMultipleObjects]
 [CustomEditor(typeof(EnemyModel), true)]
 public class EnemyModelGUI : Editor
@@ -37,3 +41,4 @@ public class EnemyModelGUI : Editor
         }
     }
 }
+#endif

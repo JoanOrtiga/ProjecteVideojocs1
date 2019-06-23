@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour {
     public KnightModel knightModel;
     public SatanModel satanModel;
 
-
     [HideInInspector] public float featherDmg;
     [HideInInspector] public float swordDmg;
 
