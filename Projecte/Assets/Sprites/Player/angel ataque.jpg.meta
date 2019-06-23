@@ -1,0 +1,435 @@
+fileFormatVersion: 2
+guid: 0c9d6395ae388ca41add083ba51ed992
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: angel ataque_0
+    21300002: angel ataque_1
+    21300004: angel ataque_2
+    21300006: angel ataque_3
+    21300008: angel ataque_4
+    21300010: angel ataque_5
+    21300012: angel ataque_6
+    21300014: angel ataque_7
+    21300016: angel ataque_8
+    21300018: angel ataque_9
+    21300020: angel ataque_10
+    21300022: angel ataque_11
+    21300024: angel ataque_12
+    21300026: angel ataque_13
+    21300028: angel ataque_14
+    21300030: angel ataque_15
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: angel ataque_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 298
+        width: 38
+        height: 45
+      alignment: 9
+      pivot: {x: 0.64645946, y: 0.49917942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cbfa97ff0c00c4d9423dd278ab2d58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 298
+        width: 31
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5647167, y: 0.49909803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d18c0ce28b07e47b9b8b2be0808103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 291
+        width: 33
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5917969, y: 0.5673253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cb0c5ec89886f42a983183cd641fca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 291
+        width: 27
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5012179, y: 0.56671435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0927c8a7ae1c76d48b4c977f39ec33ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 234
+        width: 27
+        height: 50
+      alignment: 9
+      pivot: {x: 0.6484174, y: 0.51015013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125bd9d765723be4e8238ced30605169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_5
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 239
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0.7195549, y: 0.4543742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617821e4b9c437749a8890a904262f7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 239
+        width: 28
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6580015, y: 0.45462036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022b79dbe729e1a428ca91e2687bf3f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 239
+        width: 28
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6633257, y: 0.45672745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a1fb593feede64c8a524e848ac1c34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_8
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 174
+        width: 30
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32179895, y: 0.45808953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830bf62909af0f34a8182950cddca885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 174
+        width: 29
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32931465, y: 0.45432806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c036f95e45ad35248b23f7252f4b8237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 174
+        width: 36
+        height: 45
+      alignment: 9
+      pivot: {x: 0.26298735, y: 0.45448542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce6895fba4a47143a77b4a8c703f520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_11
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 169
+        width: 29
+        height: 50
+      alignment: 9
+      pivot: {x: 0.32736102, y: 0.5100006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ab062be6dbbe64fa711240dceeec62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_12
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 106
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33944377, y: 0.47737414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ab787240805b54fa6f2dbe7f410135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_13
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 106
+        width: 36
+        height: 47
+      alignment: 9
+      pivot: {x: 0.3746607, y: 0.47919318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949669aa2b2d67a40bfa33827155351a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_14
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 106
+        width: 27
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5015767, y: 0.42438522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11504cfe5a362cd4fa3b8c3c43451da2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angel ataque_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 106
+        width: 27
+        height: 53
+      alignment: 9
+      pivot: {x: 0.50241315, y: 0.42325318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3aece18228d3245a53ff29bbb7b1fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9d9573959d0b01a4cac8b16468d5521c
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
