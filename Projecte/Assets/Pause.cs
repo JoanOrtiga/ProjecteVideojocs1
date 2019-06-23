@@ -18,8 +18,6 @@ public class Pause : MonoBehaviour {
             pausePanel.SetActive(active);
 
             Time.timeScale = (active) ? 0 : 1f;
-        }
-
-       
+        }      
     }
 }

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class closedDoorLvl2 : Boss1State {
-
+public class closedDoorLvl2 : MonoBehaviour
+{
     private bool bossAlive;
 
     // Update is called once per frame
@@ -16,10 +16,10 @@ public class closedDoorLvl2 : Boss1State {
 
         if (bossAlive == true)
         {
-            if (GameObject.Find("Boss1") == null)
+            if (GameObject.Find("Boss1") == false)
             {
                 GetComponent<SpriteRenderer>().enabled = false;
-                transform.GetChild(0).gameObject.SetActive(true);
+                GameObject.Find("OpenedDoor").SetActive(true);
             }
         }
     }
