@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DoorOpen : MonoBehaviour {
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
     public GameObject key;
     public GameObject lockGameObject;
   
@@ -11,8 +14,11 @@ public class DoorOpen : MonoBehaviour {
     [HideInInspector]
     public bool keyBool = false;
 
+    private void Start()
+    {
+        audioSource.clip = audioClip;
+    }
 
-   
     // Use this for initialization
     private void Update()
     {
@@ -26,11 +32,12 @@ public class DoorOpen : MonoBehaviour {
     {
         if (other.CompareTag("Player") && keyBool)
         {
-            
-                Destroy(lockGameObject);
+            audioSource.Play();
+
+            Destroy(lockGameObject, 0.3f);
             
            
-            Destroy(gameObject);
+            Destroy(gameObject, 0.3f);
         }
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   health: 400
   drops:
   - {fileID: 1549760201995098, guid: f7efddee07f9aca4c9238ca61d131dc9, type: 2}
-  - {fileID: 1903766858607174, guid: e71d2898367deed41a322f3d5d265fa5, type: 2}
+  - {fileID: 1693717069690194, guid: a4f562bf4f3b4c2499c7d7fca3f58209, type: 2}
   randomDropPercentatges: 6400000064000000
   chaseSpeed: 1
   rangeAttack: 7

@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693717069690194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 118, y: 127.6, z: 0}
+  m_LocalPosition: {x: 40.406883, y: 2.518652, z: -2.5196948}
   m_LocalScale: {x: 0.27349, y: 0.27349, z: 0.27349}
   m_Children: []
   m_Father: {fileID: 0}
@@ -196,7 +196,7 @@ MonoBehaviour:
   IsDefaultState: 0
   rendererGameObject: {fileID: 212900981304374766}
   boxColliderGameObject: {fileID: 61826571045458280}
-  Ui: {fileID: 0}
+  Ui: {fileID: 1933261707284978, guid: ea1e0f61e556f8045b659d51e64a8d84, type: 2}
   audioClip: {fileID: 8300000, guid: 768812b5131ffa2498e6fbbe3a786219, type: 3}
   audioSource: {fileID: 82631977050894556}
   powerUpDmg: 100
