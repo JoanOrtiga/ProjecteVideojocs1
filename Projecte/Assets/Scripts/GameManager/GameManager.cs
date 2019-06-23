@@ -55,8 +55,12 @@ public class GameManager : MonoBehaviour {
 
     public void playerHpUp(float healtIncreased)
     {
-        if(saveGame.playerHealt + healtIncreased < playerModel.health)
+        if (saveGame.playerHealt + healtIncreased < playerModel.health)
             saveGame.playerHealt += healtIncreased;
+        else
+
+            saveGame.playerHealt = playerModel.health;
+       
     }
 
     public float getplayerHealth()
