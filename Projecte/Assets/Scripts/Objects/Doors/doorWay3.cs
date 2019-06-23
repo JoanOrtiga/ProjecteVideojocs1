@@ -10,7 +10,7 @@ public class doorWay3 : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            if (collision.GetComponent<PlayPickupRelicInvetory>().relic_bible && collision.GetComponent<PlayPickupRelicInvetory>().relic_grail)
+            if (collision.GetComponent<PlayPickupRelicInvetory>().relic_bible && collision.GetComponent<PlayPickupRelicInvetory>().relic_cross)
             {
                 Destroy(transform.parent.gameObject);
             }
