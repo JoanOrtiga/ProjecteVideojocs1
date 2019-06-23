@@ -4,24 +4,43 @@ using UnityEngine;
 
 public class SatanasFirePlatforms : SatanasAttackController {
 
-    public GameObject[] firePlatforms;
+    private GameObject platform;
+    private GameObject[] FirePlatforms = new GameObject[3];
+
+    private void Awake()
+    {
+        platform = GameObject.FindGameObjectWithTag("BossComponents");
+
+        FirePlatforms[0] = platform.transform.GetChild(3).gameObject;
+        FirePlatforms[1] = platform.transform.GetChild(4).gameObject;
+        FirePlatforms[2] = platform.transform.GetChild(5).gameObject;
+    }
 
     private void OnEnable()
     {
-        firePlatforms[randomPlatform()].SetActive(true);
+        FirePlatforms[randomPlatform()].SetActive(true);
+        print(FirePlatforms[0].activeSelf);
+        print(FirePlatforms[1].activeSelf);
+        print(FirePlatforms[2].activeSelf);
 
         if (Random.Range(0, 100) < satanModel.chanceOf2Platforms)
         {
             int rnd;
-
+            int safeCount = 0;
             do
             {
                 rnd = randomPlatform();
 
-                print(rnd + "  " +  firePlatforms[rnd].activeSelf);
-            } while (firePlatforms[rnd].activeSelf);
+                safeCount++;
 
-            firePlatforms[rnd].SetActive(true);
+            } while (FirePlatforms[rnd].activeSelf && safeCount < 50f);
+
+            if(safeCount > 49)
+            {
+                base.newAtt();
+            }
+
+            FirePlatforms[rnd].SetActive(true);
         }
     }
 
@@ -32,11 +51,9 @@ public class SatanasFirePlatforms : SatanasAttackController {
 
     private void Update()
     {
-
-        if (!firePlatforms[0].activeSelf && !firePlatforms[1].activeSelf && !firePlatforms[2].activeSelf)
+        if (!FirePlatforms[0].activeSelf && !FirePlatforms[1].activeSelf && !FirePlatforms[2].activeSelf)
         {
             base.newAtt();
-        }
-            
+        }   
     }
 }
