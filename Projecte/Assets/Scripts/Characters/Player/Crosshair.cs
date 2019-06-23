@@ -9,13 +9,13 @@ public class Crosshair : MonoBehaviour {
 
     private void Start()
     {
-      //  Cursor.visible = false;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update ()
     {
-       // Cursor.visible = false;
+        Cursor.visible = false;
         mausePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mausePosition.z = 0;
 
