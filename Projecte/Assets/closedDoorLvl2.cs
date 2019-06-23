@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class closedDoorLvl2 : MonoBehaviour
 {
-    private bool bossAlive;
+    public GameObject openedDoor;
+    private bool bossAlive = false;
 
     // Update is called once per frame
     void Update ()
     {
-        if (GameObject.Find("Boss1") != null)
+        Debug.Log("Exists" + bossAlive);
+        if (GameObject.Find("Boss1(Clone)") != null)
         {
             bossAlive = true;
         }
 
         if (bossAlive == true)
         {
-            if (GameObject.Find("Boss1") == false)
+            if (GameObject.Find("Boss1(Clone)") == null)
             {
-                GetComponent<SpriteRenderer>().enabled = false;
-                GameObject.Find("OpenedDoor").SetActive(true);
+                Debug.Log("Dead boss");
+                openedDoor.SetActive(true);
+                Destroy(gameObject);
             }
         }
     }
