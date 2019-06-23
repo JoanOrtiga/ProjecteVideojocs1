@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour {
         if(GameManager.instance.getplayerHealth() <= 0)
         {
             gameOver.SetActive(true);
-            //Time.timeScale = 0f;
+            Time.timeScale = (true) ? 0 : 1f;
         }
 
         if (Input.GetButton("Restart"))
