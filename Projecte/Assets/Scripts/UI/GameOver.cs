@@ -13,16 +13,13 @@ public class GameOver : MonoBehaviour {
     {
         if(GameManager.instance.getplayerHealth() <= 0)
         {
-            if(gameOver!=null)
-                gameOver.SetActive(true);
-            //Time.timeScale = 0f;
+            gameOver.SetActive(true);
+            Time.timeScale = (true) ? 0 : 1f;
         }
 
-        if (Input.GetButton("Restart") && gameOver.activeSelf)
+        if (Input.GetButton("Restart"))
         {
             SceneManager.LoadScene(0);
-            Destroy(gameObject);
-           
         }
     }
 }

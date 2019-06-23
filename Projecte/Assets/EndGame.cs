@@ -5,38 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject endGame;
     private bool bossAlive = false;
 
     private void Update()
     {
-        if (GameObject.Find("Boss(Clone)") != null)
+        if (GameObject.Find("Boss") != null)
         {
             bossAlive = true;
-
         }
 
         if (bossAlive == true)
         {
-            if (GameObject.Find("Boss(Clone)") == null)
+            if (GameObject.Find("Boss") == null)
             {
-                endGame.SetActive(true);
-                Time.timeScale = 0f;
+                SceneManager.LoadScene("EndGame");
             }
         }
-    }
-
-    public void LoadScenes()
-    {
-        Debug.Log("LOAD NEW SCENE");
-        SceneManager.LoadScene(0);
-       
-    }
-
-    public void OnApplicationQuit()
-    {
-        Application.Quit();
-        Debug.Log("QUIT");
     }
 }
