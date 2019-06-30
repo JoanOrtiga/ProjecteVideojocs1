@@ -17,8 +17,8 @@ public class SatanasAttackController : SatanasState {
         switch (whichMov())
         {
             case 0:
-                GetComponent<SatanasFirePlatforms>().enabled = true;
-                // GetComponent<SatanasFireBallAttack>().enabled = true;
+              //  GetComponent<SatanasFirePlatforms>().enabled = true;
+                 GetComponent<SatanasFireBallAttack>().enabled = true;
                 break;
 
             case 1:
