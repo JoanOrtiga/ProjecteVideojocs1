@@ -5,6 +5,9 @@ using UnityEngine;
 public class PickUpKey : MonoBehaviour
 {
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
     [HideInInspector]
     public bool pickUpKey = false;
 
@@ -16,6 +19,8 @@ public class PickUpKey : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        audioSource.clip = audioClip;
+
         keyRenderer = GetComponent<Renderer>();
         keyRenderer.enabled = true;
         
@@ -25,6 +30,8 @@ public class PickUpKey : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.Play();
+
             pickUpKey = true;
             
             keyRenderer.enabled = false;

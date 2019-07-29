@@ -10,4 +10,9 @@ public class LoadMainMenu : MonoBehaviour {
         SceneManager.LoadScene(0);
         Destroy(GameObject.FindGameObjectWithTag("GameController").gameObject);
     }
+
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+    }
 }
