@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222158878570908184}
   - component: {fileID: 114028475638216612}
   m_Layer: 5
-  m_Name: PowerUpDMG
+  m_Name: powerUpDmg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
